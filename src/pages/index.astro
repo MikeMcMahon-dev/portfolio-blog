@@ -15,4 +15,24 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
     <a href="/blog/how-i-got-here">How I Got Here</a> if you're new, or jump straight
     into the Session Notes for technical content.
   </p>
+
+  <div class="stamp-wrap">
+    <svg width="270" height="120" xmlns="http://www.w3.org/2000/svg" aria-label="Bits go brrr since 2023">
+      <rect width="270" height="120" rx="6" fill="#EEEAE2"/>
+      <rect x="20" y="10" width="230" height="100" rx="4" fill="none" stroke="#3D6B7D" stroke-width="3" stroke-dasharray="6,3"/>
+      <text x="135" y="38" text-anchor="middle" font-family="monospace" font-size="8" fill="#3D6B7D" letter-spacing="0.2em">BUILT WITH</text>
+      <text x="135" y="62" text-anchor="middle" font-family="'Playfair Display', Georgia, serif" font-size="24" font-weight="bold" fill="#1A3A4A">Claude AI</text>
+      <line x1="50" y1="72" x2="220" y2="72" stroke="#3D6B7D" stroke-width="1"/>
+      <text x="135" y="88" text-anchor="middle" font-family="monospace" font-size="9" fill="#6B6360" letter-spacing="0.1em">BITS GO BRRR SINCE 2023</text>
+      <text x="135" y="103" text-anchor="middle" font-family="monospace" font-size="8" fill="#3D6B7D" letter-spacing="0.15em">MIKEMCMAHON.DEV</text>
+    </svg>
+  </div>
 </BaseLayout>
+
+<style>
+  .stamp-wrap {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border);
+  }
+</style>
