@@ -1,0 +1,67 @@
+---
+import { getCollection } from 'astro:content';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+
+const allPosts = await getCollection('blog', ({ data }) => !data.draft);
+const currentPath = Astro.url.pathname;
+
+const aboutPosts   = allPosts.filter(p => p.data.category === 'about')
+                              .sort((a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf());
+const sessionPosts = allPosts.filter(p => p.data.category === 'sessions')
+                              .sort((a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf());
+const projectPosts = allPosts.filter(p => p.data.category === 'projects')
+                              .sort((a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf());
+
+function isActive(slug: string) {
+  return currentPath.includes(slug);
+}
+---
+
+<aside class="sidebar">
+  <div class="sidebar-brand">
+    <h1><a href="/" style="text-decoration:none;color:inherit">{SITE_TITLE}</a></h1>
+    <p>{SITE_DESCRIPTION}</p>
+  </div>
+
+  {aboutPosts.length > 0 && (
+    <div class="sidebar-section">
+      <p class="sidebar-section-label">About</p>
+      <nav class="sidebar-nav">
+        {aboutPosts.map(post => (
+          <a href={`/blog/${post.id}`}
+             class={isActive(post.id) ? 'active' : ''}>
+            {post.data.title}
+          </a>
+        ))}
+      </nav>
+    </div>
+  )}
+
+  {sessionPosts.length > 0 && (
+    <div class="sidebar-section">
+      <p class="sidebar-section-label">Session Notes</p>
+      <nav class="sidebar-nav">
+        {sessionPosts.map(post => (
+          <a href={`/blog/${post.id}`}
+             class={isActive(post.id) ? 'active' : ''}>
+            {post.data.title}
+          </a>
+        ))}
+      </nav>
+    </div>
+  )}
+
+  {projectPosts.length > 0 && (
+    <div class="sidebar-section">
+      <p class="sidebar-section-label">Projects</p>
+      <nav class="sidebar-nav">
+        {projectPosts.map(post => (
+          <a href={`/blog/${post.id}`}
+             class={isActive(post.id) ? 'active' : ''}>
+            {post.data.title}
+          </a>
+        ))}
+      </nav>
+    </div>
+  )}
+</aside>

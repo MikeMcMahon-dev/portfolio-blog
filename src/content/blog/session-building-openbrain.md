@@ -11,7 +11,7 @@ draft: false
 OpenBrain is a personal knowledge system built on RAG (Retrieval-Augmented Generation). The core idea: instead of re-explaining context at the start of every AI session, ingest it once and query it on demand.
 
 Topics covered in this session:
-- Supabase vector store setup and namespace strategy
+- Pinecone vector store setup and namespace strategy
 - Vercel deployment and MCP server integration
 - Claude Code session hooks for automatic context injection
 - Iterating on the ingest format to improve retrieval quality
