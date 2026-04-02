@@ -24,7 +24,7 @@ My friends and I played a lot of Aftermath! — a post-apocalyptic tabletop RPG 
 
 That was the first time I built something that solved a real problem for real people in real time. That feeling never got old.
 
-In the early 90s I converted one of those character-tracking programs to run in IBM QBasic. I ran it, watched it complete, and thought it had crashed — it had finished in about 30 seconds what the C-64 spent five minutes on. That was my first real lesson in what hardware generation changes actually feel like.
+In the early 90s I converted one of those character-tracking programs to run in IBM QBasic. I ran it, watched it complete, and thought it had crashed — it had finished in about 3 seconds what the C-64 spent five minutes on. That was my first real lesson in what hardware generation changes actually feel like.
 
 ---
 
