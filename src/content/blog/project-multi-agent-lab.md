@@ -1,7 +1,7 @@
 ---
 title: "Project: Multi-Agent Infrastructure Automation"
 description: "A 3-agent Planner/Terraform/Validator pipeline for Proxmox homelab automation with LLM-powered failure diagnosis. Zero LLM calls on clean runs."
-pubDate: 2026-03-22
+pubDate: 2026-03-02
 category: projects
 draft: false
 ---
