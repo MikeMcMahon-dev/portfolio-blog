@@ -1,5 +1,6 @@
 ---
-// No props — all behavior is client-side via localStorage
+import { Image } from 'astro:assets';
+import clippyImg from '../assets/blog-placeholder-about.jpg';
 ---
 
 <div id="clippy-wrap" aria-live="polite">
@@ -14,19 +15,7 @@
     </div>
   </div>
 
-  <!-- Clippy SVG — classic paperclip with eyes -->
-  <svg id="clippy-char" width="64" height="96" viewBox="0 0 64 96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <path d="M32,6 Q54,6 54,26 L54,70 Q54,88 36,88 L28,88 Q10,88 10,70 L10,28 Q10,12 26,12 L40,12 Q52,12 52,26 L52,66 Q52,78 40,78 L32,78"
-          fill="none" stroke="#C8A017" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
-    <ellipse cx="24" cy="50" rx="8" ry="9" fill="white" stroke="#555" stroke-width="1.5"/>
-    <ellipse cx="42" cy="50" rx="8" ry="9" fill="white" stroke="#555" stroke-width="1.5"/>
-    <circle cx="25" cy="51" r="4" fill="#1a1a1a"/>
-    <circle cx="43" cy="51" r="4" fill="#1a1a1a"/>
-    <circle cx="27" cy="49" r="1.5" fill="white"/>
-    <circle cx="45" cy="49" r="1.5" fill="white"/>
-    <path d="M17,40 Q24,36 31,40" fill="none" stroke="#555" stroke-width="2.5" stroke-linecap="round"/>
-    <path d="M35,40 Q42,36 49,40" fill="none" stroke="#555" stroke-width="2.5" stroke-linecap="round"/>
-  </svg>
+  <Image id="clippy-char" src={clippyImg} width={80} height={53} alt="Clippy" aria-hidden="true" />
 </div>
 
 <!-- Recall button: shows only when probability is 0 -->
@@ -134,6 +123,9 @@
 
   #clippy-char {
     cursor: pointer;
+    width: 80px;
+    height: auto;
+    border-radius: 8px;
     filter: drop-shadow(1px 2px 4px rgba(0,0,0,0.2));
     transition: transform 0.15s ease;
   }
