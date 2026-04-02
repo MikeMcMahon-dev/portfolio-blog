@@ -1,5 +1,5 @@
 ---
-title: "Multi-Agent Infrastructure Automation"
+title: "Session: Multi-Agent Infrastructure Automation"
 description: "Building a 3-agent Planner/Terraform/Validator pipeline that diagnoses its own failures using LLM reasoning."
 pubDate: 2026-03-22
 category: sessions

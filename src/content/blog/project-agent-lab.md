@@ -1,7 +1,7 @@
 ---
 title: "Project: Agent Lab — Phase 1"
 description: "The foundation: a controlled infrastructure execution agent with LLM-assisted diagnosis, strict guardrails, and Prometheus observability."
-pubDate: 2026-03-10
+pubDate: 2026-03-01
 category: projects
 draft: false
 ---
