@@ -1,6 +1,19 @@
 ---
-import { Image } from 'astro:assets';
-import clippyImg from '../assets/blog-placeholder-about.jpg';
+// Clippy easter egg — animated via felixrieseberg/clippy sprite sheet
+// Animation assets: MIT license, © Felix Rieseberg
+// Clippy character: Microsoft IP, used in the spirit of the Clippy renaissance
+import mapPng from '../assets/clippy/map.png';
+import animData from '../assets/clippy/animations.json';
+
+const mapUrl = mapPng.src;
+const animations = animData as Array<{ Name: string; Frames: Array<{ Duration: number; ImagesOffsets: { Column: number; Row: number } | null }> }>;
+
+const IDLE_ANIMATIONS = animations
+  .filter(a => a.Name.startsWith('Idle') || a.Name === 'Idle1_1')
+  .map(a => a.Name);
+
+const SHOW_ANIMATION  = 'Show';
+const GREET_ANIMATION = 'Wave';
 ---
 
 <div id="clippy-wrap" aria-live="polite">
@@ -15,15 +28,14 @@ import clippyImg from '../assets/blog-placeholder-about.jpg';
     </div>
   </div>
 
-  <Image id="clippy-char" src={clippyImg} width={80} height={53} alt="Clippy" aria-hidden="true" />
+  <div id="clippy-char" aria-hidden="true"></div>
 </div>
 
-<!-- Recall button: shows only when probability is 0 -->
 <button id="clippy-recall" title="Bring back Clippy" aria-label="Bring back Clippy">
   📎
 </button>
 
-<style>
+<style define:vars={{ mapUrl: `url(${mapPng.src})` }}>
   #clippy-wrap {
     position: fixed;
     bottom: 2rem;
@@ -103,7 +115,6 @@ import clippyImg from '../assets/blog-placeholder-about.jpg';
     gap: 0.35rem;
     border-top: 1px solid #e8e4c8;
     padding-top: 0.45rem;
-    margin-top: 0.1rem;
   }
 
   .clippy-slider-label {
@@ -122,14 +133,16 @@ import clippyImg from '../assets/blog-placeholder-about.jpg';
   }
 
   #clippy-char {
+    width: 124px;
+    height: 93px;
+    background-image: var(--mapUrl);
+    background-repeat: no-repeat;
     cursor: pointer;
-    width: 80px;
-    height: auto;
-    border-radius: 8px;
     filter: drop-shadow(1px 2px 4px rgba(0,0,0,0.2));
-    transition: transform 0.15s ease;
+    transition: filter 0.15s ease;
+    image-rendering: pixelated;
   }
-  #clippy-char:hover { transform: scale(1.08) rotate(-3deg); }
+  #clippy-char:hover { filter: drop-shadow(1px 3px 6px rgba(0,0,0,0.3)); }
 
   #clippy-recall {
     position: fixed;
@@ -157,9 +170,12 @@ import clippyImg from '../assets/blog-placeholder-about.jpg';
   }
 </style>
 
-<script>
-  const PROB_KEY = 'clippy_probability'; // 0–100, default 30
+<script define:vars={{ mapUrl, animations, IDLE_ANIMATIONS, SHOW_ANIMATION, GREET_ANIMATION }}>
+  const PROB_KEY = 'clippy_probability';
+  const FRAME_W  = 124;
+  const FRAME_H  = 93;
 
+  // ── Messages ────────────────────────────────────────────────────────────────
   const GENERIC = [
     "It looks like you're designing an LLM. Would you like help? [Yes]  [No]  [Don't ask me again (until the next page)]",
     "It looks like you're building an AI portfolio. I'm an AI. Is this awkward for you?",
@@ -195,65 +211,105 @@ import clippyImg from '../assets/blog-placeholder-about.jpg';
     return msg;
   }
 
+  // ── Animation engine ────────────────────────────────────────────────────────
+  const animMap = {};
+  for (const a of animations) animMap[a.Name] = a.Frames;
+
+  const charEl = document.getElementById('clippy-char');
+  let animTimer = null;
+  let idleTimer  = null;
+
+  function setFrame(frame) {
+    if (!frame || !frame.ImagesOffsets) return;
+    const { Column, Row } = frame.ImagesOffsets;
+    charEl.style.backgroundPosition =
+      `-${Column * FRAME_W}px -${Row * FRAME_H}px`;
+  }
+
+  function playAnimation(name, onDone) {
+    clearTimeout(animTimer);
+    const frames = animMap[name];
+    if (!frames || !frames.length) { onDone && onDone(); return; }
+    let i = 0;
+    function step() {
+      if (i >= frames.length) { onDone && onDone(); return; }
+      setFrame(frames[i]);
+      animTimer = setTimeout(step, frames[i].Duration || 100);
+      i++;
+    }
+    step();
+  }
+
+  function pickIdle() {
+    const choices = IDLE_ANIMATIONS.filter(n => animMap[n]);
+    return choices[Math.floor(Math.random() * choices.length)];
+  }
+
+  function loopIdle() {
+    clearTimeout(idleTimer);
+    playAnimation(pickIdle(), () => {
+      idleTimer = setTimeout(loopIdle, 4000 + Math.random() * 4000);
+    });
+  }
+
+  function startIdle() {
+    idleTimer = setTimeout(loopIdle, 2000);
+  }
+
+  // ── DOM refs ────────────────────────────────────────────────────────────────
   const wrap      = document.getElementById('clippy-wrap');
   const msgEl     = document.getElementById('clippy-msg');
   const closeBtn  = document.getElementById('clippy-close');
   const recallBtn = document.getElementById('clippy-recall');
   const slider    = document.getElementById('clippy-prob');
-  const clippyChar = document.getElementById('clippy-char');
 
-  function getProb() {
-    return parseInt(localStorage.getItem(PROB_KEY) ?? '30');
-  }
-  function setProb(val) {
-    localStorage.setItem(PROB_KEY, String(val));
-  }
+  function getProb() { return parseInt(localStorage.getItem(PROB_KEY) ?? '30'); }
+  function setProb(v) { localStorage.setItem(PROB_KEY, String(v)); }
 
   function show() {
     msgEl.textContent = pickMsg();
     slider.value = String(getProb());
     wrap.style.display = 'flex';
     recallBtn.style.display = 'none';
+    // Play Show → Wave → idle loop
+    playAnimation(SHOW_ANIMATION, () => {
+      playAnimation(GREET_ANIMATION, startIdle);
+    });
   }
 
   function hide() {
+    clearTimeout(animTimer);
+    clearTimeout(idleTimer);
     wrap.style.display = 'none';
   }
 
   function dismiss() {
     setProb(0);
-    slider.value = '0';
     hide();
     recallBtn.style.display = 'flex';
   }
 
-  // X button — dismiss (sets prob to 0)
   closeBtn.addEventListener('click', (e) => { e.stopPropagation(); dismiss(); });
+  charEl.addEventListener('click', dismiss);
 
-  // Clicking Clippy himself — dismiss
-  clippyChar.addEventListener('click', dismiss);
-
-  // Recall button — max Clippy, show immediately
   recallBtn.addEventListener('click', () => {
     setProb(100);
     recallBtn.style.display = 'none';
     show();
   });
 
-  // Slider — update probability live
   slider.addEventListener('input', () => {
     const val = parseInt(slider.value);
     setProb(val);
     if (val === 0) {
       msgEl.textContent = "Fine. I'll go quietly.";
-      setTimeout(() => {
-        hide();
-        recallBtn.style.display = 'flex';
-      }, 1800);
+      clearTimeout(idleTimer);
+      setTimeout(dismiss, 1800);
     }
   });
 
-  // Init
+  // ── Init ────────────────────────────────────────────────────────────────────
+  charEl.style.backgroundImage = `url(${mapUrl})`;
   const prob = getProb();
   if (prob === 0) {
     recallBtn.style.display = 'flex';
@@ -261,3 +317,7 @@ import clippyImg from '../assets/blog-placeholder-about.jpg';
     setTimeout(show, 1200);
   }
 </script>
+
+<!-- Credit -->
+<!-- Clippy animation assets from github.com/felixrieseberg/clippy — MIT License, © Felix Rieseberg -->
+<!-- Clippy character © Microsoft, used in the spirit of the Clippy renaissance -->
