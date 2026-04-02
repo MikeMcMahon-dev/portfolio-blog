@@ -1,0 +1,271 @@
+---
+// No props — all behavior is client-side via localStorage
+---
+
+<div id="clippy-wrap" aria-live="polite">
+  <div id="clippy-bubble" role="dialog" aria-label="Clippy has a suggestion">
+    <button id="clippy-close" aria-label="Dismiss Clippy forever" title="Dismiss forever">✕</button>
+    <p id="clippy-msg"></p>
+    <div class="clippy-slider-row">
+      <span class="clippy-slider-label">No Clippy</span>
+      <input type="range" id="clippy-prob" min="0" max="100" step="1" value="30"
+             aria-label="Clippy frequency" title="Adjust how often Clippy appears" />
+      <span class="clippy-slider-label">Maximum Clippy</span>
+    </div>
+  </div>
+
+  <!-- Clippy SVG — classic paperclip with eyes -->
+  <svg id="clippy-char" width="64" height="96" viewBox="0 0 64 96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M32,6 Q54,6 54,26 L54,70 Q54,88 36,88 L28,88 Q10,88 10,70 L10,28 Q10,12 26,12 L40,12 Q52,12 52,26 L52,66 Q52,78 40,78 L32,78"
+          fill="none" stroke="#C8A017" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <ellipse cx="24" cy="50" rx="8" ry="9" fill="white" stroke="#555" stroke-width="1.5"/>
+    <ellipse cx="42" cy="50" rx="8" ry="9" fill="white" stroke="#555" stroke-width="1.5"/>
+    <circle cx="25" cy="51" r="4" fill="#1a1a1a"/>
+    <circle cx="43" cy="51" r="4" fill="#1a1a1a"/>
+    <circle cx="27" cy="49" r="1.5" fill="white"/>
+    <circle cx="45" cy="49" r="1.5" fill="white"/>
+    <path d="M17,40 Q24,36 31,40" fill="none" stroke="#555" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M35,40 Q42,36 49,40" fill="none" stroke="#555" stroke-width="2.5" stroke-linecap="round"/>
+  </svg>
+</div>
+
+<!-- Recall button: shows only when probability is 0 -->
+<button id="clippy-recall" title="Bring back Clippy" aria-label="Bring back Clippy">
+  📎
+</button>
+
+<style>
+  #clippy-wrap {
+    position: fixed;
+    bottom: 2rem;
+    right: 1.5rem;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    z-index: 1000;
+    animation: clippy-appear 0.3s ease-out;
+  }
+
+  @keyframes clippy-appear {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  #clippy-bubble {
+    background: #fffde7;
+    border: 2px solid #555;
+    border-radius: 10px;
+    padding: 0.65rem 1.1rem 0.6rem 0.9rem;
+    max-width: 240px;
+    font-size: 0.78rem;
+    line-height: 1.45;
+    position: relative;
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.18);
+    font-family: 'Inter', sans-serif;
+    color: #2C2C2C;
+  }
+
+  #clippy-bubble::after {
+    content: '';
+    position: absolute;
+    bottom: -9px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 9px solid #fffde7;
+    z-index: 1;
+  }
+  #clippy-bubble::before {
+    content: '';
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    border-top: 11px solid #555;
+  }
+
+  #clippy-close {
+    position: absolute;
+    top: 5px;
+    right: 7px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 0.65rem;
+    color: #aaa;
+    padding: 0;
+    line-height: 1;
+    font-family: monospace;
+  }
+  #clippy-close:hover { color: #333; }
+
+  #clippy-msg {
+    margin: 0 0 0.6rem 0;
+    padding-right: 0.75rem;
+  }
+
+  .clippy-slider-row {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    border-top: 1px solid #e8e4c8;
+    padding-top: 0.45rem;
+    margin-top: 0.1rem;
+  }
+
+  .clippy-slider-label {
+    font-size: 0.6rem;
+    color: #888;
+    white-space: nowrap;
+    line-height: 1;
+  }
+
+  #clippy-prob {
+    flex: 1;
+    height: 3px;
+    cursor: pointer;
+    accent-color: #C8A017;
+    min-width: 0;
+  }
+
+  #clippy-char {
+    cursor: pointer;
+    filter: drop-shadow(1px 2px 4px rgba(0,0,0,0.2));
+    transition: transform 0.15s ease;
+  }
+  #clippy-char:hover { transform: scale(1.08) rotate(-3deg); }
+
+  #clippy-recall {
+    position: fixed;
+    bottom: 1rem;
+    left: 1rem;
+    background: rgba(249, 247, 244, 0.92);
+    border: 1px solid var(--border, #D8D4CC);
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    font-size: 1.1rem;
+    line-height: 1;
+    cursor: pointer;
+    z-index: 999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(44,44,44,0.12);
+    transition: transform 0.15s, background 0.15s;
+    padding: 0;
+  }
+  #clippy-recall:hover {
+    background: white;
+    transform: scale(1.15) rotate(15deg);
+  }
+</style>
+
+<script>
+  const PROB_KEY = 'clippy_probability'; // 0–100, default 30
+
+  const GENERIC = [
+    "It looks like you're designing an LLM. Would you like help? [Yes]  [No]  [Don't ask me again (until the next page)]",
+    "It looks like you're building an AI portfolio. I'm an AI. Is this awkward for you?",
+    "It looks like you're writing infrastructure code. Have you tried turning it off and on again?",
+    "It looks like you're reading about agents. I was an agent once. It didn't end well.",
+  ];
+  const SESSION = [
+    "It looks like you're taking session notes. Would you like me to format that as a bulleted list? Actually, you don't have a choice.",
+    "It looks like you're reading about token costs. Your Opus 4.6 run was $0.39. Just saying.",
+  ];
+  const PROJECT = [
+    "It looks like you're building a RAG system. I prefer being paper-clipped to things, personally.",
+    "It looks like you're building a multi-agent system. We used to call that 'firing half the team.'",
+    "It looks like you're evaluating LLM models. I was evaluated once. Retired shortly after.",
+  ];
+  const ABOUT = [
+    "It looks like you're reading an origin story. Mine started in Office 97. We don't talk about that.",
+  ];
+
+  function getPool() {
+    const p = window.location.pathname;
+    if (p.includes('/blog/how-i-got-here') || p.includes('/about')) return [...ABOUT, ...GENERIC];
+    if (p.includes('/blog/session-')) return [...SESSION, ...GENERIC];
+    if (p.includes('/blog/project-')) return [...PROJECT, ...GENERIC];
+    return GENERIC;
+  }
+
+  let lastMsg = '';
+  function pickMsg() {
+    const pool = getPool().filter(m => m !== lastMsg);
+    const msg = pool[Math.floor(Math.random() * pool.length)];
+    lastMsg = msg;
+    return msg;
+  }
+
+  const wrap      = document.getElementById('clippy-wrap');
+  const msgEl     = document.getElementById('clippy-msg');
+  const closeBtn  = document.getElementById('clippy-close');
+  const recallBtn = document.getElementById('clippy-recall');
+  const slider    = document.getElementById('clippy-prob');
+  const clippyChar = document.getElementById('clippy-char');
+
+  function getProb() {
+    return parseInt(localStorage.getItem(PROB_KEY) ?? '30');
+  }
+  function setProb(val) {
+    localStorage.setItem(PROB_KEY, String(val));
+  }
+
+  function show() {
+    msgEl.textContent = pickMsg();
+    slider.value = String(getProb());
+    wrap.style.display = 'flex';
+    recallBtn.style.display = 'none';
+  }
+
+  function hide() {
+    wrap.style.display = 'none';
+  }
+
+  function dismiss() {
+    setProb(0);
+    slider.value = '0';
+    hide();
+    recallBtn.style.display = 'flex';
+  }
+
+  // X button — dismiss (sets prob to 0)
+  closeBtn.addEventListener('click', (e) => { e.stopPropagation(); dismiss(); });
+
+  // Clicking Clippy himself — dismiss
+  clippyChar.addEventListener('click', dismiss);
+
+  // Recall button — max Clippy, show immediately
+  recallBtn.addEventListener('click', () => {
+    setProb(100);
+    recallBtn.style.display = 'none';
+    show();
+  });
+
+  // Slider — update probability live
+  slider.addEventListener('input', () => {
+    const val = parseInt(slider.value);
+    setProb(val);
+    if (val === 0) {
+      msgEl.textContent = "Fine. I'll go quietly.";
+      setTimeout(() => {
+        hide();
+        recallBtn.style.display = 'flex';
+      }, 1800);
+    }
+  });
+
+  // Init
+  const prob = getProb();
+  if (prob === 0) {
+    recallBtn.style.display = 'flex';
+  } else if (Math.random() * 100 < prob) {
+    setTimeout(show, 1200);
+  }
+</script>
