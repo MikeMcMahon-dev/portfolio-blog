@@ -27,15 +27,16 @@ The agent eval harness answers that question with reproducible data.
 - `eval_scenario_cost_dollars_total` — USD cost per scenario
 - `eval_scenario_retries_total` — retry count (proxy for diagnosis difficulty)
 
-**2026-04-01 baseline results:**
+**2026-04-01 baseline results (5 models):**
 
-| Model | Avg Retries | Avg Cost |
-|---|---|---|
-| claude-haiku-4-5 | 2.0 | $0.0003 |
-| claude-sonnet-4-6 | 1.25 | $0.0021 |
-| gpt-4o | 1.5 | $0.0089 |
-| gpt-4o-mini | 2.25 | $0.0004 |
+| Model | Avg retries | Total cost | Cost/failure | Notable |
+|---|---|---|---|---|
+| claude-haiku-4-5 | 2.0 | $0.0069 | $0.0017 | Stable baseline — production model |
+| claude-sonnet-4-6 | 1.25 | $0.0863 | $0.0216 | Fewest retries; 13× Haiku cost |
+| gpt-4o | 1.5 | $0.0748 | $0.0187 | Only model to find both root causes in fail-vm-complex |
+| gpt-4o-mini | 2.25 | $0.0024 | $0.0006 | Cheapest; hypothesis depth slightly shallower |
+| claude-opus-4-6 | 2.25 | $0.394 | $0.099 | Did not clear Mythos Bar; 57× Sonnet cost, same retry behavior |
 
-Sonnet resolves failures in fewer retries. GPT-4o matches but costs 4×. Haiku is the budget option with a reliability trade-off.
+Opus 4.6 was added after the initial 4-model run. It matched Haiku's retry count, reproduced the same cluster topology speculation failure on `fail-vm-complex`, and cost 57× more than Sonnet. Haiku remains the production diagnosis model.
 
 Session notes: [Agent Eval Harness](/blog/session-agent-eval-harness)

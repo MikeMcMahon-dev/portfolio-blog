@@ -18,15 +18,18 @@ A 6-scenario eval suite — 2 happy path (LXC + VM), 2 LXC failure scenarios (si
 
 Happy path scenarios produce exactly 0 LLM calls. The LLM only activates in the DIAGNOSING state, which only fires on failure. This means the eval harness is almost entirely a measure of *failure diagnosis quality*, not general capability.
 
-**Model comparison (2026-04-01 baseline):**
+**Model comparison (2026-04-01 baseline, 5 models):**
 
-| Model | Avg Retries | Success Rate | Avg Cost |
-|---|---|---|---|
-| claude-haiku-4-5 | 2.0 | 100% | $0.0003 |
-| claude-sonnet-4-6 | 1.25 | 100% | $0.0021 |
-| gpt-4o | 1.5 | 100% | $0.0089 |
-| gpt-4o-mini | 2.25 | 100% | $0.0004 |
+| Model | Avg retries | Total cost | Cost/failure | Notable behavior |
+|---|---|---|---|---|
+| claude-haiku-4-5 | 2.0 | $0.0069 | $0.0017 | Stable, correct on simple failures; topology speculation on VM scenarios |
+| claude-sonnet-4-6 | 1.25 | $0.0863 | $0.0216 | Fewest retries; 13× Haiku's cost for similar hypothesis quality |
+| gpt-4o | 1.5 | $0.0748 | $0.0187 | 27% fewer tokens than Sonnet; only model to find both root causes in fail-vm-complex |
+| gpt-4o-mini | 2.25 | $0.0024 | $0.0006 | Near-identical token count to GPT-4o at 31× lower cost; shallower hypotheses |
+| **claude-opus-4-6** | **2.25** | **$0.394** | **$0.099** | Same retry behavior as Haiku; drifts to topology speculation; 57× Sonnet's cost |
 
-Sonnet resolves failures in fewer retries than Haiku. GPT-4o matches Sonnet's retry efficiency at 4× the cost. GPT-4o-mini is economical but needs more attempts.
+Opus 4.6 was run after the initial 4-model baseline as a sanity check on the top of the Anthropic lineup. It did not clear the Mythos Bar — retry behavior was identical to Haiku and GPT-4o-mini, it still speculated about cluster topology on `fail-vm-complex` by retry 3, and it costs $0.099 per failure scenario vs Haiku's $0.0017. There is no justification for using it here.
+
+**Haiku stays as the production diagnosis model.**
 
 Full architectural writeup: [eval-harness-architecture.md](/blog/project-agent-eval-harness)
