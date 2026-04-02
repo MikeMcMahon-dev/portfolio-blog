@@ -139,7 +139,8 @@
 </style>
 
 <script>
-  const STORAGE_KEY = 'clippy_dismissed';
+  const STORAGE_KEY  = 'clippy_dismissed';
+  const RECALLED_KEY = 'clippy_recalled';
 
   const GENERIC = [
     "It looks like you're designing an LLM. Would you like help? [Yes]  [No]  [Don't ask me again (until the next page)]",
@@ -194,6 +195,7 @@
   function dismiss() {
     wrap.style.display = 'none';
     localStorage.setItem(STORAGE_KEY, '1');
+    localStorage.removeItem(RECALLED_KEY);
     recallBtn.style.display = 'flex';
   }
 
@@ -202,14 +204,17 @@
 
   recallBtn.addEventListener('click', () => {
     localStorage.removeItem(STORAGE_KEY);
+    localStorage.setItem(RECALLED_KEY, '1');
     recallBtn.style.display = 'none';
     show();
   });
 
-  // Init
+  // Init: dismissed → show recall button
+  //       recalled → always show (100%)
+  //       default  → 30% chance
   if (localStorage.getItem(STORAGE_KEY)) {
     recallBtn.style.display = 'flex';
-  } else if (Math.random() < 0.30) {
+  } else if (localStorage.getItem(RECALLED_KEY) || Math.random() < 0.30) {
     setTimeout(show, 1200);
   }
 </script>
