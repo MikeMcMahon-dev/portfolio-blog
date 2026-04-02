@@ -22,7 +22,7 @@ const GREET_ANIMATION = 'Wave';
     <p id="clippy-msg"></p>
     <div class="clippy-slider-row">
       <span class="clippy-slider-label">No Clippy</span>
-      <input type="range" id="clippy-prob" min="0" max="100" step="1" value="30"
+      <input type="range" id="clippy-prob" min="0" max="100" step="1" value="100"
              aria-label="Clippy frequency" title="Adjust how often Clippy appears" />
       <span class="clippy-slider-label">Maximum Clippy</span>
     </div>
@@ -263,7 +263,7 @@ const GREET_ANIMATION = 'Wave';
   const recallBtn = document.getElementById('clippy-recall');
   const slider    = document.getElementById('clippy-prob');
 
-  function getProb() { return parseInt(localStorage.getItem(PROB_KEY) ?? '30'); }
+  function getProb() { return parseInt(localStorage.getItem(PROB_KEY) ?? '100'); }
   function setProb(v) { localStorage.setItem(PROB_KEY, String(v)); }
 
   function show() {
