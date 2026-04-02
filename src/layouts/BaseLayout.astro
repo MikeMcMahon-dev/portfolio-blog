@@ -1,6 +1,7 @@
 ---
 import BaseHead from '../components/BaseHead.astro';
 import Sidebar from '../components/Sidebar.astro';
+import ClippyWidget from '../components/ClippyWidget.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
 interface Props {
@@ -26,5 +27,6 @@ const {
         <slot />
       </main>
     </div>
+    <ClippyWidget />
   </body>
 </html>
