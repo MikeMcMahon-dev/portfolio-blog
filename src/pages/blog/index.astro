@@ -7,9 +7,13 @@ import FormattedDate from '../../components/FormattedDate.astro';
 import Header from '../../components/Header.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../../consts';
 
-const posts = (await getCollection('blog')).sort(
-	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
-);
+const allPosts = await getCollection('blog');
+const posts = allPosts
+	.filter((p) => !p.data.draft)
+	.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+const comingSoon = allPosts
+	.filter((p) => p.data.draft)
+	.sort((a, b) => a.data.title.localeCompare(b.data.title));
 ---
 
 <!doctype html>
@@ -69,6 +73,42 @@ const posts = (await getCollection('blog')).sort(
 			ul a:hover img {
 				box-shadow: var(--box-shadow);
 			}
+			.coming-soon {
+				margin-top: 3rem;
+				border-top: 1px solid rgb(var(--gray-light));
+				padding-top: 2rem;
+			}
+			.coming-soon h2 {
+				font-size: 1.2rem;
+				color: rgb(var(--gray));
+				margin-bottom: 1rem;
+				text-transform: uppercase;
+				letter-spacing: 0.08em;
+			}
+			.coming-soon-list {
+				display: flex;
+				flex-direction: column;
+				gap: 0.75rem;
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+			}
+			.coming-soon-list li {
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+				gap: 0.2rem;
+				opacity: 0.6;
+			}
+			.cs-title {
+				font-weight: 600;
+				color: rgb(var(--black));
+				font-size: 0.95rem;
+			}
+			.cs-desc {
+				color: rgb(var(--gray));
+				font-size: 0.82rem;
+			}
 			@media (max-width: 720px) {
 				ul {
 					gap: 0.5em;
@@ -108,6 +148,19 @@ const posts = (await getCollection('blog')).sort(
 					}
 				</ul>
 			</section>
+		{comingSoon.length > 0 && (
+			<section class="coming-soon">
+				<h2>Coming Soon</h2>
+				<ul class="coming-soon-list">
+					{comingSoon.map((post) => (
+						<li>
+							<span class="cs-title">{post.data.title}</span>
+							<span class="cs-desc">{post.data.description}</span>
+						</li>
+					))}
+				</ul>
+			</section>
+		)}
 		</main>
 		<Footer />
 	</body>

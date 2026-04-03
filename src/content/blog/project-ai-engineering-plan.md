@@ -6,7 +6,7 @@ category: projects
 draft: false
 ---
 
-In early 2026, Nate B. Jones published an analysis of hundreds of AI job postings and identified something specific: the AI job market had split. Generalist "AI users" were competing for commodity roles. A much smaller group — people who could design, build, operate, and validate agentic systems — were getting $280K–$400K+ offers with 142-day average time-to-fill because there simply weren't enough of them.
+In early 2026, [Nate B. Jones](https://www.youtube.com/@natebjonestech) published an analysis of hundreds of AI job postings and identified something specific: the AI job market had split. Generalist "AI users" were competing for commodity roles. A much smaller group — people who could design, build, operate, and validate agentic systems — were getting $280K–$400K+ offers with 142-day average time-to-fill because there simply weren't enough of them.
 
 He distilled it to 7 skills that employers were explicitly hiring for. My collaborator Dan Lee and I mapped those skills against what I'd already built and what was missing, and turned the gap analysis into a build plan.
 

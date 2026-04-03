@@ -54,3 +54,7 @@ Hybrid search — vector similarity from pgvector plus full-text keyword search,
 Production. Running daily for Claude Code sessions and Annie's tutoring. 26/26 smoke tests green.
 
 Session notes: [Building OpenBrain](/blog/session-building-openbrain)
+
+## References
+
+- [Nate B. Jones — Token burn and why naive PDF ingestion is costing you](https://youtu.be/japT66frdhM?si=Ja_WR593w3dSI4lz) — the video that triggered the ingest pipeline overhaul

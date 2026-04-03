@@ -6,7 +6,7 @@ category: sessions
 draft: false
 ---
 
-Prompted by a Nate Jones video on preparing for model upgrades, this session builds a proper evaluation harness for the multi-agent infrastructure pipeline.
+Prompted by a [Nate B. Jones](https://www.youtube.com/@natebjonestech) video on preparing for model upgrades, this session builds a proper evaluation harness for the multi-agent infrastructure pipeline.
 
 The goal: a reproducible test suite that can tell us, before and after a model change, whether the agent is better or worse at diagnosing infrastructure failures.
 

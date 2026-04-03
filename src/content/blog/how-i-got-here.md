@@ -46,7 +46,7 @@ My family and I started playing D&D together when my daughter was about 5.  We h
 
 That was the moment I understood this was something genuinely different from every prior wave of "AI."
 
-From there I started reading everything. Research papers, blog posts, conference talks. I found Nate Jones on YouTube — an ML engineer who covers agentic AI systems with the kind of engineering rigor that actually maps to real infrastructure work. His content changed the way I think about what these systems can do.
+From there I started reading everything. Research papers, blog posts, conference talks. I found [Nate Jones on YouTube](https://www.youtube.com/@natebjonestech) — an ML engineer who covers agentic AI systems with the kind of engineering rigor that actually maps to real infrastructure work. His content changed the way I think about what these systems can do.
 
 ---
 
