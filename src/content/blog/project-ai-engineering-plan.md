@@ -61,6 +61,10 @@ Two sessions since the plan was written have moved the needle, particularly on P
 
 Reached production on 2026-04-02. The ingestion pipeline overhaul (PDF 3-way classification, vision OCR, heading-aware chunking) closed the gap between ingest quality and retrieval quality. 26/26 smoke tests green. An extended 5-model OCR evaluation ran against real handwritten content — Annie's biology notes and a 40-page geometry scan — with ground-truth phrase scoring. Sonnet is the production recommendation for handwritten content ($0.009/page); Haiku for printed/structured scans ($0.027/40 pages); direct text extraction for text-layer PDFs ($0.00).
 
+**Project 2 — Multi-Agent Infrastructure Automation** ✅ Complete — exceeded scope
+
+A 3-agent system (Planner → Terraform sub-agent → Validator sub-agent) deployed against live Proxmox infrastructure. Explicit Pydantic handoff contracts, deterministic state machine, LLM activates only on failure. The scope target was a working multi-agent proof of concept; what shipped was a production-grade orchestration system with real infrastructure underneath it. Session notes: [Multi-Agent Infrastructure Automation](/blog/session-multi-agent-system)
+
 **Project 3 — Failure Pattern Detection** — Partial, foundation laid
 
 The agent eval harness (2026-04-01) is a failure injection test suite with Prometheus instrumentation. It covers 4 of Nate's 6 AI failure modes:
