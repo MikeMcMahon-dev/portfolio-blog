@@ -36,13 +36,24 @@ RLS is scaffolded but enforcement is Phase 2. Tenant isolation currently runs at
 
 ---
 
-## Embeddings via OpenRouter (and the Model Name That Broke Ingest)
+## The Embedding Model Migration
 
-Embeddings route through OpenRouter, not directly to OpenAI. The reason is routing flexibility — OpenRouter keeps model selection decoupled from provider lock-in. Swapping models later means changing a config string, not rotating credentials.
+The original ChatGPT-generated ingest script used `BAAI/bge-small-en` via SentenceTransformer — a local model, no API, no credentials, runs anywhere. It produces 384-dimensional vectors. Fine for a local prototype with a single user.
 
-The model string caused a real ingest failure. OpenRouter uses a `provider/model` format — the correct identifier is `openai/text-embedding-3-small`, not `text-embedding-3-small`. Passing the bare model name hit errors at the OpenRouter API boundary. The fix was adding `OPENBRAIN_EMBEDDING_MODEL` as an explicit env var rather than hardcoding the string, and settling on the fully-qualified `openai/text-embedding-3-small` as the canonical value across all ingest paths.
+When the Vercel API layer was introduced, the production embedding path switched to `openai/text-embedding-3-small` via OpenRouter — 1536 dimensions. That's not a config swap. The two models produce vectors that live in completely different semantic spaces. Any existing `BAAI/bge-small-en` vectors would return garbage results when queried against 1536-dimensional embeddings. The entire corpus had to be re-embedded from scratch.
 
-Consistent dimensions across every ingest path (Slack, Obsidian, direct API) is a hard constraint. Mixing embedding models — even different versions of the same model — produces junk retrieval because vectors from different models don't share the same semantic space. One model, one env var, enforced everywhere.
+The dimension check now gates every ingest:
+
+```python
+EXPECTED_EMBEDDING_DIMENSION = int(os.getenv("OPENBRAIN_EMBEDDING_DIMENSION", "1536"))
+# ...
+if len(embedding) != EXPECTED_EMBEDDING_DIMENSION:
+    # block the write — a mismatched vector is worse than no vector
+```
+
+The OpenRouter model name was its own problem. OpenRouter uses a `provider/model` format — the correct identifier is `openai/text-embedding-3-small`, not `text-embedding-3-small`. The bare name fails at the API boundary without a clear error. The fix: `OPENBRAIN_EMBEDDING_MODEL` as an explicit env var, canonical value `openai/text-embedding-3-small`, set consistently across every ingest path.
+
+`BAAI/bge-small-en` is still in `scripts/ingest.py` — as the local fallback when OpenRouter isn't reachable. It works for local development. It would immediately break production retrieval if it made it into the DB alongside 1536-dimensional production vectors, which is exactly what the dimension check prevents.
 
 ---
 
