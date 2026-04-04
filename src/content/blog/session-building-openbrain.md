@@ -12,11 +12,15 @@ OpenBrain is the fix. Ingest context once. Query it on demand. Every session sta
 
 ---
 
-## Why Supabase over Pinecone
+## Why Supabase (and Why ChromaDB Was Never Going to Work)
 
-The first architectural decision was the vector store. The obvious choices: Pinecone, Weaviate, local ChromaDB. The actual choice: Supabase with pgvector. [ADR-001]
+The first architectural decision was the vector store. ChatGPT suggested ChromaDB — local, embedded, easy to stand up. It worked fine for a single-user local prototype. The moment the requirements changed, it didn't.
 
-Pinecone is a managed vector-only store. That means you end up running a separate Postgres instance for structured data anyway — two datastores to manage, two billing lines, two failure domains. Supabase gives you full Postgres with pgvector bolted on. Vector search and relational queries in the same transaction. Row-Level Security already in the stack. One less service.
+The requirements changed immediately: multi-user (Mike, Beth, Annie), agentic updates from Claude Code sessions, web-based ingest from Custom GPTs. ChromaDB is local-first. It has no web-facing API, no multi-user tenancy model, no path to Vercel. The second those needs were on the table, ChromaDB was off it.
+
+The actual choice: Supabase with pgvector. [ADR-001]
+
+Supabase gives you full Postgres with pgvector bolted on — vector search and relational queries in the same transaction. Row-Level Security already in the stack. REST API out of the box. Deployable from Vercel serverless without running your own database. One service instead of two.
 
 The practical gotcha that hit immediately: the Supabase REST client is unreliable for high-frequency writes. Any operation that needs reliability — ingests, audit log writes — goes through psycopg (direct Postgres connection), not the REST client. That meant the connection string matters: `SUPABASE_DB_URL` has to be a `postgresql://` URI, not the `https://` REST URL. And on Vercel, which is IPv4-only, the direct DB connection string resolves to IPv6 and fails. The Transaction Pooler (port 6543) is the only path that works in production serverless.
 
@@ -32,11 +36,13 @@ RLS is scaffolded but enforcement is Phase 2. Tenant isolation currently runs at
 
 ---
 
-## Embeddings via OpenRouter
+## Embeddings via OpenRouter (and the Model Name That Broke Ingest)
 
-Embeddings route through OpenRouter, not directly to OpenAI. Model: `text-embedding-3-small` (1536 dimensions). The reason is routing flexibility — OpenRouter keeps model selection decoupled from provider lock-in. Adding a new embedding model later means changing a model string in config, not a credential rotation.
+Embeddings route through OpenRouter, not directly to OpenAI. The reason is routing flexibility — OpenRouter keeps model selection decoupled from provider lock-in. Swapping models later means changing a config string, not rotating credentials.
 
-Consistent dimensions across every ingest path (Slack, Obsidian, direct API) is a hard requirement. Mixing embedding models produces junk retrieval — vectors from different models live in different semantic spaces. OpenRouter enforces the single model across all ingest paths.
+The model string caused a real ingest failure. OpenRouter uses a `provider/model` format — the correct identifier is `openai/text-embedding-3-small`, not `text-embedding-3-small`. Passing the bare model name hit errors at the OpenRouter API boundary. The fix was adding `OPENBRAIN_EMBEDDING_MODEL` as an explicit env var rather than hardcoding the string, and settling on the fully-qualified `openai/text-embedding-3-small` as the canonical value across all ingest paths.
+
+Consistent dimensions across every ingest path (Slack, Obsidian, direct API) is a hard constraint. Mixing embedding models — even different versions of the same model — produces junk retrieval because vectors from different models don't share the same semantic space. One model, one env var, enforced everywhere.
 
 ---
 
