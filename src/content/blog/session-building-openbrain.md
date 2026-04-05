@@ -3,7 +3,7 @@ title: "Building OpenBrain: A Personal RAG Knowledge System"
 description: "Standing up a Retrieval-Augmented Generation system backed by Pinecone, hosted on Vercel, and wired into Claude Code sessions."
 pubDate: 2026-03-15
 category: sessions
-draft: true
+draft: false
 ---
 
 *Full write-up coming soon.*

@@ -3,7 +3,7 @@ title: "Session: Context Preservation Across AI Sessions"
 description: "Building the memory and session-wrap infrastructure that makes long-running AI-assisted projects tractable."
 pubDate: 2026-03-28
 category: sessions
-draft: true
+draft: false
 ---
 
 *Full write-up coming soon.*
