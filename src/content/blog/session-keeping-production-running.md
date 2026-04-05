@@ -8,7 +8,7 @@ draft: false
 
 ## The Incident
 
-Started the day discovering the portfolio-blog had a regression: projects and sessions pages weren't rendering. Pages like `/blog/project-openbrain` existed in git but returned 404 in production. The sidebar showed the links, but clicking them failed.
+After implementing the email subscription and RSS feature, I discovered that the portfolio-blog had a critical regression: projects and sessions pages weren't rendering. Pages like `/blog/project-openbrain` existed in git but returned 404 in production. The sidebar showed the links, but clicking them failed.
 
 ## Root Cause
 
@@ -99,7 +99,7 @@ All commits this session followed this discipline and resulted in clean, atomic 
 ## What This Prevents
 
 The smoke tests now catch:
-- ✅ Missing static prerender (like today's incident)
+- ✅ Missing static prerender (like the regression discovered after the email subscription feature)
 - ✅ Deleted or moved blog posts
 - ✅ Broken navigation links
 - ✅ Form regressions (subscribe/unsubscribe)
