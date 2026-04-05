@@ -1,7 +1,7 @@
 ---
 title: "The Plan: AI Implementation Architect Portfolio"
 description: "A structured 4-project lab plan targeting AI Implementation Architect / Staff Engineer readiness — mapped directly to Nate Jones's 7 employer-cited AI skills."
-pubDate: 2026-04-02
+pubDate: 2026-03-15
 updatedDate: 2026-04-03
 category: projects
 draft: false
