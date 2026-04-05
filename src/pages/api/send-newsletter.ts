@@ -63,9 +63,6 @@ export const POST: APIRoute = async (context) => {
 
     console.log(`📧 Sending to ${subscribers.length} subscriber(s)`);
 
-    // Render digest
-    const html = renderDigestAsHtml(newPosts);
-
     // Build subject line
     const subject =
       newPosts.length === 1
@@ -75,19 +72,33 @@ export const POST: APIRoute = async (context) => {
     // Create email service
     const emailService = createEmailService();
 
-    // Build unsubscribe token map
-    const tokenMap = new Map<string, string>();
-    for (const sub of subscribers) {
-      tokenMap.set(sub.email, sub.unsubscribe_token);
+    // Send to each subscriber with their unique token in the email body
+    let sent = 0;
+    let failed = 0;
+    for (const subscriber of subscribers) {
+      // Render digest with this subscriber's unique unsubscribe token
+      const html = renderDigestAsHtml(newPosts, subscriber.unsubscribe_token);
+
+      const result = await emailService.send(
+        subscriber.email,
+        subject,
+        html,
+        subscriber.unsubscribe_token
+      );
+
+      if (result.success) {
+        sent++;
+      } else {
+        failed++;
+        console.error(`Failed to send to ${subscriber.email}:`, result.error);
+      }
     }
 
-    // Send batch
-    const sendResult = await emailService.sendBatch(
-      subscribers.map((s) => s.email),
-      subject,
-      html,
-      tokenMap
-    );
+    const sendResult = {
+      success: failed === 0,
+      sent,
+      failed,
+    };
 
     console.log(
       `📧 Send result: ${sendResult.sent} sent, ${sendResult.failed} failed`
