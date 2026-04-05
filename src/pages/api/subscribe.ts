@@ -35,12 +35,10 @@ export const POST: APIRoute = async (context) => {
     if (error) {
       console.error('RPC error:', error);
       return new Response(
-        JSON.stringify({ error: 'Failed to subscribe', rpc_error: error.message }),
+        JSON.stringify({ error: 'Failed to subscribe' }),
         { status: 500, headers: { 'Content-Type': 'application/json' } }
       );
     }
-
-    console.log('RPC response:', data);
 
     // RPC returns the JSON object from the procedure
     if (!data || !data.success) {
