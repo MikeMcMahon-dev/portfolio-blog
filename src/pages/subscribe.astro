@@ -1,0 +1,102 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SubscribeForm from '../components/SubscribeForm.astro';
+
+const title = 'Subscribe';
+const description = 'Get a daily digest of new posts emailed to your inbox.';
+---
+
+<BaseLayout title={title}>
+  <article>
+    <h1>{title}</h1>
+    <p class="intro">{description}</p>
+
+    <section>
+      <h2>Email Digest</h2>
+      <p>
+        Subscribe to receive a daily digest at midnight UTC. Every morning, you'll get summaries
+        of all posts published in the previous 24 hours, with links back to the full articles.
+      </p>
+
+      <SubscribeForm />
+
+      <p style="font-size: 0.9rem; color: #666;">
+        We respect your privacy. You can unsubscribe anytime with the link in every email.
+      </p>
+    </section>
+
+    <section>
+      <h2>Or use RSS</h2>
+      <p>
+        Prefer a feed reader? Subscribe via RSS and get posts as they're published. No emails,
+        no digest delays, just pure feed.
+      </p>
+      <p>
+        <a href="/rss.xml" style="color: var(--accent); font-weight: 500;">
+          → Subscribe via RSS
+        </a>
+      </p>
+    </section>
+
+    <section>
+      <h2>What you'll get</h2>
+      <ul>
+        <li>Daily digest emails at midnight UTC</li>
+        <li>Summaries of new articles with links to read more</li>
+        <li>Post dates, categories, and descriptions</li>
+        <li>One-click unsubscribe in every email</li>
+      </ul>
+    </section>
+  </article>
+</BaseLayout>
+
+<style>
+  article {
+    max-width: 700px;
+  }
+
+  .intro {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 2rem;
+  }
+
+  section {
+    margin: 3rem 0;
+  }
+
+  h2 {
+    color: #333;
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  ul li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+  }
+
+  ul li:before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: bold;
+  }
+
+  a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+</style>
