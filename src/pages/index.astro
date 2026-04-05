@@ -16,6 +16,13 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
     into the Session Notes for technical content.
   </p>
 
+  <div class="subscribe-cta">
+    <p>
+      <strong>Subscribe to new posts:</strong>
+      <a href="/subscribe">Email digest (daily)</a> or
+      <a href="/rss.xml">RSS feed</a>
+    </p>
+  </div>
 
   <div class="stamp-wrap">
     <svg width="270" height="120" xmlns="http://www.w3.org/2000/svg" aria-label="Bits go brrr since 2023">
@@ -31,6 +38,27 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 </BaseLayout>
 
 <style>
+  .subscribe-cta {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, rgba(61, 107, 125, 0.05) 0%, rgba(61, 107, 125, 0.02) 100%);
+    border-left: 4px solid var(--accent);
+    border-radius: 4px;
+  }
+
+  .subscribe-cta p {
+    margin: 0;
+  }
+
+  .subscribe-cta a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .subscribe-cta a:hover {
+    text-decoration: underline;
+  }
 
   .stamp-wrap {
     margin-top: 3rem;
