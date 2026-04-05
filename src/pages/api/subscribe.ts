@@ -33,34 +33,29 @@ export const POST: APIRoute = async (context) => {
     });
 
     if (error) {
-      console.error('Database error:', error);
-      // Check if it's a duplicate email error
-      if (data?.error?.includes('Already subscribed')) {
-        return new Response(
-          JSON.stringify({ error: 'Already subscribed with this email' }),
-          { status: 409, headers: { 'Content-Type': 'application/json' } }
-        );
-      }
+      console.error('RPC error:', error);
       return new Response(
-        JSON.stringify({ error: 'Failed to subscribe' }),
+        JSON.stringify({ error: 'Failed to subscribe', rpc_error: error.message }),
         { status: 500, headers: { 'Content-Type': 'application/json' } }
       );
     }
 
-    const result = typeof data === 'string' ? JSON.parse(data) : data;
+    console.log('RPC response:', data);
 
-    if (!result.success) {
+    // RPC returns the JSON object from the procedure
+    if (!data || !data.success) {
+      const errorMsg = data?.error || 'Failed to subscribe';
+      const status = errorMsg?.includes('Already') ? 409 : 500;
       return new Response(
-        JSON.stringify({ error: result.error || 'Failed to subscribe' }),
-        { status: result.error?.includes('Already') ? 409 : 500,
-          headers: { 'Content-Type': 'application/json' } }
+        JSON.stringify({ error: errorMsg }),
+        { status, headers: { 'Content-Type': 'application/json' } }
       );
     }
 
     return new Response(
       JSON.stringify({
         success: true,
-        message: result.message,
+        message: data.message,
       }),
       { status: 201, headers: { 'Content-Type': 'application/json' } }
     );
