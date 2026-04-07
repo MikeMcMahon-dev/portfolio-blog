@@ -10,6 +10,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
+    "generate:clippy-quips": "tsx src/scripts/generate-clippy-quips.ts",
     "test": "vitest run",
     "test:watch": "vitest",
     "test:ui": "vitest --ui",
@@ -20,6 +21,7 @@
     "test:all": "npm run test && npm run test:build && npm run test:e2e"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.82.0",
     "@astrojs/mdx": "^5.0.3",
     "@astrojs/rss": "^4.0.18",
     "@astrojs/sitemap": "^3.7.2",
@@ -34,6 +36,7 @@
     "@playwright/test": "^1.59.1",
     "@types/nodemailer": "^6.4.14",
     "@vitest/ui": "^4.1.2",
+    "tsx": "^4.21.0",
     "vitest": "^4.1.2"
   }
 }
