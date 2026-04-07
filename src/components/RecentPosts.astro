@@ -4,10 +4,10 @@ import { getCollection } from 'astro:content';
 // Get all published blog posts
 const allPosts = await getCollection('blog', ({ data }) => !data.draft);
 
-// Sort by pubDate descending and get the 3 most recent
+// Sort by pubDate descending and get the 4 most recent
 const recentPosts = allPosts
   .sort((a, b) => new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime())
-  .slice(0, 3);
+  .slice(0, 4);
 
 // Generate slug from id (e.g., 'session-keeping-production-running' -> '/blog/session-keeping-production-running')
 const getSlug = (id: string) => `/blog/${id}`;
