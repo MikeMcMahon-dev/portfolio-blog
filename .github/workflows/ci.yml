@@ -11,8 +11,6 @@ jobs:
     name: Build & Test
     runs-on: ubuntu-latest
     timeout-minutes: 30
-    env:
-      CLAUDE_API_KEY: ${{ secrets.CLAUDE_API_KEY }}
 
     steps:
       - uses: actions/checkout@v4
@@ -36,12 +34,16 @@ jobs:
 
       - name: Build project
         run: npm run build
+        env:
+          CLAUDE_API_KEY: ${{ secrets.CLAUDE_API_KEY }}
 
       - name: Unit & content tests
         run: npm run test
 
       - name: Build completeness tests
         run: npm run test:build
+        env:
+          CLAUDE_API_KEY: ${{ secrets.CLAUDE_API_KEY }}
 
       - name: E2E Tests
         run: npm run test:e2e
