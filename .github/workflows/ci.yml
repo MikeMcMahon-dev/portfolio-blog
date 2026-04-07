@@ -1,0 +1,68 @@
+name: CI
+
+on:
+  pull_request:
+    branches: [feat/initial-site-build, main]
+  push:
+    branches: [feat/initial-site-build, main]
+
+jobs:
+  build-and-test:
+    name: Build & Test
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Type check
+        run: npx astro check
+
+      - name: Build project
+        run: npm run build
+
+      - name: Unit & content tests
+        run: npm run test
+
+      - name: Build completeness tests
+        run: npm run test:build
+
+      - name: E2E Tests
+        run: npm run test:e2e
+
+      - name: Upload test results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: playwright-report/
+          retention-days: 30
+
+  gate:
+    name: Merge Gate
+    runs-on: ubuntu-latest
+    needs: build-and-test
+    if: always()
+
+    steps:
+      - name: Check build status
+        run: |
+          if [ "${{ needs.build-and-test.result }}" != "success" ]; then
+            echo "::error::Build or tests failed. Keep PR in preview mode."
+            echo "❌ Do NOT merge until all checks pass."
+            echo ""
+            echo "## What failed?"
+            echo "- Check the 'Build & Test' job above for details"
+            echo "- Review Playwright test report for E2E failures"
+            exit 1
+          fi
+          echo "✅ All checks passed. Ready to merge."
