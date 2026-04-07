@@ -4,6 +4,7 @@
 // Clippy character: Microsoft IP, used in the spirit of the Clippy renaissance
 import mapPng from '../assets/clippy/map.png';
 import animData from '../assets/clippy/animations.json';
+import quipsData from '../data/clippy-quips.json';
 
 const mapUrl = mapPng.src;
 const animations = animData as Array<{ Name: string; Frames: Array<{ Duration: number; ImagesOffsets: { Column: number; Row: number } | null }> }>;
@@ -170,37 +171,21 @@ const GREET_ANIMATION = 'Wave';
   }
 </style>
 
-<script define:vars={{ mapUrl, animations, IDLE_ANIMATIONS, SHOW_ANIMATION, GREET_ANIMATION }}>
+<script define:vars={{ mapUrl, animations, IDLE_ANIMATIONS, SHOW_ANIMATION, GREET_ANIMATION, quipsData }}>
   const PROB_KEY = 'clippy_probability';
   const FRAME_W  = 124;
   const FRAME_H  = 93;
 
   // ── Messages ────────────────────────────────────────────────────────────────
-  const GENERIC = [
-    "It looks like you're designing an LLM. Would you like help? [Yes]  [No]  [Don't ask me again (until the next page)]",
-    "It looks like you're building an AI portfolio. I'm an AI. Is this awkward for you?",
-    "It looks like you're writing infrastructure code. Have you tried turning it off and on again?",
-    "It looks like you're reading about agents. I was an agent once. It didn't end well.",
-  ];
-  const SESSION = [
-    "It looks like you're taking session notes. Would you like me to format that as a bulleted list? Actually, you don't have a choice.",
-    "It looks like you're reading about token costs. Your Opus 4.6 run was $0.39. Just saying.",
-  ];
-  const PROJECT = [
-    "It looks like you're building a RAG system. I prefer being paper-clipped to things, personally.",
-    "It looks like you're building a multi-agent system. We used to call that 'firing half the team.'",
-    "It looks like you're evaluating LLM models. I was evaluated once. Retired shortly after.",
-  ];
-  const ABOUT = [
-    "It looks like you're reading an origin story. Mine started in Office 97. We don't talk about that.",
-  ];
+  // Quips are loaded from generated clippy-quips.json or fallback to hardcoded
+  // They're passed from the Astro component via the define:vars directive
 
   function getPool() {
     const p = window.location.pathname;
-    if (p.includes('/blog/how-i-got-here') || p.includes('/about')) return [...ABOUT, ...GENERIC];
-    if (p.includes('/blog/session-')) return [...SESSION, ...GENERIC];
-    if (p.includes('/blog/project-')) return [...PROJECT, ...GENERIC];
-    return GENERIC;
+    if (p.includes('/blog/how-i-got-here') || p.includes('/about')) return [...quipsData.ABOUT, ...quipsData.GENERIC];
+    if (p.includes('/blog/session-')) return [...quipsData.SESSION, ...quipsData.GENERIC];
+    if (p.includes('/blog/project-')) return [...quipsData.PROJECT, ...quipsData.GENERIC];
+    return quipsData.GENERIC;
   }
 
   let lastMsg = '';

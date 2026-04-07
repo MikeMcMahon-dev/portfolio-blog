@@ -7,6 +7,18 @@ const DIST_DIR = path.join(process.cwd(), 'dist');
 const CLIENT_DIR = path.join(DIST_DIR, 'client');
 const BLOG_DIR = path.join(CLIENT_DIR, 'blog');
 
+// Helper to escape HTML entities in title for comparison
+function escapeHtmlEntities(text: string): string {
+  const map: Record<string, string> = {
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    '"': '&quot;',
+    "'": '&#39;'
+  };
+  return text.replace(/[&<>"']/g, (char) => map[char]);
+}
+
 describe('Build Completeness', () => {
   let publishedPosts: any[] = [];
 
@@ -52,8 +64,10 @@ describe('Build Completeness', () => {
       expect(content).toMatch(/<html|<!DOCTYPE/i,
         `Post ${post.slug} HTML doesn't start with valid HTML`);
 
-      // Verify it contains the post title
-      expect(content).toContain(post.frontmatter.title,
+      // Verify it contains the post title (handle HTML entities)
+      const escapedTitle = escapeHtmlEntities(post.frontmatter.title);
+      const titleFound = content.includes(post.frontmatter.title) || content.includes(escapedTitle);
+      expect(titleFound).toBe(true,
         `Post ${post.slug} HTML doesn't contain title: ${post.frontmatter.title}`);
     }
   });

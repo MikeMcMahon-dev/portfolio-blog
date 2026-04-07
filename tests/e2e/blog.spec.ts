@@ -25,8 +25,8 @@ test.describe('Blog', () => {
     await firstPost.click();
 
     // Should render post content
-    await expect(page.locator('h1, h2')).toBeTruthy();
-    await expect(page.locator('article, main')).toBeTruthy();
+    await expect(page.locator('h1, h2').first()).toBeTruthy();
+    await expect(page.locator('article').first()).toBeTruthy();
   });
 
   test('individual blog posts should display metadata', async ({ page }) => {
@@ -40,8 +40,8 @@ test.describe('Blog', () => {
     const heading = page.locator('h1, h2').first();
     await expect(heading).toBeVisible();
 
-    // Should have some content
-    const content = page.locator('article, main');
+    // Should have some content (prefer article over main for blog posts)
+    const content = page.locator('article').first();
     const text = await content.textContent();
     expect(text).toBeTruthy();
     expect(text?.length).toBeGreaterThan(50);
@@ -52,7 +52,7 @@ test.describe('Blog', () => {
     await page.locator('a[href*="/blog/"]').first().click();
 
     // Check for sidebar with categories (Sidebar component)
-    const sidebar = page.locator('aside, [class*="sidebar"]');
+    const sidebar = page.locator('aside');
     if (await sidebar.isVisible()) {
       const sidebarText = await sidebar.textContent();
       // Should mention categories

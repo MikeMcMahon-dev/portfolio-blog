@@ -5,32 +5,28 @@ test.describe('Subscription', () => {
     await page.goto('/subscribe');
 
     await expect(page).toHaveURL(/\/subscribe\/?$/);
-    await expect(page.locator('h1, h2')).toBeTruthy();
+    await expect(page.locator('h1, h2').first()).toBeTruthy();
   });
 
   test('subscribe form should have email input', async ({ page }) => {
     await page.goto('/subscribe');
 
-    const emailInput = page.locator('input[type="email"], input[name*="email"]');
+    const emailInput = page.locator('input[type="email"]').first();
     await expect(emailInput).toBeVisible();
   });
 
   test('subscribe form should have submit button', async ({ page }) => {
     await page.goto('/subscribe');
 
-    const submitButton = page.locator(
-      'button[type="submit"], button:has-text(/[Ss]ubscri|[Ss]ubmit/)'
-    );
+    const submitButton = page.locator('button[type="submit"]').first();
     await expect(submitButton).toBeVisible();
   });
 
   test('should show error for invalid email format', async ({ page }) => {
     await page.goto('/subscribe');
 
-    const emailInput = page.locator('input[type="email"], input[name*="email"]');
-    const submitButton = page.locator(
-      'button[type="submit"], button:has-text(/[Ss]ubscri|[Ss]ubmit/)'
-    );
+    const emailInput = page.locator('input[type="email"]').first();
+    const submitButton = page.locator('button[type="submit"]').first();
 
     // Try invalid email
     await emailInput.fill('not-an-email');
@@ -45,7 +41,7 @@ test.describe('Subscription', () => {
   test('subscribe form should accept valid email', async ({ page }) => {
     await page.goto('/subscribe');
 
-    const emailInput = page.locator('input[type="email"], input[name*="email"]');
+    const emailInput = page.locator('input[type="email"]').first();
     await emailInput.fill('test@example.com');
 
     const isValid = await emailInput.evaluate((el: any) => el.checkValidity?.());
@@ -55,7 +51,8 @@ test.describe('Subscription', () => {
   test('should show RSS feed link on subscribe page', async ({ page }) => {
     await page.goto('/subscribe');
 
-    const rssLink = page.locator('a[href="/rss.xml"]');
+    // Use more specific selector: the RSS link in the "Or use RSS" section of main content
+    const rssLink = page.locator('main a[href="/rss.xml"], article a[href="/rss.xml"]').first();
     await expect(rssLink).toBeVisible();
   });
 
@@ -68,7 +65,7 @@ test.describe('Subscription', () => {
   test('unsubscribe page should have email form', async ({ page }) => {
     await page.goto('/unsubscribe');
 
-    const emailInput = page.locator('input[type="email"], input[name*="email"]');
+    const emailInput = page.locator('input[type="email"]').first();
     await expect(emailInput).toBeVisible();
   });
 

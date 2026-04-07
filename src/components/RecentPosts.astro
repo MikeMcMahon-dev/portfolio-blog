@@ -1,0 +1,130 @@
+---
+import { getCollection } from 'astro:content';
+
+// Get all published blog posts
+const allPosts = await getCollection('blog', ({ data }) => !data.draft);
+
+// Sort by pubDate descending and get the 3 most recent
+const recentPosts = allPosts
+  .sort((a, b) => new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime())
+  .slice(0, 3);
+
+// Generate slug from id (e.g., 'session-keeping-production-running' -> '/blog/session-keeping-production-running')
+const getSlug = (id: string) => `/blog/${id}`;
+
+// Format date as "MMM DD, YYYY"
+const formatDate = (date: Date) => {
+  return date.toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric'
+  });
+};
+
+// Get 4 most recent posts
+const fourRecentPosts = recentPosts.slice(0, 4);
+---
+
+<section class="recent-posts">
+  <h2>Recent Posts</h2>
+  <div class="posts-grid">
+    {fourRecentPosts.map((post) => (
+      <article class="post-bubble">
+        <a href={getSlug(post.id)}>
+          <h3>{post.data.title}</h3>
+          <p class="description">{post.data.description}</p>
+          <time datetime={post.data.pubDate.toISOString()}>
+            {formatDate(post.data.pubDate)}
+          </time>
+        </a>
+      </article>
+    ))}
+  </div>
+</section>
+
+<style>
+  .recent-posts {
+    margin: 3rem 0;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border);
+  }
+
+  .recent-posts h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-primary);
+  }
+
+  .posts-grid {
+    display: grid;
+    gap: 1.5rem;
+    /* Default: 1 column on mobile */
+    grid-template-columns: 1fr;
+  }
+
+  /* Tablet: 2 columns */
+  @media (min-width: 768px) {
+    .posts-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  /* Desktop: 4 columns for balanced layout */
+  @media (min-width: 1200px) {
+    .posts-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  .post-bubble {
+    padding: 1.5rem;
+    border: 2px solid var(--accent);
+    border-radius: 8px;
+    background: linear-gradient(135deg, rgba(61, 107, 125, 0.03) 0%, rgba(61, 107, 125, 0.01) 100%);
+    transition: all 0.2s ease;
+  }
+
+  .post-bubble:hover {
+    border-color: var(--accent-hover);
+    box-shadow: 0 4px 12px rgba(61, 107, 125, 0.1);
+    transform: translateY(-2px);
+  }
+
+  .post-bubble a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .post-bubble h3 {
+    margin: 0 0 0.75rem 0;
+    font-size: 1.1rem;
+    color: var(--text-primary);
+    line-height: 1.3;
+  }
+
+  .post-bubble .description {
+    flex: 1;
+    margin: 0 0 1rem 0;
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .post-bubble time {
+    font-size: 0.875rem;
+    color: var(--accent);
+    font-weight: 500;
+    margin-top: auto;
+  }
+
+  .post-bubble:hover h3 {
+    color: var(--accent);
+  }
+</style>

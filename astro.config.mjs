@@ -4,6 +4,7 @@ import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 import vercel from '@astrojs/vercel';
 import { defineConfig } from 'astro/config';
+import clippyQuipsIntegration from './src/integrations/clippy-quips';
 
 // https://astro.build/config
 export default defineConfig({
@@ -14,7 +15,7 @@ export default defineConfig({
 			enabled: false,
 		},
 	}),
-	integrations: [mdx(), sitemap()],
+	integrations: [mdx(), sitemap(), clippyQuipsIntegration()],
 	markdown: {
 		shikiConfig: {
 			theme: 'github-light',

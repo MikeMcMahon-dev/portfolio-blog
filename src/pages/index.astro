@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import RecentPosts from '../components/RecentPosts.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 ---
 
@@ -23,6 +24,8 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
       <a href="/rss.xml">RSS feed</a>
     </p>
   </div>
+
+  <RecentPosts />
 
   <div class="stamp-wrap">
     <svg width="270" height="120" xmlns="http://www.w3.org/2000/svg" aria-label="Bits go brrr since 2023">
@@ -64,5 +67,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
     margin-top: 3rem;
     padding-top: 2rem;
     border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: center;
   }
 </style>
