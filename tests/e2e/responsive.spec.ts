@@ -8,8 +8,8 @@ test.describe('Responsive Design', () => {
     await page.goto('/');
 
     // Main content should be visible
-    const mainContent = page.locator('h1, h2, main');
-    await expect(mainContent.first()).toBeVisible();
+    const heading = page.locator('h1, h2').first();
+    await expect(heading).toBeVisible();
   });
 
   test('blog listing should work on mobile', async ({ page }) => {
@@ -25,8 +25,8 @@ test.describe('Responsive Design', () => {
     await expect(postLinks.first()).toBeVisible();
     await postLinks.first().click();
 
-    // Blog post should be readable
-    const content = page.locator('article, main');
+    // Blog post should be readable (prefer article for blog posts)
+    const content = page.locator('article');
     await expect(content).toBeVisible();
   });
 
@@ -34,19 +34,19 @@ test.describe('Responsive Design', () => {
     await page.goto('/');
 
     // Header should be visible
-    const header = page.locator('header, [role="navigation"]');
+    const header = page.locator('header').first();
     await expect(header).toBeVisible();
 
     // Should have at least one navigation link
-    const navLink = page.locator('a[href="/blog"]');
+    const navLink = page.locator('a[href="/blog"]').first();
     await expect(navLink).toBeVisible();
   });
 
   test('subscribe form should be usable on mobile', async ({ page }) => {
     await page.goto('/subscribe');
 
-    const emailInput = page.locator('input[type="email"], input[name*="email"]');
-    const submitButton = page.locator('button[type="submit"]');
+    const emailInput = page.locator('input[type="email"]').first();
+    const submitButton = page.locator('button[type="submit"]').first();
 
     // Form elements should be visible and not overlapped
     await expect(emailInput).toBeVisible();

@@ -16,8 +16,8 @@ test.describe('Component Consistency', () => {
     for (const testPage of testPages) {
       await page.goto(testPage);
 
-      // Check for Subscribe in sidebar (various possible selectors)
-      const subscribeInSidebar = page.locator('aside').locator('text=Subscribe, /i');
+      // Check for Subscribe in sidebar
+      const subscribeInSidebar = page.locator('aside').filter({ hasText: /Subscribe/i });
       const count = await subscribeInSidebar.count();
 
       expect(count).toBeGreaterThan(0,
@@ -55,12 +55,12 @@ test.describe('Component Consistency', () => {
 
       // Verify key layout sections exist
       const sidebar = page.locator('aside');
-      const main = page.locator('main, article');
+      const mainContent = page.locator('main');
       const nav = page.locator('nav');
 
       expect(await sidebar.count()).toBeGreaterThan(0,
         `Sidebar missing on ${testPage}`);
-      expect(await main.count()).toBeGreaterThan(0,
+      expect(await mainContent.count()).toBeGreaterThan(0,
         `Main content area missing on ${testPage}`);
       // Nav may not always exist but track consistency
     }
