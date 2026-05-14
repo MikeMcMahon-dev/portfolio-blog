@@ -17,7 +17,7 @@
     "test:build": "npm run build && vitest run tests/build.test.ts",
     "test:content": "vitest run tests/content.test.ts",
     "test:smoke": "playwright test --project=chromium tests/e2e/smoke.spec.ts",
-    "test:e2e": "playwright test tests/e2e/smoke.spec.ts tests/e2e/navigation.spec.ts tests/e2e/subscription.spec.ts",
+    "test:e2e": "playwright test tests/e2e/smoke.spec.ts tests/e2e/navigation.spec.ts tests/e2e/subscription.spec.ts tests/e2e/content-presence.spec.ts",
     "test:e2e:full": "playwright test",
     "test:e2e:dev": "playwright test --ui",
     "test:all": "npm run test && npm run test:build && npm run test:smoke"
