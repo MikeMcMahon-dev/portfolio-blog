@@ -1,30 +1,32 @@
 ---
 title: "Project: OpenBrain 2.0 — Temporal Knowledge Architecture"
-description: "How a Pi-Hole IP change exposed the fundamental flaw in my RAG system, and the architecture I built to fix it: temporal state, write safety, and a compounding wiki layer."
+description: "A home network hardware migration exposed the fundamental flaw in my RAG system. Here's the architecture Claude and I designed to fix it: temporal state, write safety, and a compounding wiki layer."
 pubDate: 2026-05-14
 category: projects
 draft: false
 ---
 
-OpenBrain 1.0 had a problem I didn't know I had until it bit me: it treated all knowledge as equally present-tense. Every record in the vector store competed for retrieval on equal terms, regardless of when it was written or whether it was still true.
+I recently completed a hardware refresh on my home network — 10G switches, a new WiFi 7 router, a more robust VLAN architecture. As Claude and I worked through the project, I kept running into the same problem: AI absentmindedness. Stale context pulling in old IP assignments. Wrong VLAN IDs. Device configs that had been superseded two iterations ago but were still in the knowledge base with full retrieval weight, indistinguishable from current state.
 
-The failure was invisible until it wasn't.
+I'd already found Andrej Karpathy's write-up on using Markdown files as persistent model references, but it didn't feel like the right fit — too static, too manual. Then I watched Nate Jones' video on the same problem and something clicked. The issue wasn't just that context was missing; it was that the existing context was actively wrong, and the system had no way to know the difference.
+
+Now — after getting over my frustration with AI's reliable insistence on bypassing guardrails in the name of "efficiency" — Claude Chat, Claude Code, and I sat down and designed something better. Here's what we built.
 
 ## The Problem: Temporal Blindness
 
-Pi-Hole moved from `192.168.100.30` to `192.168.110.30`. Two records now existed in the database — one old, one new — with identical semantic weight. A query for "Pi-Hole IP" returned both, indistinguishably. The old record wasn't just useless; it was actively misleading.
+OpenBrain 1.0 treated all knowledge as equally present-tense. Every record in the vector store competed for retrieval on equal terms, regardless of when it was written or whether it was still true. A VLAN configuration from before the migration and the updated one after it had identical semantic weight. A query returned both, indistinguishably. The old record wasn't just useless — it was actively misleading.
 
-This is the problem that vector stores don't solve by default. They're retrieval engines, not state machines. They have no concept of "this was true then, this is true now."
+This is the problem vector stores don't solve by default. They're retrieval engines, not state machines. They have no concept of "this was true then, this is true now."
 
-The specific failure modes I identified:
+The specific failure modes the migration made impossible to ignore:
 
-**No supersession.** When operational state changes, both the old and new records exist with equal retrieval weight. There is no mechanism to mark the old one as replaced.
+**No supersession.** When a device moved to a new VLAN segment, both the old and new records existed with equal retrieval weight. There was no mechanism to mark the old one as replaced. The system couldn't distinguish "current config" from "config that was true six weeks ago."
 
-**No domain separation.** Study notes (NV exam prep, Terraform reference material) competed with operational state queries. A query about current network topology pulled in certification study cards.
+**No domain separation.** Study notes (NV exam prep, Terraform reference material) competed equally with operational state queries. A question about current network topology pulled in certification study cards alongside live device configs.
 
-**No lifecycle.** Every record is equally present tense. There is no `current`, `superseded`, or `historical`. A record from May 5 and a record from May 8 about the same component have identical standing.
+**No lifecycle.** Every record was equally present tense. There was no `current`, `superseded`, or `historical`. A record from before the hardware refresh and a record from after it had identical standing in retrieval.
 
-**No compounding synthesis.** Every session re-derives understanding from raw chunks. Nothing accumulates. The same synthesis work happens on every query, from scratch.
+**No compounding synthesis.** Every session re-derived understanding from raw chunks. Nothing accumulated. The same synthesis work happened on every query, from scratch, with no persistent artifact representing "the understood current state of this network."
 
 ## Design Influences
 
@@ -57,7 +59,7 @@ Status semantics are strict:
 - `historical` — migrated from the old `thoughts` table; treat as reference, not current state
 - `draft` — staged, pending human approval before becoming current
 
-Retrieval defaults to `status = 'current'`. Stale state is excluded without callers needing to know it exists.
+Retrieval defaults to `status = 'current'`. Stale state is excluded without callers needing to know it exists. A device that moved subnets during a network refresh has one current record and a chain of superseded ones — the old configs are preserved for audit but don't pollute queries about present state.
 
 ### Layer 2: Write Safety
 
