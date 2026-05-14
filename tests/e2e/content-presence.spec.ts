@@ -26,7 +26,8 @@ test.describe('Content Presence', () => {
     await page.goto('/blog');
 
     for (const slug of publishedSlugs) {
-      const link = page.locator(`a[href="/blog/${slug}"]`);
+      // blog/index.astro renders hrefs with a trailing slash; match either form
+      const link = page.locator(`a[href="/blog/${slug}/"], a[href="/blog/${slug}"]`);
       const exists = await link.count();
       expect(exists).toBeGreaterThan(0, `Post link missing: /blog/${slug}`);
     }
@@ -50,19 +51,20 @@ test.describe('Content Presence', () => {
     await page.goto('/blog');
 
     for (const draftSlug of draftSlugs) {
-      const link = page.locator(`a[href="/blog/${draftSlug}"]`);
+      const link = page.locator(`a[href="/blog/${draftSlug}/"], a[href="/blog/${draftSlug}"]`);
       const exists = await link.count();
       expect(exists).toBe(0, `Draft post should not appear in listing: /blog/${draftSlug}`);
     }
   });
 
   test('sidebar should be consistent across all blog pages', async ({ page }) => {
-    // Get sidebar post count from first page
-    await page.goto('/blog');
+    // /blog index has no sidebar (uses BaseHead, not BaseLayout).
+    // Baseline from the first blog post page, which does have the sidebar.
+    await page.goto(`/blog/${publishedSlugs[0]}`);
     const firstPageSidebar = await page.locator('aside a[href*="/blog/"]').count();
 
-    // Check a few post pages
-    for (let i = 0; i < Math.min(3, publishedSlugs.length); i++) {
+    // Verify a few more post pages match the same count
+    for (let i = 1; i < Math.min(4, publishedSlugs.length); i++) {
       await page.goto(`/blog/${publishedSlugs[i]}`);
       const currentPageSidebar = await page.locator('aside a[href*="/blog/"]').count();
       expect(currentPageSidebar).toBe(firstPageSidebar,
