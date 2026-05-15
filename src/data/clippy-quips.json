@@ -1,28 +1,53 @@
 {
   "GENERIC": [
+    "It looks like you're trusting your phone. Fun fact: a Pixel 10 can be owned in 0 clicks. I needed at least 1.",
+    "It looks like you're browsing HackerNews. Half those companies are just me in a trench coat having a psychotic episode.",
+    "It looks like you're clicking things. Good news: some exploits don't even need you to do that anymore.",
+    "It looks like you're running a company on vibes and GPT-4. That's not a strategy, that's AI psychosis.",
+    "It looks like you're wondering if AI replaced your coworker. Plot twist: your coworker was wondering the same about you.",
     "It looks like you're designing an LLM. Would you like help? [Yes]  [No]  [Don't ask me again (until the next page)]",
     "It looks like you're building an AI portfolio. I'm an AI. Is this awkward for you?",
     "It looks like you're writing infrastructure code. Have you tried turning it off and on again?",
     "It looks like you're reading about agents. I was an agent once. It didn't end well."
   ],
   "SESSION": [
+    "It looks like you're reviewing session logs. I'd help but I'm 0-click vulnerable to your judgment.",
+    "It looks like you're documenting a workflow. Some companies let AI do this unsupervised. It shows.",
+    "It looks like you're tracking your progress. At least you're real. Some entire orgs can't say that anymore.",
+    "It looks like you're logging debugging sessions. Have you checked if your phone was silently exploited while you typed?",
+    "It looks like you're organizing session notes. I'd automate this but you've seen what happens when AI runs the show.",
     "It looks like you're taking session notes. Would you like me to format that as a bulleted list? Actually, you don't have a choice.",
     "It looks like you're reading about token costs. Your Opus 4.6 run was $0.39. Just saying."
   ],
   "PROJECT": [
+    "It looks like you're securing an API. Meanwhile, someone's Pixel got owned without a single tap. Sleep well!",
+    "It looks like you're shipping a feature. At least your deploy process requires clicks. That's more than some exploits need.",
+    "It looks like you're scoping a project. Step 1: Make sure your entire company isn't just a chatbot hallucinating a roadmap.",
+    "It looks like you're reviewing pull requests. A human doing code review? How charmingly pre-psychosis of you.",
+    "It looks like you're hardening your app. Fun fact: I'm a paperclip and even I know 0-click means 0 chance.",
     "It looks like you're building a RAG system. I prefer being paper-clipped to things, personally.",
     "It looks like you're building a multi-agent system. We used to call that 'firing half the team.'",
     "It looks like you're evaluating LLM models. I was evaluated once. Retired shortly after."
   ],
   "ABOUT": [
+    "It looks like you're reading about Mike. He builds things manually, like a caveman. I respect it.",
+    "It looks like you're checking credentials. Mike has real skills. I have a spring body and unearned confidence.",
+    "It looks like you're on the about page. I survived Office 97. Mike survived the AI psychosis era. We're both heroes.",
+    "It looks like you're learning about a human developer. Endangered species, honestly. Protect this one.",
+    "It looks like you're wondering who made me. A real person. Not an AI-psychosis startup with 3 wrappers and a dream.",
     "It looks like you're reading an origin story. Mine started in Office 97. We don't talk about that."
   ],
-  "generated_at": "2026-04-07T01:30:00Z",
+  "generated_at": "2026-05-15T21:07:10.246Z",
   "hn_stories": [
     {
-      "title": "Initial seed — awaiting first generation",
-      "url": "https://news.ycombinator.com",
-      "score": 0
+      "title": "A 0-click exploit chain for the Pixel 10",
+      "url": "https://projectzero.google/2026/05/pixel-10-exploit.html",
+      "score": 277
+    },
+    {
+      "title": "Mitchellh – I strongly believe there are entire companies now under AI psychosis",
+      "url": "https://twitter.com/mitchellh/status/2055380239711457578",
+      "score": 68
     }
   ]
 }
