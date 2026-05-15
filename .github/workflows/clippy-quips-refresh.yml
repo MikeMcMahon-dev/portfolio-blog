@@ -43,9 +43,10 @@ jobs:
           fi
 
       - name: Commit and open PR
+        id: open-pr
         if: steps.check-changes.outputs.changed == 'true'
         run: |
-          BRANCH="chore/clippy-quips-$(date +%Y%m%d)"
+          BRANCH="chore/clippy-quips-${{ github.run_id }}"
           git config --local user.email "action@github.com"
           git config --local user.name "Clippy Quips Bot"
           git checkout -b "$BRANCH"
@@ -59,10 +60,17 @@ jobs:
             --head "$BRANCH" \
             --title "chore: regenerate Clippy quips from HackerNews" \
             --body "Automated weekly quip refresh from trending HackerNews stories.")
-          gh pr review "$PR_URL" --approve
-          gh pr merge "$PR_URL" --squash --delete-branch
+          echo "pr_url=$PR_URL" >> $GITHUB_OUTPUT
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Approve and merge PR
+        if: steps.open-pr.outputs.pr_url != ''
+        run: |
+          gh pr review "${{ steps.open-pr.outputs.pr_url }}" --approve
+          gh pr merge "${{ steps.open-pr.outputs.pr_url }}" --squash --delete-branch
+        env:
+          GH_TOKEN: ${{ secrets.QUIPS_PAT }}
 
       - name: Log summary
         run: |
