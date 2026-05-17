@@ -12,9 +12,9 @@ I discovered that my M3 Max MacBook Pro was worth a healthy amount and had initi
 
 ## The Why
 
-The immediate motivation is professional: I work at NVIDIA, where the infrastructure I support is purpose-built for large-scale AI inference. Being able to speak fluently about the architectural differences between local inference and AI-as-a-service isn't optional at this point — it's table stakes. This project is my hands-on answer to that gap.
+The immediate motivation is professional: I work with companies deploying infrastructure purpose-built for large-scale AI inference. Being able to speak fluently about the architectural differences between local inference and AI-as-a-service isn't optional at this point — it's table stakes. This project is my hands-on answer to that gap.
 
-The longer motivation: I already run a production RAG system called [OpenBrain](/blog/project-openbrain) — a hybrid retrieval pipeline built on Supabase/pgvector, exposed as a custom MCP connector in Claude.ai. The architecture works well, but it has dependencies I don't control: Anthropic's API, a hosted Postgres instance, Vercel. This project mirrors that architecture locally and builds a structured comparison framework to understand what you're actually trading away (and gaining) when you move inference on-device.
+The longer motivation: I already run a production RAG system called [OpenBrain](/blog/project-openbrain) — a hybrid retrieval pipeline built on Supabase/pgvector, exposed as a custom MCP connector in Claude.ai, as well as a custom GPT in ChatGPT. The architecture works well, but it has dependencies I don't control: Anthropic's API, a hosted Postgres instance, Vercel. This project mirrors that architecture locally and builds a structured comparison framework to understand what you're actually trading away (and gaining) when you move inference on-device.
 
 ## The Hardware
 
