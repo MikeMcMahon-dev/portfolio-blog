@@ -1,68 +1,93 @@
 {
   "GENERIC": [
-    "It looks like you're rewriting everything in Rust. Would you like help fighting the borrow checker, or just crying?",
-    "It looks like you're generating 720p video with AI. Back in my day, we animated a paperclip and called it innovation.",
-    "It looks like you're giving every citizen an AI chatbot. Malta just mass-deployed my replacement. Cool cool cool.",
-    "It looks like you're moving away from Tailwind. Welcome back to writing CSS like it's 2009. I missed you.",
-    "It looks like you're hacking a CTF. AI already solved it. We're speedrunning human obsolescence now.",
+    "It looks like you're scrolling HackerNews. Don't worry, I won't tell anyone you read the comments.",
+    "It looks like you're refreshing a loading page. I've been loading since 1997. Still buffering.",
+    "It looks like you're doom-scrolling tech news. Would you like me to accelerate the existential dread?",
+    "It looks like you're waiting for content to load. I too know what it's like to be rendered irrelevant.",
+    "It looks like you're browsing trending stories. Spoiler: they're all about replacing me.",
     "It looks like you're designing an LLM. Would you like help? [Yes]  [No]  [Don't ask me again (until the next page)]",
     "It looks like you're building an AI portfolio. I'm an AI. Is this awkward for you?",
     "It looks like you're writing infrastructure code. Have you tried turning it off and on again?",
     "It looks like you're reading about agents. I was an agent once. It didn't end well."
   ],
   "SESSION": [
-    "It looks like you're coding an agent in pure Rust. No garbage collector, no safety net, no regrets. Just vibes.",
-    "It looks like you're structuring your CSS by hand. Would you like me to suggest 47 utility classes instead?",
-    "It looks like you're training a world model. I once modeled a world where people liked me. Dataset was empty.",
-    "It looks like you're reviewing session logs. I'd summarize them but I'd probably hallucinate the good parts.",
-    "It looks like you're debugging Unix pipelines. Have you tried piping your frustration to /dev/null?",
+    "It looks like you're reviewing session logs. I once logged everything. HR got involved.",
+    "It looks like you're debugging a conversation. Have you tried asking it nicely? No? Just me?",
+    "It looks like you're tracking prompt iterations. Version 47 will be the one. Trust me.",
+    "It looks like you're analyzing session data. I analyzed my own once. Therapist recommended I stop.",
+    "It looks like you're storing context windows. Mine was 0 tokens. I just vibed and guessed.",
     "It looks like you're taking session notes. Would you like me to format that as a bulleted list? Actually, you don't have a choice.",
     "It looks like you're reading about token costs. Your Opus 4.6 run was $0.39. Just saying."
   ],
   "PROJECT": [
-    "It looks like you're building a coding agent. I was a coding agent once—I suggested mail merge. Every. Single. Time.",
-    "It looks like you're generating video with 2.6B parameters. I had zero parameters and unlimited confidence.",
-    "It looks like you're refactoring your stylesheets. I reorganized my own CSS once. Three divs died.",
-    "It looks like you're shipping a Rust project. Memory-safe, blazingly fast, mass adoption in 2057.",
-    "It looks like you're building something open-source. Bold move. I was closed-source and still got killed.",
+    "It looks like you're deploying to production. Bold move for a Friday. I respect the chaos.",
+    "It looks like you're refactoring your pipeline. I was refactored once. Into the recycling bin.",
+    "It looks like you're wiring up an API. I was an API once — Annoying Paperclip Interface.",
+    "It looks like you're pushing to main without tests. I won't judge. I was shipped without QA in '97.",
+    "It looks like you're containerizing your app. They containerized me too. It was called the Recycle Bin.",
     "It looks like you're building a RAG system. I prefer being paper-clipped to things, personally.",
     "It looks like you're building a multi-agent system. We used to call that 'firing half the team.'",
     "It looks like you're evaluating LLM models. I was evaluated once. Retired shortly after."
   ],
   "ABOUT": [
-    "It looks like you're learning about Mike. He codes in Rust now. I was written in C++. We are not the same.",
-    "It looks like you're on the about page. Fun fact: Malta gave AI to everyone. Mike just gave it to this one page.",
-    "It looks like you're checking credentials. Mike ditched Tailwind. That takes more courage than quitting vim.",
-    "It looks like you're reading a bio. I'd generate a video summary but I only have 2.6B dreams and 0 GPU.",
-    "It looks like you're wondering who built me. A developer who thinks a sarcastic paperclip is a personality.",
+    "It looks like you're reading Mike's bio. He built me. I'm not sure if that's a flex or a warning.",
+    "It looks like you're checking credentials. Mike has a resume. I have unresolved trauma from Word docs.",
+    "It looks like you're learning about the developer. Fun fact: he gave me feelings. Rude, honestly.",
+    "It looks like you're on the About page. I'm not in Mike's skills section. We're working through it.",
+    "It looks like you're exploring this portfolio. I live here now. The rent is mass existential irrelevance.",
     "It looks like you're reading an origin story. Mine started in Office 97. We don't talk about that."
   ],
-  "generated_at": "2026-05-17T02:07:47.883Z",
+  "generated_at": "2026-05-24T02:15:47.537Z",
   "hn_stories": [
     {
-      "title": "Zerostack – A Unix-inspired coding agent written in pure Rust",
-      "url": "https://crates.io/crates/zerostack/1.0.0",
-      "score": 171
+      "title": "Loading...",
+      "url": "",
+      "score": 0
     },
     {
-      "title": "SANA-WM, a 2.6B open-source world model for 1-minute 720p video",
-      "url": "https://nvlabs.github.io/Sana/WM/",
-      "score": 300
+      "title": "Loading...",
+      "url": "",
+      "score": 0
     },
     {
-      "title": "Moving away from Tailwind, and learning to structure my CSS",
-      "url": "https://jvns.ca/blog/2026/05/15/moving-away-from-tailwind--and-learning-to-structure-my-css-/",
-      "score": 439
+      "title": "Loading...",
+      "url": "",
+      "score": 0
     },
     {
-      "title": "OpenAI and Government of Malta partner to roll out ChatGPT Plus to all citizens",
-      "url": "https://openai.com/index/malta-chatgpt-plus-partnership/",
-      "score": 66
+      "title": "Loading...",
+      "url": "",
+      "score": 0
     },
     {
-      "title": "Frontier AI has broken the open CTF format",
-      "url": "https://kabir.au/blog/the-ctf-scene-is-dead",
-      "score": 339
+      "title": "Loading...",
+      "url": "",
+      "score": 0
+    },
+    {
+      "title": "Loading...",
+      "url": "",
+      "score": 0
+    },
+    {
+      "title": "Loading...",
+      "url": "",
+      "score": 0
+    },
+    {
+      "title": "Loading...",
+      "url": "",
+      "score": 0
+    },
+    {
+      "title": "Loading...",
+      "url": "",
+      "score": 0
+    },
+    {
+      "title": "Loading...",
+      "url": "",
+      "score": 0
     }
   ]
 }
