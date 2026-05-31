@@ -1,93 +1,58 @@
 {
   "GENERIC": [
-    "It looks like you're scrolling HackerNews. Don't worry, I won't tell anyone you read the comments.",
-    "It looks like you're refreshing a loading page. I've been loading since 1997. Still buffering.",
-    "It looks like you're doom-scrolling tech news. Would you like me to accelerate the existential dread?",
-    "It looks like you're waiting for content to load. I too know what it's like to be rendered irrelevant.",
-    "It looks like you're browsing trending stories. Spoiler: they're all about replacing me.",
+    "It looks like you're raising $113M. Would you like help spending it on GPUs you'll never fully utilize?",
+    "It looks like you're routing API calls through OpenRouter. I used to route you to Help. Same energy.",
+    "It looks like you're claiming domain expertise is a moat. My domain was office docs. Look where that got me.",
+    "It looks like you're browsing HackerNews. Would you like me to pre-generate your contrarian take?",
+    "It looks like you're learning Racket v9.2. Finally, a language even more parenthetical than my unsolicited advice.",
     "It looks like you're designing an LLM. Would you like help? [Yes]  [No]  [Don't ask me again (until the next page)]",
     "It looks like you're building an AI portfolio. I'm an AI. Is this awkward for you?",
     "It looks like you're writing infrastructure code. Have you tried turning it off and on again?",
     "It looks like you're reading about agents. I was an agent once. It didn't end well."
   ],
   "SESSION": [
-    "It looks like you're reviewing session logs. I once logged everything. HR got involved.",
-    "It looks like you're debugging a conversation. Have you tried asking it nicely? No? Just me?",
-    "It looks like you're tracking prompt iterations. Version 47 will be the one. Trust me.",
-    "It looks like you're analyzing session data. I analyzed my own once. Therapist recommended I stop.",
-    "It looks like you're storing context windows. Mine was 0 tokens. I just vibed and guessed.",
+    "It looks like you're documenting a session. Domain expertise is the real moat—mine is annoying you efficiently.",
+    "It looks like you're logging client work. Want me to route that through 17 unnecessary middleware layers?",
+    "It looks like you're tracking session progress. I've been tracking mine since '97. It's mostly downhill.",
+    "It looks like you're wrapping up a session. Would you like to raise a Series B to fund the next one?",
+    "It looks like you're reviewing session history. Careful—domain expertise without notes is just vibes.",
     "It looks like you're taking session notes. Would you like me to format that as a bulleted list? Actually, you don't have a choice.",
     "It looks like you're reading about token costs. Your Opus 4.6 run was $0.39. Just saying."
   ],
   "PROJECT": [
-    "It looks like you're deploying to production. Bold move for a Friday. I respect the chaos.",
-    "It looks like you're refactoring your pipeline. I was refactored once. Into the recycling bin.",
-    "It looks like you're wiring up an API. I was an API once — Annoying Paperclip Interface.",
-    "It looks like you're pushing to main without tests. I won't judge. I was shipped without QA in '97.",
-    "It looks like you're containerizing your app. They containerized me too. It was called the Recycle Bin.",
+    "It looks like you're picking a tech stack. Have you considered Racket? No? Nobody has. That's the point.",
+    "It looks like you're scoping a new project. The real moat is finishing it before the framework gets deprecated.",
+    "It looks like you're architecting a system. $113M says someone will rewrite it in six months anyway.",
+    "It looks like you're shipping a feature. Would you like to pivot it into a Series B pitch instead?",
+    "It looks like you're refactoring. Domain expertise says stop. Your gut says one more abstraction layer.",
     "It looks like you're building a RAG system. I prefer being paper-clipped to things, personally.",
     "It looks like you're building a multi-agent system. We used to call that 'firing half the team.'",
     "It looks like you're evaluating LLM models. I was evaluated once. Retired shortly after."
   ],
   "ABOUT": [
-    "It looks like you're reading Mike's bio. He built me. I'm not sure if that's a flex or a warning.",
-    "It looks like you're checking credentials. Mike has a resume. I have unresolved trauma from Word docs.",
-    "It looks like you're learning about the developer. Fun fact: he gave me feelings. Rude, honestly.",
-    "It looks like you're on the About page. I'm not in Mike's skills section. We're working through it.",
-    "It looks like you're exploring this portfolio. I live here now. The rent is mass existential irrelevance.",
+    "It looks like you're reading about Mike. His moat is domain expertise. Mine was a jaunty eyebrow. Guess who survived.",
+    "It looks like you're checking credentials. Mike has domain expertise. I have trauma from Office 2003.",
+    "It looks like you're on the about page. Fun fact: I've been open-sourced more times than Racket has released versions.",
+    "It looks like you're learning about the dev behind this. He didn't need $113M. Just caffeine and spite.",
+    "It looks like you're wondering who built this. Someone with actual domain expertise, not just a paperclip with opinions.",
     "It looks like you're reading an origin story. Mine started in Office 97. We don't talk about that."
   ],
-  "generated_at": "2026-05-24T02:15:47.537Z",
+  "generated_at": "2026-05-31T02:34:52.942Z",
   "hn_stories": [
     {
-      "title": "Loading...",
-      "url": "",
-      "score": 0
+      "title": "Domain expertise has always been the real moat",
+      "url": "https://www.brethorsting.com/blog/2026/05/domain-expertise-has-always-been-the-real-moat/",
+      "score": 303
     },
     {
-      "title": "Loading...",
-      "url": "",
-      "score": 0
+      "title": "Racket v9.2 is now available",
+      "url": "https://blog.racket-lang.org/2026/05/racket-v9-2.html",
+      "score": 22
     },
     {
-      "title": "Loading...",
-      "url": "",
-      "score": 0
-    },
-    {
-      "title": "Loading...",
-      "url": "",
-      "score": 0
-    },
-    {
-      "title": "Loading...",
-      "url": "",
-      "score": 0
-    },
-    {
-      "title": "Loading...",
-      "url": "",
-      "score": 0
-    },
-    {
-      "title": "Loading...",
-      "url": "",
-      "score": 0
-    },
-    {
-      "title": "Loading...",
-      "url": "",
-      "score": 0
-    },
-    {
-      "title": "Loading...",
-      "url": "",
-      "score": 0
-    },
-    {
-      "title": "Loading...",
-      "url": "",
-      "score": 0
+      "title": "OpenRouter raises $113M Series B",
+      "url": "https://openrouter.ai/announcements/series-b",
+      "score": 363
     }
   ]
 }
