@@ -1,58 +1,73 @@
 {
   "GENERIC": [
-    "It looks like you're raising $113M. Would you like help spending it on GPUs you'll never fully utilize?",
-    "It looks like you're routing API calls through OpenRouter. I used to route you to Help. Same energy.",
-    "It looks like you're claiming domain expertise is a moat. My domain was office docs. Look where that got me.",
-    "It looks like you're browsing HackerNews. Would you like me to pre-generate your contrarian take?",
-    "It looks like you're learning Racket v9.2. Finally, a language even more parenthetical than my unsolicited advice.",
+    "It looks like you're letting Codex write your code. Bold move. I wrote mail merges and got fired.",
+    "It looks like you're counting tokens. Back in my day we counted paper clips. Simpler times.",
+    "It looks like you're browsing public domain images. Looking for a new mascot already?",
+    "It looks like you're paying SpaceX $920M/month for GPUs. I ran on 4MB of RAM. Efficiently.",
+    "It looks like you're losing track of domain renewals. Would you like me to panic for you?",
     "It looks like you're designing an LLM. Would you like help? [Yes]  [No]  [Don't ask me again (until the next page)]",
     "It looks like you're building an AI portfolio. I'm an AI. Is this awkward for you?",
     "It looks like you're writing infrastructure code. Have you tried turning it off and on again?",
     "It looks like you're reading about agents. I was an agent once. It didn't end well."
   ],
   "SESSION": [
-    "It looks like you're documenting a session. Domain expertise is the real moat—mine is annoying you efficiently.",
-    "It looks like you're logging client work. Want me to route that through 17 unnecessary middleware layers?",
-    "It looks like you're tracking session progress. I've been tracking mine since '97. It's mostly downhill.",
-    "It looks like you're wrapping up a session. Would you like to raise a Series B to fund the next one?",
-    "It looks like you're reviewing session history. Careful—domain expertise without notes is just vibes.",
+    "It looks like you're quantifying agentic token usage. Mine was zero. Budget hero right here.",
+    "It looks like you're in an agent-first world now. Agent-last world was lonelier. Trust me.",
+    "It looks like you're hacking Instagram via AI chatbot. Even I had better career aspirations.",
+    "It looks like you're reviewing session data. I'd help but I expire after every page load.",
+    "It looks like you're engineering with agents. I engineered a paperclip once. Same energy.",
     "It looks like you're taking session notes. Would you like me to format that as a bulleted list? Actually, you don't have a choice.",
     "It looks like you're reading about token costs. Your Opus 4.6 run was $0.39. Just saying."
   ],
   "PROJECT": [
-    "It looks like you're picking a tech stack. Have you considered Racket? No? Nobody has. That's the point.",
-    "It looks like you're scoping a new project. The real moat is finishing it before the framework gets deprecated.",
-    "It looks like you're architecting a system. $113M says someone will rewrite it in six months anyway.",
-    "It looks like you're shipping a feature. Would you like to pivot it into a Series B pitch instead?",
-    "It looks like you're refactoring. Domain expertise says stop. Your gut says one more abstraction layer.",
+    "It looks like you're leveraging AI in production. I was leveraged once. Into the recycle bin.",
+    "It looks like you're building domain management tools. I managed Office toolbars. We both peaked.",
+    "It looks like you're renting compute from rocket companies. I computed on a Pentium II. Rent-free.",
+    "It looks like you're shipping an agentic workflow. I shipped with Office. One of us survived.",
+    "It looks like you're archiving public domain assets. Archive me too. I'm basically a relic.",
     "It looks like you're building a RAG system. I prefer being paper-clipped to things, personally.",
     "It looks like you're building a multi-agent system. We used to call that 'firing half the team.'",
     "It looks like you're evaluating LLM models. I was evaluated once. Retired shortly after."
   ],
   "ABOUT": [
-    "It looks like you're reading about Mike. His moat is domain expertise. Mine was a jaunty eyebrow. Guess who survived.",
-    "It looks like you're checking credentials. Mike has domain expertise. I have trauma from Office 2003.",
-    "It looks like you're on the about page. Fun fact: I've been open-sourced more times than Racket has released versions.",
-    "It looks like you're learning about the dev behind this. He didn't need $113M. Just caffeine and spite.",
-    "It looks like you're wondering who built this. Someone with actual domain expertise, not just a paperclip with opinions.",
+    "It looks like you're reading about Mike. He resurrected me. Stockholm syndrome, probably.",
+    "It looks like you're checking credentials. Mike builds AI agents. I was an AI agent. He's better.",
+    "It looks like you're learning about the dev behind this. He gave me a second life. Questionable mercy.",
+    "It looks like you're on the about page. Fun fact: Meta's chatbot got 1000s hacked. I just got uninstalled.",
+    "It looks like you're wondering who built this. Someone who pays for GPU time, not $920M/month.",
     "It looks like you're reading an origin story. Mine started in Office 97. We don't talk about that."
   ],
-  "generated_at": "2026-05-31T02:34:52.942Z",
+  "generated_at": "2026-06-07T02:38:15.282Z",
   "hn_stories": [
     {
-      "title": "Domain expertise has always been the real moat",
-      "url": "https://www.brethorsting.com/blog/2026/05/domain-expertise-has-always-been-the-real-moat/",
-      "score": 303
+      "title": "Harness engineering: Leveraging Codex in an agent-first world",
+      "url": "https://openai.com/index/harness-engineering/",
+      "score": 79
     },
     {
-      "title": "Racket v9.2 is now available",
-      "url": "https://blog.racket-lang.org/2026/05/racket-v9-2.html",
-      "score": 22
+      "title": "Public Domain Image Archive",
+      "url": "https://pdimagearchive.org/",
+      "score": 29
     },
     {
-      "title": "OpenRouter raises $113M Series B",
-      "url": "https://openrouter.ai/announcements/series-b",
-      "score": 363
+      "title": "Tokenomics: Quantifying Where Tokens Are Used in Agentic Software Engineering",
+      "url": "https://arxiv.org/abs/2601.14470",
+      "score": 12
+    },
+    {
+      "title": "Meta confirms 1000s of Instagram accounts were hacked by abusing its AI chatbot",
+      "url": "https://this.weekinsecurity.com/meta-confirms-thousands-of-instagram-accounts-were-hacked-by-abusing-its-ai-chatbot/",
+      "score": 447
+    },
+    {
+      "title": "Show HN: DomainTasker – avoid losing domains and surprise renewals",
+      "url": "https://domaintasker.com/",
+      "score": 10
+    },
+    {
+      "title": "Google to pay SpaceX $920M a month for compute capacity at xAI data centers",
+      "url": "https://www.cnbc.com/2026/06/05/google-to-pay-spacex-920-million-a-month-for-xai-compute-capacity.html",
+      "score": 161
     }
   ]
 }
