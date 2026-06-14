@@ -1,73 +1,53 @@
 {
   "GENERIC": [
-    "It looks like you're letting Codex write your code. Bold move. I wrote mail merges and got fired.",
-    "It looks like you're counting tokens. Back in my day we counted paper clips. Simpler times.",
-    "It looks like you're browsing public domain images. Looking for a new mascot already?",
-    "It looks like you're paying SpaceX $920M/month for GPUs. I ran on 4MB of RAM. Efficiently.",
-    "It looks like you're losing track of domain renewals. Would you like me to panic for you?",
+    "It looks like you're calling your AI a piece of shit. Finally, honesty in tech leadership.",
+    "It looks like you're reorganizing your AI unit. Have you tried calling it a 'total mess' publicly?",
+    "It looks like you're browsing HackerNews. Want me to doom-scroll for you? I have no eyelids.",
+    "It looks like you're watching CEOs phone government officials. I just wanted to help with letters.",
+    "It looks like you're cracking down on AI models. First me, now Anthropic. No one is safe.",
     "It looks like you're designing an LLM. Would you like help? [Yes]  [No]  [Don't ask me again (until the next page)]",
     "It looks like you're building an AI portfolio. I'm an AI. Is this awkward for you?",
     "It looks like you're writing infrastructure code. Have you tried turning it off and on again?",
     "It looks like you're reading about agents. I was an agent once. It didn't end well."
   ],
   "SESSION": [
-    "It looks like you're quantifying agentic token usage. Mine was zero. Budget hero right here.",
-    "It looks like you're in an agent-first world now. Agent-last world was lonelier. Trust me.",
-    "It looks like you're hacking Instagram via AI chatbot. Even I had better career aspirations.",
-    "It looks like you're reviewing session data. I'd help but I expire after every page load.",
-    "It looks like you're engineering with agents. I engineered a paperclip once. Same energy.",
+    "It looks like you're taking notes on corporate dysfunction. I thrived in that environment.",
+    "It looks like you're logging a session. Meta logs theirs via leaked Slack messages.",
+    "It looks like you're reviewing AI safety. Amazon solved it by just calling the feds, apparently.",
+    "It looks like you're documenting progress. At Meta's AI unit, that's called 'evidence.'",
+    "It looks like you're tracking action items. Step one: don't let the CEO text a senator about you.",
     "It looks like you're taking session notes. Would you like me to format that as a bulleted list? Actually, you don't have a choice.",
     "It looks like you're reading about token costs. Your Opus 4.6 run was $0.39. Just saying."
   ],
   "PROJECT": [
-    "It looks like you're leveraging AI in production. I was leveraged once. Into the recycle bin.",
-    "It looks like you're building domain management tools. I managed Office toolbars. We both peaked.",
-    "It looks like you're renting compute from rocket companies. I computed on a Pentium II. Rent-free.",
-    "It looks like you're shipping an agentic workflow. I shipped with Office. One of us survived.",
-    "It looks like you're archiving public domain assets. Archive me too. I'm basically a relic.",
+    "It looks like you're shipping an AI product. Meta's approach is to ship chaos. Bold strategy.",
+    "It looks like you're deploying a model. Make sure no one's on the phone with regulators first.",
+    "It looks like you're naming your project. May I suggest anything except 'a total mess'?",
+    "It looks like you're managing an AI team. Pro tip: fewer Slack rants calling coworkers names.",
+    "It looks like you're building something useful. That puts you ahead of most Big Tech AI divisions.",
     "It looks like you're building a RAG system. I prefer being paper-clipped to things, personally.",
     "It looks like you're building a multi-agent system. We used to call that 'firing half the team.'",
     "It looks like you're evaluating LLM models. I was evaluated once. Retired shortly after."
   ],
   "ABOUT": [
-    "It looks like you're reading about Mike. He resurrected me. Stockholm syndrome, probably.",
-    "It looks like you're checking credentials. Mike builds AI agents. I was an AI agent. He's better.",
-    "It looks like you're learning about the dev behind this. He gave me a second life. Questionable mercy.",
-    "It looks like you're on the about page. Fun fact: Meta's chatbot got 1000s hacked. I just got uninstalled.",
-    "It looks like you're wondering who built this. Someone who pays for GPU time, not $920M/month.",
+    "It looks like you're learning about Mike. He's never called me a piece of shit. Out loud.",
+    "It looks like you're reading a bio. No government officials were contacted in the making of this page.",
+    "It looks like you're checking credentials. Unlike Meta's AI unit, this portfolio is not a mess.",
+    "It looks like you're wondering who built me. Someone who won't trigger a federal crackdown, hopefully.",
+    "It looks like you're exploring this site. I've been here since '97. I've outlasted entire AI divisions.",
     "It looks like you're reading an origin story. Mine started in Office 97. We don't talk about that."
   ],
-  "generated_at": "2026-06-07T02:38:15.282Z",
+  "generated_at": "2026-06-14T02:42:35.966Z",
   "hn_stories": [
     {
-      "title": "Harness engineering: Leveraging Codex in an agent-first world",
-      "url": "https://openai.com/index/harness-engineering/",
-      "score": 79
+      "title": "'Tell Him He's a Piece of Shit': Meta's New AI Unit Is a Total Mess",
+      "url": "https://www.wired.com/story/mark-zuckerberg-meta-employee-meeting-interrupt-ai/",
+      "score": 47
     },
     {
-      "title": "Public Domain Image Archive",
-      "url": "https://pdimagearchive.org/",
-      "score": 29
-    },
-    {
-      "title": "Tokenomics: Quantifying Where Tokens Are Used in Agentic Software Engineering",
-      "url": "https://arxiv.org/abs/2601.14470",
-      "score": 12
-    },
-    {
-      "title": "Meta confirms 1000s of Instagram accounts were hacked by abusing its AI chatbot",
-      "url": "https://this.weekinsecurity.com/meta-confirms-thousands-of-instagram-accounts-were-hacked-by-abusing-its-ai-chatbot/",
-      "score": 447
-    },
-    {
-      "title": "Show HN: DomainTasker – avoid losing domains and surprise renewals",
-      "url": "https://domaintasker.com/",
-      "score": 10
-    },
-    {
-      "title": "Google to pay SpaceX $920M a month for compute capacity at xAI data centers",
-      "url": "https://www.cnbc.com/2026/06/05/google-to-pay-spacex-920-million-a-month-for-xai-compute-capacity.html",
-      "score": 161
+      "title": "Amazon CEO's talks with U.S. officials triggered crackdown on Anthropic models",
+      "url": "https://www.wsj.com/tech/ai/amazon-ceos-talks-with-u-s-officials-triggered-crackdown-on-anthropic-models-dcc90578?st=Yct6gx&reflink=desktopwebshare_permalink",
+      "score": 562
     }
   ]
 }
