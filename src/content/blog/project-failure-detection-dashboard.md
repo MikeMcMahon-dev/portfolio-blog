@@ -132,7 +132,7 @@ Compare to fail-simple: Single terraform error, Haiku ~800 tokens input, ~100 ou
 
 - Navigate to **Failure Mode Breakdown** — which scenario failed?
 - Read corresponding runbook: e.g., cascading-failure if fail-complex has high retry count
-- Check Prometheus: `http://docker01.mcmahon.home:9090/graph`
+- Check Prometheus: `http://monitoring.mcmahon.home:9090/graph`
 - Query: `eval_scenario_runs_total{scenario="fail-complex", status="FAILED"}`
 
 ## Infrastructure Setup
@@ -146,9 +146,9 @@ docker-compose up -d
 ```
 
 Verify:
-- Prometheus: `http://docker01.mcmahon.home:9090/targets`
-- Grafana: `http://docker01.mcmahon.home:3000/d/failure-detection-main`
-- Pushgateway: `http://192.168.100.54:9091/metrics`
+- Prometheus: `http://monitoring.mcmahon.home:9090/targets`
+- Grafana: `http://monitoring.mcmahon.home:3000/d/failure-detection-main`
+- Pushgateway: `http://monitoring.mcmahon.home:9091/metrics`
 
 ## What's Next
 
@@ -170,3 +170,7 @@ Failure detection isn't about preventing failures — it's about making them vis
 The 2/3 cost for one scenario wasn't a surprise because of luck — it was inevitable because vision OCR is expensive. The surprise was that the dashboard made it obvious in 15 seconds of looking at one chart.
 
 That's the value of instrumentation.
+
+---
+
+*Update (post-migration): the monitoring stack has since moved from the standalone Docker host to Kubernetes. The Prometheus, Grafana, and Pushgateway URLs in the **Verify** and access steps above now point at the `monitoring.mcmahon.home` VIP accordingly.*
