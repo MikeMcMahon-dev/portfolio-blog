@@ -24,8 +24,8 @@ echo ""
 
 # 3. Labtime logging (Claude logs work sessions)
 echo "✓ Logging session to labtime..."
-LABTIME_SCRIPT=/Users/mmcmahon/src/home-lab/scripts/labtime.sh
-LABTIME_CSV=/Users/mmcmahon/src/home-lab/lab-time.csv
+LABTIME_SCRIPT=/Users/Shared/home-lab/scripts/labtime.sh
+LABTIME_CSV=/Users/Shared/home-lab/lab-time.csv
 export LABTIME_CSV LABTIME_PROJECT=portfolio-blog
 
 # Log a note about the commit
