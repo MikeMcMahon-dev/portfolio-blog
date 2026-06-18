@@ -3,7 +3,7 @@ title: "Session: The Flip — Cutting Over a RAG System I Forgot to Finish"
 description: "A migration war story: a one-result retrieval bug led me to discover I'd built a whole new knowledge store and never cut over to it. Finishing that cutover — and the deploy pipeline that had been silently dead for weeks — became a lesson in why engineers need PM support, even when the engineer and the customer are the same person."
 pubDate: 2026-06-18
 category: sessions
-draft: true
+draft: false
 ---
 
 The task was supposed to take twenty minutes. Load 31 Linux flashcards into my
