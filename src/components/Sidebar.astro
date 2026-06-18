@@ -4,7 +4,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
 const allPosts = await getCollection('blog', ({ data }) => !data.draft);
 const draftPosts = (await getCollection('blog', ({ data }) => data.draft))
-                    .sort((a, b) => a.data.title.localeCompare(b.data.title));
+                    .sort((a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf());
 const currentPath = Astro.url.pathname;
 
 const aboutPosts   = allPosts.filter(p => p.data.category === 'about')
