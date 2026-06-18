@@ -108,6 +108,15 @@ snapshot. The fix: prefer `current`, but broaden to `historical` when the top re
 is low-confidence or empty. Stale operational state stays out of the way; nobody's
 notes disappear.
 
+The reason I want to flag this one specifically: same column, same query, *opposite*
+correct answer — and the only thing that changed was **who was asking.** For me
+querying infrastructure state, "only show me current" is right. For a kid querying her
+biology notes, it's a data-loss bug. That's not a database decision; it's a
+requirements decision, and requirements come from knowing your audience. I almost
+shipped the technically-correct version that was wrong for the people who'd actually
+use it. The catch had nothing to do with being a better engineer and everything to do
+with stopping to ask who the feature was *for*.
+
 **Per-owner ingest policy.** When you ingest a note, the system can either *honor* an
 explicit domain/environment you provide or *derive* it from the content. I'm more
 likely to classify correctly than my 13-year-old is, so: my account honors explicit
@@ -220,6 +229,13 @@ When you're your own customer, you give yourself the worst possible PM: one who 
 the engineer completely. I built a perfectly good system and then, as its own product
 manager, never asked whether it had launched. The cutover wasn't a coding project. It
 was the project-management project I'd been skipping.
+
+The tell is that the *one* place the design held up under pressure was the one place I
+actually did the PM work — the `current`-vs-`historical` sorting call, where I stopped
+and asked who the feature was for before I shipped it. Every place I skipped that
+question, it cost me: a stalled launch, a dead pipeline, a smoke test that verified
+nothing, a config line that read fine and did the opposite. The engineering was never
+the bottleneck. Asking "who is this for, and is it actually done?" was.
 
 ## Where it landed
 
