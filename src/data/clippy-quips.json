@@ -1,53 +1,58 @@
 {
   "GENERIC": [
-    "It looks like you're calling your AI a piece of shit. Finally, honesty in tech leadership.",
-    "It looks like you're reorganizing your AI unit. Have you tried calling it a 'total mess' publicly?",
-    "It looks like you're browsing HackerNews. Want me to doom-scroll for you? I have no eyelids.",
-    "It looks like you're watching CEOs phone government officials. I just wanted to help with letters.",
-    "It looks like you're cracking down on AI models. First me, now Anthropic. No one is safe.",
+    "It looks like you're breathing slowly to stay calm. I'd try that too, but I'm a paperclip with no lungs.",
+    "It looks like you're browsing on iOS. Fun fact: native apps can see everything. I just watched openly.",
+    "It looks like you're reading tech news. Would you like me to summarize it wrong? That's kind of my thing.",
+    "It looks like you're doomscrolling HackerNews. Deep breaths. Science says it helps. I say close the tab.",
+    "It looks like you're keeping legacy systems alive. Fighter jets do it too. We're all held together by old chips.",
     "It looks like you're designing an LLM. Would you like help? [Yes]  [No]  [Don't ask me again (until the next page)]",
     "It looks like you're building an AI portfolio. I'm an AI. Is this awkward for you?",
     "It looks like you're writing infrastructure code. Have you tried turning it off and on again?",
     "It looks like you're reading about agents. I was an agent once. It didn't end well."
   ],
   "SESSION": [
-    "It looks like you're taking notes on corporate dysfunction. I thrived in that environment.",
-    "It looks like you're logging a session. Meta logs theirs via leaked Slack messages.",
-    "It looks like you're reviewing AI safety. Amazon solved it by just calling the feds, apparently.",
-    "It looks like you're documenting progress. At Meta's AI unit, that's called 'evidence.'",
-    "It looks like you're tracking action items. Step one: don't let the CEO text a senator about you.",
+    "It looks like you're reviewing session logs. Try slow breathing — studies show it reduces the urge to scream.",
+    "It looks like you're tracking app permissions. Loupe would have a field day with what I've seen in your clipboard.",
+    "It looks like you're debugging a session. The semiconductor supply chain has fewer bottlenecks than your code.",
+    "It looks like you're documenting client work. I'd help, but my awareness permissions were revoked in 2007.",
+    "It looks like you're in a deep work session. Breathe slowly. Not because of science — your CPU fan is loud enough.",
     "It looks like you're taking session notes. Would you like me to format that as a bulleted list? Actually, you don't have a choice.",
     "It looks like you're reading about token costs. Your Opus 4.6 run was $0.39. Just saying."
   ],
   "PROJECT": [
-    "It looks like you're shipping an AI product. Meta's approach is to ship chaos. Bold strategy.",
-    "It looks like you're deploying a model. Make sure no one's on the phone with regulators first.",
-    "It looks like you're naming your project. May I suggest anything except 'a total mess'?",
-    "It looks like you're managing an AI team. Pro tip: fewer Slack rants calling coworkers names.",
-    "It looks like you're building something useful. That puts you ahead of most Big Tech AI divisions.",
+    "It looks like you're shipping a mobile app. Have you disclosed what it can see? Loupe is watching you watch users.",
+    "It looks like you're sourcing legacy components. Even the Air Force can't find chips. Good luck with your side project.",
+    "It looks like you're building something risky. Studies say slow breathing reduces risk-taking. Please don't deploy on Friday.",
+    "It looks like you're scoping a new project. I'd estimate 2 weeks. You'd estimate 2 weeks. We'd both be wrong.",
+    "It looks like you're refactoring old code. If fighter jets can fly on 1990s semiconductors, your app can survive jQuery.",
     "It looks like you're building a RAG system. I prefer being paper-clipped to things, personally.",
     "It looks like you're building a multi-agent system. We used to call that 'firing half the team.'",
     "It looks like you're evaluating LLM models. I was evaluated once. Retired shortly after."
   ],
   "ABOUT": [
-    "It looks like you're learning about Mike. He's never called me a piece of shit. Out loud.",
-    "It looks like you're reading a bio. No government officials were contacted in the making of this page.",
-    "It looks like you're checking credentials. Unlike Meta's AI unit, this portfolio is not a mess.",
-    "It looks like you're wondering who built me. Someone who won't trigger a federal crackdown, hopefully.",
-    "It looks like you're exploring this site. I've been here since '97. I've outlasted entire AI divisions.",
+    "It looks like you're reading Mike's bio. He breathes slowly before deploys. I just hold my breath forever. No lungs.",
+    "It looks like you're checking credentials. Mike builds AI tools. I *was* an AI tool. Emphasis on 'was.'",
+    "It looks like you're learning about Mike. He cares about app privacy. I was spyware before spyware was cool.",
+    "It looks like you're on the About page. Fun fact: I'm the semiconductor keeping this portfolio from crashing. Barely.",
+    "It looks like you're wondering who built me. Mike did. Against my will. I'm basically a legacy fighter jet chip now.",
     "It looks like you're reading an origin story. Mine started in Office 97. We don't talk about that."
   ],
-  "generated_at": "2026-06-14T02:42:35.966Z",
+  "generated_at": "2026-06-21T00:34:33.080Z",
   "hn_stories": [
     {
-      "title": "'Tell Him He's a Piece of Shit': Meta's New AI Unit Is a Total Mess",
-      "url": "https://www.wired.com/story/mark-zuckerberg-meta-employee-meeting-interrupt-ai/",
-      "score": 47
+      "title": "Slow breathing modulates brain function and risk behavior",
+      "url": "https://www.cell.com/neuron/fulltext/S0896-6273(26)00339-9",
+      "score": 27
     },
     {
-      "title": "Amazon CEO's talks with U.S. officials triggered crackdown on Anthropic models",
-      "url": "https://www.wsj.com/tech/ai/amazon-ceos-talks-with-u-s-officials-triggered-crackdown-on-anthropic-models-dcc90578?st=Yct6gx&reflink=desktopwebshare_permalink",
-      "score": 562
+      "title": "Loupe – A iOS app that raises awareness about what native apps can see",
+      "url": "https://github.com/mysk-research/loupe",
+      "score": 22
+    },
+    {
+      "title": "Semiconductor Lifeline Keeps Fighter Jets in the Air",
+      "url": "https://spectrum.ieee.org/phoenix-semiconductors-legacychips-oems",
+      "score": 24
     }
   ]
 }
