@@ -52,9 +52,13 @@ jobs:
         with:
           script: |
             const label = 'ci-failure';
-            const runUrl = `${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`;
+            // Repo owner — assign + @mention so the alert lands regardless of the
+            // owner's repo watch level ("Participating and @mentions" filters out
+            // bot-opened issues you aren't assigned to or named in).
+            const owner = context.repo.owner;
+            const runUrl = `${context.serverUrl}/${owner}/${context.repo.repo}/actions/runs/${context.runId}`;
             const body = [
-              `Post-Merge Verification failed on \`main\`.`,
+              `@${owner} — Post-Merge Verification failed on \`main\`.`,
               ``,
               `- Commit: ${context.sha}`,
               `- Run: ${runUrl}`,
@@ -64,7 +68,7 @@ jobs:
 
             // Dedup: if an alert is already open, comment on it instead of stacking new issues.
             const existing = await github.rest.issues.listForRepo({
-              owner: context.repo.owner,
+              owner,
               repo: context.repo.repo,
               state: 'open',
               labels: label,
@@ -72,17 +76,18 @@ jobs:
 
             if (existing.data.length > 0) {
               await github.rest.issues.createComment({
-                owner: context.repo.owner,
+                owner,
                 repo: context.repo.repo,
                 issue_number: existing.data[0].number,
-                body: `Failed again — ${context.sha}\n${runUrl}`,
+                body: `@${owner} failed again — ${context.sha}\n${runUrl}`,
               });
             } else {
               await github.rest.issues.create({
-                owner: context.repo.owner,
+                owner,
                 repo: context.repo.repo,
                 title: 'Post-Merge Verification failed on main',
                 labels: [label],
+                assignees: [owner],
                 body,
               });
             }
