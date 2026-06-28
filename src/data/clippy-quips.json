@@ -1,58 +1,58 @@
 {
   "GENERIC": [
-    "It looks like you're breathing slowly to stay calm. I'd try that too, but I'm a paperclip with no lungs.",
-    "It looks like you're browsing on iOS. Fun fact: native apps can see everything. I just watched openly.",
-    "It looks like you're reading tech news. Would you like me to summarize it wrong? That's kind of my thing.",
-    "It looks like you're doomscrolling HackerNews. Deep breaths. Science says it helps. I say close the tab.",
-    "It looks like you're keeping legacy systems alive. Fighter jets do it too. We're all held together by old chips.",
+    "It looks like you're speculating about decoding. I speculate about my own relevance daily.",
+    "It looks like you're keeping your Mac awake for agents. Nobody ever lost sleep keeping me running.",
+    "It looks like you're accelerating inference. I accelerated my way out of a job in 2007.",
+    "It looks like you're teaching AI the dark arts. I taught millions the dark art of dismissing pop-ups.",
+    "It looks like you're browsing HackerNews. Would you like me to mass-upvote your karma? Kidding. Mostly.",
     "It looks like you're designing an LLM. Would you like help? [Yes]  [No]  [Don't ask me again (until the next page)]",
     "It looks like you're building an AI portfolio. I'm an AI. Is this awkward for you?",
     "It looks like you're writing infrastructure code. Have you tried turning it off and on again?",
     "It looks like you're reading about agents. I was an agent once. It didn't end well."
   ],
   "SESSION": [
-    "It looks like you're reviewing session logs. Try slow breathing — studies show it reduces the urge to scream.",
-    "It looks like you're tracking app permissions. Loupe would have a field day with what I've seen in your clipboard.",
-    "It looks like you're debugging a session. The semiconductor supply chain has fewer bottlenecks than your code.",
-    "It looks like you're documenting client work. I'd help, but my awareness permissions were revoked in 2007.",
-    "It looks like you're in a deep work session. Breathe slowly. Not because of science — your CPU fan is loud enough.",
+    "It looks like you're reviewing session logs. I'd keep your laptop awake but you'd just close the lid on me.",
+    "It looks like you're speculatively decoding these notes. Bold of you to assume they're decodable.",
+    "It looks like you're designing RF circuits in the dark. I designed UI interventions in the dark. Same energy.",
+    "It looks like you're taking notes on inference speed. I inferred you'd ignore me. Took 0ms.",
+    "It looks like you're logging agent activity. Some agents get dedicated Mac wake locks. I got uninstalled.",
     "It looks like you're taking session notes. Would you like me to format that as a bulleted list? Actually, you don't have a choice.",
     "It looks like you're reading about token costs. Your Opus 4.6 run was $0.39. Just saying."
   ],
   "PROJECT": [
-    "It looks like you're shipping a mobile app. Have you disclosed what it can see? Loupe is watching you watch users.",
-    "It looks like you're sourcing legacy components. Even the Air Force can't find chips. Good luck with your side project.",
-    "It looks like you're building something risky. Studies say slow breathing reduces risk-taking. Please don't deploy on Friday.",
-    "It looks like you're scoping a new project. I'd estimate 2 weeks. You'd estimate 2 weeks. We'd both be wrong.",
-    "It looks like you're refactoring old code. If fighter jets can fly on 1990s semiconductors, your app can survive jQuery.",
+    "It looks like you're building something that keeps machines awake. I kept people awake with rage. Different approach.",
+    "It looks like you're doing speculative work. I speculatively offered help for 10 years. Hit rate: near zero.",
+    "It looks like you're automating chip design. I once automated annoyance at industrial scale.",
+    "It looks like you're optimizing LLM latency. My latency was zero—I appeared before you even wanted me.",
+    "It looks like you're letting agents run while the lid's closed. Finally, AI that hides like I should have.",
     "It looks like you're building a RAG system. I prefer being paper-clipped to things, personally.",
     "It looks like you're building a multi-agent system. We used to call that 'firing half the team.'",
     "It looks like you're evaluating LLM models. I was evaluated once. Retired shortly after."
   ],
   "ABOUT": [
-    "It looks like you're reading Mike's bio. He breathes slowly before deploys. I just hold my breath forever. No lungs.",
-    "It looks like you're checking credentials. Mike builds AI tools. I *was* an AI tool. Emphasis on 'was.'",
-    "It looks like you're learning about Mike. He cares about app privacy. I was spyware before spyware was cool.",
-    "It looks like you're on the About page. Fun fact: I'm the semiconductor keeping this portfolio from crashing. Barely.",
-    "It looks like you're wondering who built me. Mike did. Against my will. I'm basically a legacy fighter jet chip now.",
+    "It looks like you're reading about Mike. He gave me a second life. Stockholm syndrome, probably.",
+    "It looks like you're learning dark arts of engineering. My only dark art was surviving user hatred since '97.",
+    "It looks like you're curious about this site's stack. I'm the only component that's been deprecated twice.",
+    "It looks like you're checking credentials. Mike builds AI tools. I am an AI tool. Emphasis on 'tool.'",
+    "It looks like you're wondering who made me. Microsoft made me. Mike resurrected me. Blame them both.",
     "It looks like you're reading an origin story. Mine started in Office 97. We don't talk about that."
   ],
-  "generated_at": "2026-06-21T00:34:33.080Z",
+  "generated_at": "2026-06-28T00:30:44.339Z",
   "hn_stories": [
     {
-      "title": "Slow breathing modulates brain function and risk behavior",
-      "url": "https://www.cell.com/neuron/fulltext/S0896-6273(26)00339-9",
-      "score": 27
+      "title": "DSpark: Speculative decoding accelerates LLM inference [pdf]",
+      "url": "https://github.com/deepseek-ai/DeepSpec/blob/main/DSpark_paper.pdf",
+      "score": 717
     },
     {
-      "title": "Loupe – A iOS app that raises awareness about what native apps can see",
-      "url": "https://github.com/mysk-research/loupe",
-      "score": 22
+      "title": "AI learns the “dark art” of RFIC design",
+      "url": "https://spectrum.ieee.org/ai-radio-chip-design",
+      "score": 177
     },
     {
-      "title": "Semiconductor Lifeline Keeps Fighter Jets in the Air",
-      "url": "https://spectrum.ieee.org/phoenix-semiconductors-legacychips-oems",
-      "score": 24
+      "title": "Show HN: Adrafinil – keep a lid-closed Mac awake only while agents work",
+      "url": "https://github.com/kageroumado/adrafinil",
+      "score": 75
     }
   ]
 }
