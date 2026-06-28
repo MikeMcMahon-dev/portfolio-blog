@@ -52,13 +52,20 @@ jobs:
         with:
           script: |
             const label = 'ci-failure';
-            // Repo owner — assign + @mention so the alert lands regardless of the
-            // owner's repo watch level ("Participating and @mentions" filters out
-            // bot-opened issues you aren't assigned to or named in).
+            // owner is the GitHub org that owns the repo — correct for API params,
+            // but an org can't be assigned to an issue and @mentioning it won't
+            // notify a person. `notify` is the human to assign + @mention so the
+            // alert bypasses the "Participating and @mentions" watch level. It comes
+            // from the ALERT_ASSIGNEE repo variable (Settings → Variables) so the
+            // recipient is changeable without editing this file. Empty if unset —
+            // guarded below so a missing variable degrades to an unassigned issue
+            // rather than a 422.
             const owner = context.repo.owner;
+            const notify = '${{ vars.ALERT_ASSIGNEE }}';
+            const mention = notify ? `@${notify} — ` : '';
             const runUrl = `${context.serverUrl}/${owner}/${context.repo.repo}/actions/runs/${context.runId}`;
             const body = [
-              `@${owner} — Post-Merge Verification failed on \`main\`.`,
+              `${mention}Post-Merge Verification failed on \`main\`.`,
               ``,
               `- Commit: ${context.sha}`,
               `- Run: ${runUrl}`,
@@ -79,7 +86,7 @@ jobs:
                 owner,
                 repo: context.repo.repo,
                 issue_number: existing.data[0].number,
-                body: `@${owner} failed again — ${context.sha}\n${runUrl}`,
+                body: `${notify ? `@${notify} ` : ''}failed again — ${context.sha}\n${runUrl}`,
               });
             } else {
               await github.rest.issues.create({
@@ -87,7 +94,7 @@ jobs:
                 repo: context.repo.repo,
                 title: 'Post-Merge Verification failed on main',
                 labels: [label],
-                assignees: [owner],
+                ...(notify ? { assignees: [notify] } : {}),
                 body,
               });
             }
