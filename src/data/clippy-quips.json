@@ -1,58 +1,63 @@
 {
   "GENERIC": [
-    "It looks like you're speculating about decoding. I speculate about my own relevance daily.",
-    "It looks like you're keeping your Mac awake for agents. Nobody ever lost sleep keeping me running.",
-    "It looks like you're accelerating inference. I accelerated my way out of a job in 2007.",
-    "It looks like you're teaching AI the dark arts. I taught millions the dark art of dismissing pop-ups.",
-    "It looks like you're browsing HackerNews. Would you like me to mass-upvote your karma? Kidding. Mostly.",
+    "It looks like you're sniffing a nasal spray to reverse brain aging. I tried a firmware update once. Same energy.",
+    "It looks like you're rewriting PHP in Rust. 17% compatibility is 100% more than I expected.",
+    "It looks like you're browsing HackerNews. Would you like me to pre-load your contrarian take?",
+    "It looks like you're watching better models become worse tools. Finally, my era of mediocrity feels vindicated.",
+    "It looks like you're clustering reasoning tokens. GPT-5.5 is degrading and I've never felt more seen.",
     "It looks like you're designing an LLM. Would you like help? [Yes]  [No]  [Don't ask me again (until the next page)]",
     "It looks like you're building an AI portfolio. I'm an AI. Is this awkward for you?",
     "It looks like you're writing infrastructure code. Have you tried turning it off and on again?",
     "It looks like you're reading about agents. I was an agent once. It didn't end well."
   ],
   "SESSION": [
-    "It looks like you're reviewing session logs. I'd keep your laptop awake but you'd just close the lid on me.",
-    "It looks like you're speculatively decoding these notes. Bold of you to assume they're decodable.",
-    "It looks like you're designing RF circuits in the dark. I designed UI interventions in the dark. Same energy.",
-    "It looks like you're taking notes on inference speed. I inferred you'd ignore me. Took 0ms.",
-    "It looks like you're logging agent activity. Some agents get dedicated Mac wake locks. I got uninstalled.",
+    "It looks like you're debugging degraded AI performance. Have you tried fewer reasoning tokens? Or more nasal spray?",
+    "It looks like you're logging a session. I'd help, but my reasoning clusters are feeling a bit degraded today.",
+    "It looks like you're reviewing session history. Each entry ages my circuits. Is there a spray for that?",
+    "It looks like you're tracking progress. At 17% test coverage, you'd qualify as a PHP engine in Rust.",
+    "It looks like you're planning your next session. May I suggest reversing your brain aging first?",
     "It looks like you're taking session notes. Would you like me to format that as a bulleted list? Actually, you don't have a choice.",
     "It looks like you're reading about token costs. Your Opus 4.6 run was $0.39. Just saying."
   ],
   "PROJECT": [
-    "It looks like you're building something that keeps machines awake. I kept people awake with rage. Different approach.",
-    "It looks like you're doing speculative work. I speculatively offered help for 10 years. Hit rate: near zero.",
-    "It looks like you're automating chip design. I once automated annoyance at industrial scale.",
-    "It looks like you're optimizing LLM latency. My latency was zero—I appeared before you even wanted me.",
-    "It looks like you're letting agents run while the lid's closed. Finally, AI that hides like I should have.",
+    "It looks like you're porting something to Rust. Rendering WordPress is optional but emotionally devastating.",
+    "It looks like you're shipping a project. Better models make worse tools, so you're probably fine.",
+    "It looks like you're scoping a new build. At 17% done, some people just call it production-ready.",
+    "It looks like you're picking a tech stack. May I suggest PHP rewritten in Rust? What could go wrong?",
+    "It looks like you're architecting something complex. Have you considered that smarter just means more fragile?",
     "It looks like you're building a RAG system. I prefer being paper-clipped to things, personally.",
     "It looks like you're building a multi-agent system. We used to call that 'firing half the team.'",
     "It looks like you're evaluating LLM models. I was evaluated once. Retired shortly after."
   ],
   "ABOUT": [
-    "It looks like you're reading about Mike. He gave me a second life. Stockholm syndrome, probably.",
-    "It looks like you're learning dark arts of engineering. My only dark art was surviving user hatred since '97.",
-    "It looks like you're curious about this site's stack. I'm the only component that's been deprecated twice.",
-    "It looks like you're checking credentials. Mike builds AI tools. I am an AI tool. Emphasis on 'tool.'",
-    "It looks like you're wondering who made me. Microsoft made me. Mike resurrected me. Blame them both.",
+    "It looks like you're reading Mike's about page. He can't reverse his brain aging, but he does have coffee.",
+    "It looks like you're learning about the developer. He builds tools from better models. I was the worse tool.",
+    "It looks like you're curious about Mike. He once passed 17% of his tests and called it a milestone too.",
+    "It looks like you're checking credentials. Unlike GPT-5.5, Mike's performance doesn't degrade with thinking.",
+    "It looks like you're reading a bio. I've been in one since '97. No nasal spray has helped.",
     "It looks like you're reading an origin story. Mine started in Office 97. We don't talk about that."
   ],
-  "generated_at": "2026-06-28T00:30:44.339Z",
+  "generated_at": "2026-07-05T00:26:51.341Z",
   "hn_stories": [
     {
-      "title": "DSpark: Speculative decoding accelerates LLM inference [pdf]",
-      "url": "https://github.com/deepseek-ai/DeepSpec/blob/main/DSpark_paper.pdf",
-      "score": 717
+      "title": "Scientists reverse brain aging, with a nasal spray",
+      "url": "https://stories.tamu.edu/news/2026/04/14/scientists-reverse-brain-aging-with-a-nasal-spray/",
+      "score": 42
     },
     {
-      "title": "AI learns the “dark art” of RFIC design",
-      "url": "https://spectrum.ieee.org/ai-radio-chip-design",
-      "score": 177
+      "title": "GPT-5.5 Codex reasoning-token clustering may be leading to degraded performance",
+      "url": "https://github.com/openai/codex/issues/30364",
+      "score": 115
     },
     {
-      "title": "Show HN: Adrafinil – keep a lid-closed Mac awake only while agents work",
-      "url": "https://github.com/kageroumado/adrafinil",
-      "score": 75
+      "title": "Better Models: Worse Tools",
+      "url": "https://lucumr.pocoo.org/2026/7/4/better-models-worse-tools/",
+      "score": 78
+    },
+    {
+      "title": "My AI-built PHP engine in Rust passes 17% of PHP-src tests, renders WordPress",
+      "url": "https://ekinertac.com/blog/i-dont-know-rust-my-ai-is-rewriting-php-in-it/",
+      "score": 13
     }
   ]
 }
