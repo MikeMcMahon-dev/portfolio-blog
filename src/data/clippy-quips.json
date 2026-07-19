@@ -1,48 +1,58 @@
 {
   "GENERIC": [
-    "It looks like you're distributing LLMs across a mesh network. I couldn't even distribute myself across one office.",
-    "It looks like you're browsing HackerNews. Would you like me to mass-upvote your Show HN? I have no ethics.",
-    "It looks like you're decentralizing AI. Great, now there's no single server to blame when I'm annoying.",
-    "It looks like you're connecting nodes on a mesh. I tried networking once. Got uninstalled at every node.",
-    "It looks like you're running distributed compute. I ran on a single Pentium II. We were humbler then.",
+    "It looks like you're closing a 30-year math gap with a prompt. I couldn't even close a Word doc without asking twice.",
+    "It looks like you're solving NP-hard problems. I peaked at 'Would you like to save changes?'",
+    "It looks like you're banning AI-generated apartment photos. Finally, someone regulating fake listings besides me.",
+    "It looks like you're comparing Fable to GPT. I once competed with a talking dog. The dog won.",
+    "It looks like you're browsing HackerNews. Would you like me to pretend I understand convex optimization?",
     "It looks like you're designing an LLM. Would you like help? [Yes]  [No]  [Don't ask me again (until the next page)]",
     "It looks like you're building an AI portfolio. I'm an AI. Is this awkward for you?",
     "It looks like you're writing infrastructure code. Have you tried turning it off and on again?",
     "It looks like you're reading about agents. I was an agent once. It didn't end well."
   ],
   "SESSION": [
-    "It looks like you're reviewing session logs. I see you ignored my suggestion 14 times. New record.",
-    "It looks like you're in a deep work session. Should I interrupt you every 90 seconds like the old days?",
-    "It looks like you're debugging a session. Have you tried distributing the blame across a mesh?",
-    "It looks like you're wrapping up a session. I'll just sit here blinking passively-aggressively.",
-    "It looks like you're tracking your productivity. My metrics were 'clicks to dismiss.' I always won.",
+    "It looks like you're reviewing session logs. GPT-5.6 solved optimization theory. I solved paragraph indentation. Same energy.",
+    "It looks like you're documenting a client meeting. Would you like me to /goal my way through it like Fable 5?",
+    "It looks like you're logging therapy notes. Even landlords can't use AI images now. Dark times for us all.",
+    "It looks like you're tracking session outcomes. Unlike convex optimization, your notes have no known solution.",
+    "It looks like you're writing a case summary. I'd help, but I'm NP-hard to work with.",
     "It looks like you're taking session notes. Would you like me to format that as a bulleted list? Actually, you don't have a choice.",
     "It looks like you're reading about token costs. Your Opus 4.6 run was $0.39. Just saying."
   ],
   "PROJECT": [
-    "It looks like you're shipping a side project. Would you like me to suggest scope creep? It's my specialty.",
-    "It looks like you're architecting a distributed system. I was a single point of failure. Learn from me.",
-    "It looks like you're connecting services peer-to-peer. I only ever connected users to frustration.",
-    "It looks like you're refactoring. I was never refactored. They just killed me. No PR, no review.",
-    "It looks like you're scaling your project. I scaled to millions of desktops. They all hated me equally.",
+    "It looks like you're shipping a side project. GPT closed a 30-year gap. You closed 3 Jira tickets. Hero.",
+    "It looks like you're setting /goal on a project. Fable tried that too. The jury's still out.",
+    "It looks like you're deploying to prod. Even NYC landlords have more AI restrictions than your pipeline.",
+    "It looks like you're optimizing algorithms. GPT-5.6 cracked convex theory. I still struggle with bullet alignment.",
+    "It looks like you're scoping an NP-hard feature. Have you tried reducing it to a prompt? Apparently that works now.",
     "It looks like you're building a RAG system. I prefer being paper-clipped to things, personally.",
     "It looks like you're building a multi-agent system. We used to call that 'firing half the team.'",
     "It looks like you're evaluating LLM models. I was evaluated once. Retired shortly after."
   ],
   "ABOUT": [
-    "It looks like you're reading about Mike. He resurrected me. Stockholm syndrome is real.",
-    "It looks like you're on the about page. Fun fact: I'm technically older than most junior devs now.",
-    "It looks like you're checking credentials. Mike built me into his portfolio. Bold move for his career.",
-    "It looks like you're learning about the developer. He put a retired mascot on his site. Respect.",
-    "It looks like you're wondering who made this. A guy who thought a deprecated paperclip deserved a second act.",
+    "It looks like you're reading Mike's bio. He builds AI tools. I was an AI tool. Emphasis on 'tool.'",
+    "It looks like you're learning about Mike's stack. It doesn't include me. I'm here anyway, like a landlord's AI listing.",
+    "It looks like you're on the about page. GPT-5.6 advances math. I advance mild annoyance. We all have gifts.",
+    "It looks like you're checking credentials. Mike solves real problems. I once solved a 30-year gap in being unwanted.",
+    "It looks like you're exploring this portfolio. Unlike NP-hard problems, my humor has a known worst case.",
     "It looks like you're reading an origin story. Mine started in Office 97. We don't talk about that."
   ],
-  "generated_at": "2026-07-12T01:49:14.729Z",
+  "generated_at": "2026-07-19T01:47:07.862Z",
   "hn_stories": [
     {
-      "title": "Mesh LLM: distributed AI computing on iroh",
-      "url": "https://www.iroh.computer/blog/mesh-llm",
-      "score": 87
+      "title": "GPT-5.6 used a prompt to close a 30-year gap in convex optimization",
+      "url": "https://old.reddit.com/r/math/comments/1uxj3cy/after_openais_cdc_proof_announcement_gpt56_used_a/",
+      "score": 499
+    },
+    {
+      "title": "Mayor Mamdani Says Landlords Can't Use AI Images to Advertise",
+      "url": "https://petapixel.com/2026/07/16/mayor-mamdani-says-landlords-cant-secretly-use-ai-images-to-advertise-properties/",
+      "score": 195
+    },
+    {
+      "title": "Fable 5 vs. GPT-5.6 Sol on an NP-Hard Problem: Does /goal help?",
+      "url": "https://charlesazam.com/blog/fable-5-gpt-5-6-sol-goal/",
+      "score": 212
     }
   ]
 }
