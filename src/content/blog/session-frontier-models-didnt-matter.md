@@ -1,6 +1,6 @@
 ---
 title: "Session: The Generation Gap That Wasn't — When the Frontier Models Didn't Matter"
-description: "Months after the first run, I re-ran the multi-agent eval across a fresh generation of models — Claude Fable 5, GPT-5.5, GPT-5.6 Sol. I expected the frontier tier to pull ahead. Instead the cheap model from a generation ago tied for first, one handwriting sample decided the entire ranking, and paying 33× more bought nothing."
+description: "Months after the first run, I re-ran the multi-agent eval across a fresh generation of models — Claude Fable 5, GPT-5.5, GPT-5.6 Sol. I expected the frontier tier to pull ahead. Instead the cheap model from a generation ago tied for first, one handwriting sample decided the entire ranking, paying 33× more bought nothing — and when I stress-tested that conclusion, half the quality signal turned out not to reproduce."
 pubDate: 2026-07-22
 category: sessions
 draft: true
@@ -108,19 +108,65 @@ diagnosis prompts (25–30K versus 12–14K). All that extra deliberation conver
 additional scenarios.** On a task with a deterministic ceiling, thinking harder just
 costs more to arrive at the same place.
 
+## Then I stopped trusting my own result
+
+Here's the part I almost didn't write. A colleague poked at the story — *how much of that
+handwriting score is the model, and how much is a crap input and a brittle rubric?* — and
+the honest answer, once I chased it, was: **most of it wasn't measuring what I thought.**
+The entire quality ranking rode on one scenario, so I put that one scenario under a
+microscope. Three things fell out.
+
+**Fable 5's zero was a refusal, not a failure.** The priciest model on the board scored
+0.00 on the handwriting page, which I'd quietly filed under "expensive and bad." It isn't
+bad — it *declined*. Fable 5 ships safety classifiers that target research biology, and
+they false-positive on a thirteen-year-old's taxonomy homework: a clean HTTP 200 with
+`stop_reason: "refusal"` and empty text. The tell is unambiguous — Fable 5 transcribes a
+*geometry* worksheet just fine (0.89, rock-stable). So its "worst value on the board"
+verdict was a policy decline misread as incapability, and my harness was scoring a
+refusal as a capability failure. (It now records `REFUSED` as its own bucket.)
+
+**A hint that should have helped, hurt.** The same colleague noted that telling a model
+what it's looking at ("these are handwritten notes about X") usually improves OCR. So I
+A/B'd it. It made scores slightly *worse* — and the reason is the rubric, not the model.
+The ground truth scores against my daughter's *verbatim misspellings* ("Carl Lyn," not
+"Linnaeus"; "orthopods," not "arthropods"). Priming the domain nudges the model to
+*correct* the biology, which loses the verbatim match. Sonnet only wins because its
+transcription convention hedges — it writes the misspelling **and** a bracketed
+correction, `Carl Lyneus [Linnaeus]`, satisfying both. That scenario was measuring
+error-preserving transcription convention, not OCR skill.
+
+**And the metric doesn't survive a second run.** I ran it twice, back to back. Biology
+scores swung up to 0.23 and flipped two models across the pass line *within a single
+session*. One of my two "winners," GPT-5.6 Sol, passed at 0.92 in one run and failed at
+0.62 in another. The whole quality ranking hinged on a scenario that won't reproduce.
+
+The fix wasn't more runs — the noise is structural, not sample-size. It was a better
+target. I re-scored the geometry worksheet on its **printed** content (the typed question
+stems and multiple-choice options, not the handwriting) — clean text, no misspelling
+lottery, and math, so Fable 5 doesn't refuse it. Same nine models, same two runs:
+**seven of nine landed identical scores both times (0.000 spread)**, it still
+discriminated, and Fable 5 finally got a real number. That's a signal you can rank on.
+The handwriting scenario never was.
+
 ## The takeaway
 
-The headline is easy to say and uncomfortable to internalize: **on a suite this
-deterministic, the pass-rate metric saturates and stops discriminating — and the moment
-it does, capability benchmarks start lying to you.** They'd tell you Fable 5 is the best
-model here. The dashboard tells you it's the most expensive way to get a 4/10, and that
-a previous-generation Sonnet tied for the win at a fifth of the price.
+Two headlines, and the second is the one that took me longer to accept.
 
-That's the whole argument for measuring cost-per-fixed-task instead of trusting a
-leaderboard. The right model for a job isn't the most capable one; it's the cheapest one
-that clears the bar the job actually sets — and for most of my agent's work, that bar was
-cleared a generation ago. The only place the new models earned their price was reading
-handwriting, and even there it was Sonnet, not the flagship, that won.
+**The pass-rate metric saturates and starts lying.** On a suite this deterministic, a
+capability leaderboard would tell you Fable 5 is the best model here. Cost-per-fixed-task
+tells you it's the most expensive way to get a 4/10, and that a previous-generation
+Sonnet tied for the win at a fifth of the price. The right model for a job isn't the most
+capable one; it's the cheapest one that clears the bar the job actually sets — and for
+most of my agent's work, that bar was cleared a generation ago.
 
-I re-ran this expecting to write "the new models are better." The dashboard made me write
-the true thing instead.
+**But verify that your quality signal survives a second run before you rank anything on
+it.** My cost axis was trustworthy the whole time — dollars are dollars. My *quality*
+axis was noise wearing a lab coat: one non-deterministic scenario, a rubric that scored a
+kid's spelling errors, a threshold sitting in the noise band, and a silent refusal booked
+as a failure. A leaderboard that flips when you run it twice isn't a leaderboard. The
+uncomfortable version of "don't trust benchmarks" is that it applies to the one you built
+yourself.
+
+I re-ran this expecting to write "the new models are better." I got "the new models
+didn't matter," and then, digging further, "and half of what I used to decide that
+doesn't reproduce." The dashboard made me write all three.
