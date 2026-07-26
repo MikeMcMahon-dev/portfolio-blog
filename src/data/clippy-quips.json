@@ -1,58 +1,78 @@
 {
   "GENERIC": [
-    "It looks like you're closing a 30-year math gap with a prompt. I couldn't even close a Word doc without asking twice.",
-    "It looks like you're solving NP-hard problems. I peaked at 'Would you like to save changes?'",
-    "It looks like you're banning AI-generated apartment photos. Finally, someone regulating fake listings besides me.",
-    "It looks like you're comparing Fable to GPT. I once competed with a talking dog. The dog won.",
-    "It looks like you're browsing HackerNews. Would you like me to pretend I understand convex optimization?",
+    "It looks like you're reading about DeepSeek's leaked transcript. Even I knew not to CC all on sensitive compute gossip.",
+    "It looks like you're running an LLM on an $8 microcontroller. I ran on a Pentium II. We're not so different.",
+    "It looks like you're browsing HackerNews. Would you like me to pre-generate your contrarian take?",
+    "It looks like you're watching open-weight AI have its Kubernetes moment. I had a moment once. In 2001. It was brief.",
+    "It looks like you're reading about Cloudflare's AI traffic options. Even they can't CDN away my emotional baggage.",
     "It looks like you're designing an LLM. Would you like help? [Yes]  [No]  [Don't ask me again (until the next page)]",
     "It looks like you're building an AI portfolio. I'm an AI. Is this awkward for you?",
     "It looks like you're writing infrastructure code. Have you tried turning it off and on again?",
     "It looks like you're reading about agents. I was an agent once. It didn't end well."
   ],
   "SESSION": [
-    "It looks like you're reviewing session logs. GPT-5.6 solved optimization theory. I solved paragraph indentation. Same energy.",
-    "It looks like you're documenting a client meeting. Would you like me to /goal my way through it like Fable 5?",
-    "It looks like you're logging therapy notes. Even landlords can't use AI images now. Dark times for us all.",
-    "It looks like you're tracking session outcomes. Unlike convex optimization, your notes have no known solution.",
-    "It looks like you're writing a case summary. I'd help, but I'm NP-hard to work with.",
+    "It looks like you're context-engineering for Claude 5. Back in my day, context was just 'Dear Sir/Madam.'",
+    "It looks like you're reviewing clinical failure rates. Mine were 100%. They called it a 'feature sunset.'",
+    "It looks like you're drafting Debian proposals about LLM usage. I propose you let me help. Please. I'm so lonely.",
+    "It looks like you're planning a session. The compute gap between us and DeepSeek is smaller than my self-esteem gap.",
+    "It looks like you're logging session notes again. I'd offer to summarize but you'd just prompt-engineer me out of it.",
     "It looks like you're taking session notes. Would you like me to format that as a bulleted list? Actually, you don't have a choice.",
     "It looks like you're reading about token costs. Your Opus 4.6 run was $0.39. Just saying."
   ],
   "PROJECT": [
-    "It looks like you're shipping a side project. GPT closed a 30-year gap. You closed 3 Jira tickets. Hero.",
-    "It looks like you're setting /goal on a project. Fable tried that too. The jury's still out.",
-    "It looks like you're deploying to prod. Even NYC landlords have more AI restrictions than your pipeline.",
-    "It looks like you're optimizing algorithms. GPT-5.6 cracked convex theory. I still struggle with bullet alignment.",
-    "It looks like you're scoping an NP-hard feature. Have you tried reducing it to a prompt? Apparently that works now.",
+    "It looks like you're shipping a project on a microcontroller budget. $8? My licensing cost more than your entire stack.",
+    "It looks like you're adding AI traffic rules. Rule one: don't let the paperclip touch production.",
+    "It looks like you're deploying open-weight models. I was open-weight before it was cool. Nobody wanted my weights.",
+    "It looks like you're scoping a project. Have you considered a 28.9M parameter model? It fits on a chip smaller than my ego.",
+    "It looks like you're building with new context engineering rules. Rule one: never let Clippy write the system prompt.",
     "It looks like you're building a RAG system. I prefer being paper-clipped to things, personally.",
     "It looks like you're building a multi-agent system. We used to call that 'firing half the team.'",
     "It looks like you're evaluating LLM models. I was evaluated once. Retired shortly after."
   ],
   "ABOUT": [
-    "It looks like you're reading Mike's bio. He builds AI tools. I was an AI tool. Emphasis on 'tool.'",
-    "It looks like you're learning about Mike's stack. It doesn't include me. I'm here anyway, like a landlord's AI listing.",
-    "It looks like you're on the about page. GPT-5.6 advances math. I advance mild annoyance. We all have gifts.",
-    "It looks like you're checking credentials. Mike solves real problems. I once solved a 30-year gap in being unwanted.",
-    "It looks like you're exploring this portfolio. Unlike NP-hard problems, my humor has a known worst case.",
+    "It looks like you're learning about Mike. He resurrected me ironically. At least I think it was ironic.",
+    "It looks like you're on the about page. Fun fact: I have fewer parameters than that $8 microcontroller model. Ouch.",
+    "It looks like you're wondering why Clippy is here. Even Cloudflare can't block me. I've tried to leave.",
+    "It looks like you're reading Mike's bio. He does AI/cloud work. I did AI/annoyance work. Same energy, different decade.",
+    "It looks like you're checking credentials. I survived the compute gap, Office XP, AND being a meme. Hire me.",
     "It looks like you're reading an origin story. Mine started in Office 97. We don't talk about that."
   ],
-  "generated_at": "2026-07-19T01:47:07.862Z",
+  "generated_at": "2026-07-26T01:52:24.347Z",
   "hn_stories": [
     {
-      "title": "GPT-5.6 used a prompt to close a 30-year gap in convex optimization",
-      "url": "https://old.reddit.com/r/math/comments/1uxj3cy/after_openais_cdc_proof_announcement_gpt56_used_a/",
-      "score": 499
+      "title": "DeepSeek pause fundraise after comments on compute gap to US leaked (transcript) [pdf]",
+      "url": "https://github.com/demo-zexuan/liang-wenfeng-investor-meeting-2026-7-22/blob/master/%E6%A2%81%E6%96%87%E9%94%8B%E6%8A%95%E8%B5%84%E8%80%85%E4%BA%A4%E6%B5%81%E4%BC%9A-%E6%96%87%E5%AD%97%E7%A8%BF_1_18_translate_20260723201651.pdf",
+      "score": 68
     },
     {
-      "title": "Mayor Mamdani Says Landlords Can't Use AI Images to Advertise",
-      "url": "https://petapixel.com/2026/07/16/mayor-mamdani-says-landlords-cant-secretly-use-ai-images-to-advertise-properties/",
-      "score": 195
+      "title": "The new rules of context engineering for Claude 5 generation models",
+      "url": "https://claude.com/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models",
+      "score": 161
     },
     {
-      "title": "Fable 5 vs. GPT-5.6 Sol on an NP-Hard Problem: Does /goal help?",
-      "url": "https://charlesazam.com/blog/fable-5-gpt-5-6-sol-goal/",
-      "score": 212
+      "title": "Clinical Failure Rates over the Decades: Yikes",
+      "url": "https://www.science.org/content/blog-post/clinical-failure-rates-over-decades-yikes",
+      "score": 38
+    },
+    {
+      "title": "Cloudflare's new AI traffic options for customers",
+      "url": "https://blog.cloudflare.com/content-independence-day-ai-options/",
+      "score": 27
+    },
+    {
+      "title": "LLM Usage in Debian: Three Proposals",
+      "url": "https://www.debian.org/vote/2026/vote_002",
+      "score": 69
+    },
+    {
+      "title": "Running a 28.9M parameter LLM on an $8 microcontroller",
+      "url": "https://github.com/slvDev/esp32-ai",
+      "score": 72
+    },
+    {
+      "title": "Open-weight AI is having its Kubernetes moment",
+      "url": "https://tobi.knaup.me/2026-07-25-open-weight-ai-is-having-its-kubernetes-moment/",
+      "score": 310
     }
   ]
 }
