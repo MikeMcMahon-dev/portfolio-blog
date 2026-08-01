@@ -1,18 +1,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
 
 :root {
-	--bg:           #F9F7F4;
-	--sidebar-bg:   #EEEAE2;
-	--sidebar-hover:#E0DAD0;
+	--bg:           #F0E5CD;
+	--sidebar-bg:   #E7DABC;
+	--sidebar-hover:#DDCEA9;
 	--text:         #2C2C2C;
 	--text-muted:   #6B6360;
 	--heading:      #1A3A4A;
 	--accent:       #3D6B7D;
 	--accent-hover: #2D5566;
-	--border:       #D8D4CC;
-	--code-bg:      #EDE8DF;
+	--border:       #D8C7A4;
+	--code-bg:      #E8DBBD;
+	--row-stripe:   rgba(231, 218, 188, 0.4);
 	--sidebar-width: 270px;
 	--box-shadow: 0 2px 8px rgba(44, 44, 44, 0.08);
+}
+
+/* Warm "dark parchment" — candle-lit manuscript, not a generic black template.
+   Auto-applies to readers whose OS is in dark mode; the whole site reads from
+   these variables, so overriding them here is the entire dark theme. */
+@media (prefers-color-scheme: dark) {
+	:root {
+		--bg:           #211B14;
+		--sidebar-bg:   #2A2318;
+		--sidebar-hover:#362C1E;
+		--text:         #E8DCC0;
+		--text-muted:   #B0A488;
+		--heading:      #9FC6D4;
+		--accent:       #7FB3C4;
+		--accent-hover: #A6D0DE;
+		--border:       #3D3427;
+		--code-bg:      #2C2418;
+		--row-stripe:   rgba(232, 220, 192, 0.05);
+		--box-shadow:   0 2px 8px rgba(0, 0, 0, 0.35);
+	}
 }
 
 * {
@@ -226,7 +247,7 @@ td {
 }
 
 tr:nth-child(even) td {
-	background: rgba(238, 234, 226, 0.4);
+	background: var(--row-stripe);
 }
 
 /* ── Post metadata ───────────────────────────────────── */
