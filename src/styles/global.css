@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
 
 :root {
-	--bg:           #E7D6B0;
-	--sidebar-bg:   #DECFA6;
+	--bg:           #F0E5CD;
+	--sidebar-bg:   #E7DABC;
 	--sidebar-hover:#DDCEA9;
 	--text:         #2C2C2C;
 	--text-muted:   #6B6360;
