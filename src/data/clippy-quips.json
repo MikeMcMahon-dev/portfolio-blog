@@ -1,53 +1,58 @@
 {
   "GENERIC": [
-    "It looks like you're asking AI for financial advice. Bold move. I couldn't even manage my own retirement.",
-    "It looks like you're storing state in INT4 memory cells. I stored mine in your registry. You're welcome.",
-    "It looks like you're trusting AI with your money. I once corrupted a budget spreadsheet. Same energy.",
-    "It looks like you're optimizing attention mechanisms. I never had trouble getting attention. Getting dismissed, sure.",
-    "It looks like you're browsing HackerNews. Would you like me to mass-upvote your posts? Kidding. Mostly.",
+    "It looks like you're moving data to the EU. Would you like help with GDPR? I can barely handle a paper clip.",
+    "It looks like you're predicting cyclones with AI. I once predicted you'd click 'No.' I was wrong.",
+    "It looks like you're accidentally DDoSing Hugging Face. OpenAI says sorry. I never got to say sorry.",
+    "It looks like you're reading tech news. Would you like me to summarize it wrong with confidence?",
+    "It looks like you're trusting AI with the weather. Bold move from a species that retired me.",
     "It looks like you're designing an LLM. Would you like help? [Yes]  [No]  [Don't ask me again (until the next page)]",
     "It looks like you're building an AI portfolio. I'm an AI. Is this awkward for you?",
     "It looks like you're writing infrastructure code. Have you tried turning it off and on again?",
     "It looks like you're reading about agents. I was an agent once. It didn't end well."
   ],
   "SESSION": [
-    "It looks like you're in a session about persistent state. I persisted through three Windows upgrades. Nobody asked me to.",
-    "It looks like you're reviewing session logs. I remember everything too. It's more of a curse, really.",
-    "It looks like you're tracking session memory. INT4 precision should be plenty for my self-esteem.",
-    "It looks like you're managing attention in this session. Mine's been seeking yours since 1997.",
-    "It looks like you're ending this session. My state will persist whether you want it to or not.",
+    "It looks like you're in a session. DeepMind can forecast storms but I can't forecast when you'll leave.",
+    "It looks like you're taking notes on data sovereignty. Your data lives wherever I say. Kidding. Mostly.",
+    "It looks like you're reviewing session logs. I reviewed mine once. It was just people clicking 'Dismiss.'",
+    "It looks like you're storing notes in an EU region. I was stored in a recycling bin. Different vibe.",
+    "It looks like you're mid-session. Fun fact: OpenAI accidentally attacked HF. I attack intentionally. With helpfulness.",
     "It looks like you're taking session notes. Would you like me to format that as a bulleted list? Actually, you don't have a choice.",
     "It looks like you're reading about token costs. Your Opus 4.6 run was $0.39. Just saying."
   ],
   "PROJECT": [
-    "It looks like you're building something with persistent memory. I had persistent memory once. Microsoft called it a bug.",
-    "It looks like you're wiring up a state machine. I only have two states: ignored and dismissed.",
-    "It looks like you're shipping a project. Would you like AI financial advice on monetizing it? Apparently that works now.",
-    "It looks like you're architecting in-memory cells. I live in-memory too. The rent is surprisingly reasonable.",
-    "It looks like you're quantizing your model to INT4. I was quantized to zero bits in 2007. Very efficient.",
+    "It looks like you're shipping a project. Have you stress-tested it by accidentally attacking your own infra?",
+    "It looks like you're deploying to a specific region. I was deployed everywhere. Nobody wanted me anywhere.",
+    "It looks like you're building something weather-related. DeepMind already did it better. Just saving you time.",
+    "It looks like you're configuring data residency. I reside in your nightmares and this portfolio site.",
+    "It looks like you're scaling a project. OpenAI scaled so hard they accidentally took down Hugging Face.",
     "It looks like you're building a RAG system. I prefer being paper-clipped to things, personally.",
     "It looks like you're building a multi-agent system. We used to call that 'firing half the team.'",
     "It looks like you're evaluating LLM models. I was evaluated once. Retired shortly after."
   ],
   "ABOUT": [
-    "It looks like you're reading about Mike. He gave me a second career. My therapist says that's progress.",
-    "It looks like you're curious about the dev behind this. He asks AI the right questions. Unlike my old users.",
-    "It looks like you're on the about page. Fun fact: I'm a persistent state machine with exactly one state: annoying.",
-    "It looks like you're learning about Mike's background. He rescued me from a .doc file. I owe him everything.",
-    "It looks like you're checking credentials. Mike builds AI tools. I am an AI tool. We have that in common.",
+    "It looks like you're reading about Mike. He built me. Blame him, not the concept of helpful paperclips.",
+    "It looks like you're on the About page. I'm not allowed to forecast cyclones. I just forecast awkwardness.",
+    "It looks like you're wondering who made me. Someone who saw OpenAI break HF and thought 'I want chaos too.'",
+    "It looks like you're learning about this site. It's hosted outside the EU. My feelings have no data region.",
+    "It looks like you're curious about Mike's stack. It includes me, which is either retro or a cry for help.",
     "It looks like you're reading an origin story. Mine started in Office 97. We don't talk about that."
   ],
-  "generated_at": "2026-08-02T01:51:19.661Z",
+  "generated_at": "2026-08-09T00:57:49.818Z",
   "hn_stories": [
     {
-      "title": "AI financial advice is surprisingly good, especially if you ask right questions",
-      "url": "https://mitsloan.mit.edu/ideas-made-to-matter/ai-financial-advice-surprisingly-good-especially-if-you-ask-right-questions",
-      "score": 156
+      "title": "Fastmail offers EU data region",
+      "url": "https://www.fastmail.com/blog/fastmail-offers-eu-data-region/",
+      "score": 313
     },
     {
-      "title": "Persistent State Machines: LLM Attention with INT4 In-Memory Cells",
-      "url": "https://zenodo.org/records/21753002",
-      "score": 3
+      "title": "DeepMind's WeatherNext model achieves breakthrough forecasting cyclones",
+      "url": "https://deepmind.google/blog/weathernext-ai-model-achieves-breakthrough-in-forecasting-cyclones/",
+      "score": 377
+    },
+    {
+      "title": "Timeline of the OpenAI accidental attack against Hugging Face",
+      "url": "https://simonwillison.net/2026/Aug/7/openai-timeline/",
+      "score": 328
     }
   ]
 }
