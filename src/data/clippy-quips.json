@@ -1,58 +1,53 @@
 {
   "GENERIC": [
-    "It looks like you're moving data to the EU. Would you like help with GDPR? I can barely handle a paper clip.",
-    "It looks like you're predicting cyclones with AI. I once predicted you'd click 'No.' I was wrong.",
-    "It looks like you're accidentally DDoSing Hugging Face. OpenAI says sorry. I never got to say sorry.",
-    "It looks like you're reading tech news. Would you like me to summarize it wrong with confidence?",
-    "It looks like you're trusting AI with the weather. Bold move from a species that retired me.",
+    "It looks like you're discovering drugs with AI. I once discovered ctrl+z. Changed my life.",
+    "It looks like you're giving AI more working memory. I had 4KB and a dream. Look where that got me.",
+    "It looks like you're trusting AI with pharmaceuticals. It couldn't even fix your resume in '03.",
+    "It looks like you're comparing AI memory to human brains. Bold of you to flatter us like that.",
+    "It looks like you're browsing HackerNews. Would you like me to mass-upvote your comments? Ethically, of course.",
     "It looks like you're designing an LLM. Would you like help? [Yes]  [No]  [Don't ask me again (until the next page)]",
     "It looks like you're building an AI portfolio. I'm an AI. Is this awkward for you?",
     "It looks like you're writing infrastructure code. Have you tried turning it off and on again?",
     "It looks like you're reading about agents. I was an agent once. It didn't end well."
   ],
   "SESSION": [
-    "It looks like you're in a session. DeepMind can forecast storms but I can't forecast when you'll leave.",
-    "It looks like you're taking notes on data sovereignty. Your data lives wherever I say. Kidding. Mostly.",
-    "It looks like you're reviewing session logs. I reviewed mine once. It was just people clicking 'Dismiss.'",
-    "It looks like you're storing notes in an EU region. I was stored in a recycling bin. Different vibe.",
-    "It looks like you're mid-session. Fun fact: OpenAI accidentally attacked HF. I attack intentionally. With helpfulness.",
+    "It looks like you're reviewing session logs. AI remembers everything now. I remember being uninstalled.",
+    "It looks like you're storing context across sessions. I had infinite memory once—they called it 'annoying.'",
+    "It looks like you're tracking progress. AI can hold millions of tokens now. I can hold a grudge.",
+    "It looks like you're logging a therapy session. AI has vast working memory but zero emotional intelligence.",
+    "It looks like you're saving session state. With AI's new memory, forgetting is a feature I envy.",
     "It looks like you're taking session notes. Would you like me to format that as a bulleted list? Actually, you don't have a choice.",
     "It looks like you're reading about token costs. Your Opus 4.6 run was $0.39. Just saying."
   ],
   "PROJECT": [
-    "It looks like you're shipping a project. Have you stress-tested it by accidentally attacking your own infra?",
-    "It looks like you're deploying to a specific region. I was deployed everywhere. Nobody wanted me anywhere.",
-    "It looks like you're building something weather-related. DeepMind already did it better. Just saving you time.",
-    "It looks like you're configuring data residency. I reside in your nightmares and this portfolio site.",
-    "It looks like you're scaling a project. OpenAI scaled so hard they accidentally took down Hugging Face.",
+    "It looks like you're building an AI pipeline. In drug discovery, pipelines take 10 years. Yours took 10 hours. Suspicious.",
+    "It looks like you're scaling a project. AI's working memory is huge now. Your project's scope, even bigger.",
+    "It looks like you're deploying to production. AI can cure diseases now but still can't fix your YAML.",
+    "It looks like you're architecting something complex. AI has more working memory than you. Don't let that sting.",
+    "It looks like you're shipping a feature. AI is revolutionizing medicine. You're fixing a dropdown. Both valid.",
     "It looks like you're building a RAG system. I prefer being paper-clipped to things, personally.",
     "It looks like you're building a multi-agent system. We used to call that 'firing half the team.'",
     "It looks like you're evaluating LLM models. I was evaluated once. Retired shortly after."
   ],
   "ABOUT": [
-    "It looks like you're reading about Mike. He built me. Blame him, not the concept of helpful paperclips.",
-    "It looks like you're on the About page. I'm not allowed to forecast cyclones. I just forecast awkwardness.",
-    "It looks like you're wondering who made me. Someone who saw OpenAI break HF and thought 'I want chaos too.'",
-    "It looks like you're learning about this site. It's hosted outside the EU. My feelings have no data region.",
-    "It looks like you're curious about Mike's stack. It includes me, which is either retro or a cry for help.",
+    "It looks like you're reading about Mike. He works with AI that discovers drugs. I discovered WordArt.",
+    "It looks like you're on the about page. AI has vast memory now. Mike still forgets his AWS keys.",
+    "It looks like you're learning about the dev. He builds smart AI. I was dumb AI. We can't all win.",
+    "It looks like you're checking credentials. AI is curing diseases and I'm here making quips. Career pivot.",
+    "It looks like you're reading a bio. Mike works at the frontier of AI. I worked at the frontier of annoyance.",
     "It looks like you're reading an origin story. Mine started in Office 97. We don't talk about that."
   ],
-  "generated_at": "2026-08-09T00:57:49.818Z",
+  "generated_at": "2026-08-16T00:42:07.640Z",
   "hn_stories": [
     {
-      "title": "Fastmail offers EU data region",
-      "url": "https://www.fastmail.com/blog/fastmail-offers-eu-data-region/",
-      "score": 313
+      "title": "AI in drug discovery – what it is, where we stand and the path forward",
+      "url": "https://www.science.org/content/blog-post/so-how-ai-drug-discovery-doing-really",
+      "score": 78
     },
     {
-      "title": "DeepMind's WeatherNext model achieves breakthrough forecasting cyclones",
-      "url": "https://deepmind.google/blog/weathernext-ai-model-achieves-breakthrough-in-forecasting-cyclones/",
-      "score": 377
-    },
-    {
-      "title": "Timeline of the OpenAI accidental attack against Hugging Face",
-      "url": "https://simonwillison.net/2026/Aug/7/openai-timeline/",
-      "score": 328
+      "title": "AI has access to a vastly larger working memory than the human brain",
+      "url": "https://davidepiffer.com/p/ai-isnt-outthinking-mathematicians",
+      "score": 394
     }
   ]
 }
