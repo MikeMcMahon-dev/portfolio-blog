@@ -102,7 +102,7 @@ A human-approval airlock for irreversible deletions, fully built and reviewed an
 
 Authorization that was never wired to authentication. Identity resolution worked correctly. Nothing ever used the correctly-resolved identity to decide whether the caller was allowed to touch the row.
 
-The pattern across all four is that unit tests passed. One hundred and eighty-one of them, green, throughout. They were green because each component was correct in isolation and the defects lived between components. More unit tests would have caught none of it, not because the request wasn't made.  The unit tests wouldn't have caught it because the post-wiring testing did not reveal the weakness.
+The pattern across all four is that unit tests passed. One hundred and eighty-one of them, green, throughout. They were green because each component was correct in isolation. More unit tests would have caught none of it, and not because they weren't part of the spec provided to the agent. They'd have missed it because the defects lived between components, and the testing that would have caught them - exercising the wired path end to end - never ran.
 
 What caught them was running the thing end to end, once, for real - and in two cases, deliberately trying to make a passing test fail to confirm it could.
 
