@@ -30,7 +30,7 @@ Declining a close match costs a written reason, above a similarity threshold of 
 
 Then I tested it against content I'd deliberately written to be a near-duplicate of an existing living doc, and it wrote the row.
 
-The deployed server didn't have my change yet, so it returned no threshold. My helper treated "no threshold" as "nothing is close" and waved the write through. Enforcement was also off, so the server-side check never ran either. Two guards, both fell open, in sequence.
+The deployed server didn't have my change yet, so it returned no threshold. My helper treated "no threshold" as "nothing is close" and waved the write through. Enforcement was also off, so the server-side check never ran either. Both guards fell open, in sequence.
 
 The content scored 0.777. The bar is 0.75.
 
@@ -40,7 +40,7 @@ A gate that cannot evaluate its own rule has to fail closed, not open. It now tr
 
 Rather than flip the flag and see, I built a small harness: a proxy that forwards `plan_ingest` to production and captures the `/api/ingest` POST without forwarding it. Real CLI, real plan data, nothing written. Then I fed the captured payloads to the real `verify_apply` with enforcement forced on.
 
-It found two blockers that would have shipped.
+It found blockers that would have shipped.
 
 The first: `verify_apply` read the living-doc identity only from a `component` field. The ADR-008 identity is a `component:*` tag, which is what `ob_ingest --component` actually sends. So a declared update was answered with `decision_required` - rejected for failing to declare the update it had just declared.
 
@@ -67,7 +67,7 @@ Then the error escaped as a traceback and left the request marked `approved`, so
 
 And once deletion did work, the audit record became unreadable, because `cmd_show` inner-joined the row it had just deleted.
 
-Three bugs, in code that reviewed clean and had tests.
+All of it in code that reviewed clean and had tests.
 
 ## A green light wired to nothing
 
