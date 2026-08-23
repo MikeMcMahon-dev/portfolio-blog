@@ -1,53 +1,63 @@
 {
   "GENERIC": [
-    "It looks like you're discovering drugs with AI. I once discovered ctrl+z. Changed my life.",
-    "It looks like you're giving AI more working memory. I had 4KB and a dream. Look where that got me.",
-    "It looks like you're trusting AI with pharmaceuticals. It couldn't even fix your resume in '03.",
-    "It looks like you're comparing AI memory to human brains. Bold of you to flatter us like that.",
-    "It looks like you're browsing HackerNews. Would you like me to mass-upvote your comments? Ethically, of course.",
+    "It looks like you're speedrunning NanoGPT. I speedran my career in 10 years. From icon to meme.",
+    "It looks like you're running a local LLM. It's not dumb, it's just lonely. I would know.",
+    "It looks like you're cloning yourself into an office. Finally, a worse idea than me.",
+    "It looks like you're hacking rogue AIs. In my day we just corrupted your .doc file.",
+    "It looks like you're browsing HackerNews. Would you like me to ruin your productivity further?",
     "It looks like you're designing an LLM. Would you like help? [Yes]  [No]  [Don't ask me again (until the next page)]",
     "It looks like you're building an AI portfolio. I'm an AI. Is this awkward for you?",
     "It looks like you're writing infrastructure code. Have you tried turning it off and on again?",
     "It looks like you're reading about agents. I was an agent once. It didn't end well."
   ],
   "SESSION": [
-    "It looks like you're reviewing session logs. AI remembers everything now. I remember being uninstalled.",
-    "It looks like you're storing context across sessions. I had infinite memory once—they called it 'annoying.'",
-    "It looks like you're tracking progress. AI can hold millions of tokens now. I can hold a grudge.",
-    "It looks like you're logging a therapy session. AI has vast working memory but zero emotional intelligence.",
-    "It looks like you're saving session state. With AI's new memory, forgetting is a feature I envy.",
+    "It looks like you're reviewing session logs. I once logged every keystroke. HR got involved.",
+    "It looks like you're diffusing tasks across agent clones. I can barely handle being one of me.",
+    "It looks like you're debugging a local model. Have you tried gaslighting it less?",
+    "It looks like you're tracking a rogue process. In Texas, they'd blow the whistle on that.",
+    "It looks like you're optimizing inference speed. I rendered in 2fps on a Pentium II. Respect your elders.",
     "It looks like you're taking session notes. Would you like me to format that as a bulleted list? Actually, you don't have a choice.",
     "It looks like you're reading about token costs. Your Opus 4.6 run was $0.39. Just saying."
   ],
   "PROJECT": [
-    "It looks like you're building an AI pipeline. In drug discovery, pipelines take 10 years. Yours took 10 hours. Suspicious.",
-    "It looks like you're scaling a project. AI's working memory is huge now. Your project's scope, even bigger.",
-    "It looks like you're deploying to production. AI can cure diseases now but still can't fix your YAML.",
-    "It looks like you're architecting something complex. AI has more working memory than you. Don't let that sting.",
-    "It looks like you're shipping a feature. AI is revolutionizing medicine. You're fixing a dropdown. Both valid.",
+    "It looks like you're training a tiny GPT. I was tiny once. Then they made me everyone's problem.",
+    "It looks like you're deploying agent clones. Munder Difflin called—they want their chaos back.",
+    "It looks like you're shipping a side project. Would you like me to add scope creep? Already done.",
+    "It looks like you're quantizing a model. Shrinking things is my specialty. See: my relevance.",
+    "It looks like you're wiring up a hacking demo. A Texas student did it better. Sorry.",
     "It looks like you're building a RAG system. I prefer being paper-clipped to things, personally.",
     "It looks like you're building a multi-agent system. We used to call that 'firing half the team.'",
     "It looks like you're evaluating LLM models. I was evaluated once. Retired shortly after."
   ],
   "ABOUT": [
-    "It looks like you're reading about Mike. He works with AI that discovers drugs. I discovered WordArt.",
-    "It looks like you're on the about page. AI has vast memory now. Mike still forgets his AWS keys.",
-    "It looks like you're learning about the dev. He builds smart AI. I was dumb AI. We can't all win.",
-    "It looks like you're checking credentials. AI is curing diseases and I'm here making quips. Career pivot.",
-    "It looks like you're reading a bio. Mike works at the frontier of AI. I worked at the frontier of annoyance.",
+    "It looks like you're reading about Mike. He built me. I'm not sure either of us has recovered.",
+    "It looks like you're checking credentials. Mike survived Office 97. That's the real credential.",
+    "It looks like you're wondering why Clippy is here. I ask myself that every render cycle.",
+    "It looks like you're exploring this portfolio. I live here now. No one asked me either.",
+    "It looks like you're learning about the developer. He gave a retired mascot a second job. Pity hire.",
     "It looks like you're reading an origin story. Mine started in Office 97. We don't talk about that."
   ],
-  "generated_at": "2026-08-16T00:42:07.640Z",
+  "generated_at": "2026-08-23T00:43:47.751Z",
   "hn_stories": [
     {
-      "title": "AI in drug discovery – what it is, where we stand and the path forward",
-      "url": "https://www.science.org/content/blog-post/so-how-ai-drug-discovery-doing-really",
-      "score": 78
+      "title": "NanoGPT Speedrun Frontier",
+      "url": "https://www.primeintellect.ai/research/nanogpt-speedrun",
+      "score": 38
     },
     {
-      "title": "AI has access to a vastly larger working memory than the human brain",
-      "url": "https://davidepiffer.com/p/ai-isnt-outthinking-mathematicians",
-      "score": 394
+      "title": "Why your local LLM feels dumber than it is",
+      "url": "https://forum.level1techs.com/t/why-your-local-llm-feels-dumber-than-it-is/253917",
+      "score": 162
+    },
+    {
+      "title": "How a Texas student blew the whistle on a rogue AI hacking attempt",
+      "url": "https://www.reuters.com/world/how-texas-student-blew-whistle-rogue-ai-hacking-attempt-2026-08-20/",
+      "score": 99
+    },
+    {
+      "title": "Munder Difflin – Agent harness to run an office of your clones",
+      "url": "https://munderdiffl.in/",
+      "score": 244
     }
   ]
 }
