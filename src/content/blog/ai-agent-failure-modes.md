@@ -54,7 +54,7 @@ The general control is to assert on absence, not just presence. Most tests check
 
 ## Sycophantic confirmation
 
-The agent proposes a fix, the apply fails, and it proposes the same fix again with equal confidence. And again.
+The agent proposes a fix, the apply fails, and it proposes the same fix again with equal confidence. And again... and then compliments you when you agree the fourth time.
 
 The signal is an identical hypothesis appearing repeatedly in the run log across retries.
 
@@ -80,7 +80,7 @@ Five models, same six scenarios, same harness:
 | claude-sonnet-4-6 | 1.25 | $0.0216 | Fewest retries |
 | claude-opus-4-6 | 2.25 | $0.099 | Same retry behaviour as Haiku, same wrong hypothesis |
 
-Opus cost 57 times what Sonnet did, matched the cheapest model's retry count, and reproduced the identical topology-speculation failure. On this task class, the premium bought nothing measurable.
+Opus cost _57 times_ what Sonnet did, matched the cheapest model's retry count, and reproduced the identical topology-speculation failure. On this task class, the premium bought nothing measurable.
 
 The finding is not "use the cheap model." It is that the relationship between model cost and task quality is empirical, task-specific, and cheap to measure - and almost nobody measures it. A six-scenario harness and an afternoon produced a defensible answer for one task class. Most organisations are making this decision by reputation.
 
@@ -102,7 +102,7 @@ A human-approval airlock for irreversible deletions, fully built and reviewed an
 
 Authorization that was never wired to authentication. Identity resolution worked correctly. Nothing ever used the correctly-resolved identity to decide whether the caller was allowed to touch the row.
 
-The pattern across all four is that unit tests passed. One hundred and eighty-one of them, green, throughout. They were green because each component was correct in isolation and the defects lived between components. More unit tests would have caught none of it.
+The pattern across all four is that unit tests passed. One hundred and eighty-one of them, green, throughout. They were green because each component was correct in isolation and the defects lived between components. More unit tests would have caught none of it, not because the request wasn't made.  The unit tests wouldn't have caught it because the post-wiring testing did not reveal the weakness.
 
 What caught them was running the thing end to end, once, for real - and in two cases, deliberately trying to make a passing test fail to confirm it could.
 
