@@ -8,7 +8,7 @@ draft: false
 
 There is no shortage of writing about getting AI agents to work. There is very little about how they fail, which is the part you need before you let one touch production.
 
-This is a taxonomy from instrumenting a multi-agent system that provisions real infrastructure - Terraform against a live Proxmox host, with a planner agent, a Terraform sub-agent and a validator. Six failure modes, each with a metric signal that detects it and a control that contains it. Then the cost data, because model selection is a control and most teams are choosing by vibes. Then the failure class that none of this instrumentation catches, which is the part I would want to know if I were reading someone else's version of this.
+This is a taxonomy from instrumenting a multi-agent system that provisions real infrastructure - Terraform against a live Proxmox host, with a planner agent, a Terraform sub-agent and a validator. Six failure modes, each with a metric signal that detects it and a control that contains it. Then the cost data, because model selection is a control and most teams are choosing by whichever model was in last week's Substack. Then the failure class that none of this instrumentation catches, which is the part I would want to know if I were reading someone else's version of this.
 
 The measurements come from a six-scenario eval suite: two happy paths and four synthetic failures, run across five models.
 
