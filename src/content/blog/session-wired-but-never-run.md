@@ -117,4 +117,4 @@ The rubric I use for "is this deployed" asked whether a capability had a caller.
 
 And when someone offers a test as proof, the question is what result would turn it red. If nothing realistic would, it isn't coverage. It's decoration with a green checkmark.
 
-And one final point - one I consider crucial: you `MUST` work with AI in order to identify where it fails.  The longer you work with it, the more you discover how you need to code, test, and then evaluate.  The testing harnesses built over the last 6-or-so months have made a significant difference in what we catch `before` it hits production.  Trust but verify is still a valid approach, IMO.
+And one final point - one I consider crucial: you **MUST** work with AI in order to identify where it fails.  The longer you work with it, the more you discover how you need to code, test, and then evaluate.  The testing harnesses built over the last 6-or-so months have made a significant difference in what we catch *before* it hits production.  Trust but verify is still a valid approach, IMO.
