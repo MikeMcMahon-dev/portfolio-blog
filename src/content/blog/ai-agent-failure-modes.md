@@ -2,7 +2,7 @@
 title: "Six Ways AI Agents Fail in Production Infrastructure, and the Controls That Catch Them"
 description: "A failure taxonomy from instrumenting a multi-agent system against live infrastructure: what each mode looks like, the metric signal that detects it, and the control that contains it. Includes the cost data showing a 57x price difference for identical diagnostic quality, and an honest account of the failure class none of this instrumentation catches."
 pubDate: 2026-08-23
-category: projects
+category: about
 draft: false
 ---
 
