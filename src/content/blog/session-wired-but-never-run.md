@@ -10,7 +10,7 @@ OpenBrain got a plan/apply handshake a couple of weeks back. You call `plan_inge
 
 It shipped behind a flag. `OPENBRAIN_REQUIRE_INGEST_PLAN` was off, which is the sensible way to ship a gate.
 
-It also meant nobody had ever walked the enforced path. Not once.
+It also meant nobody had ever walked the enforced path. Oops!
 
 ## Turning the flag on would have broken every session wrap
 
@@ -20,7 +20,7 @@ The handoff note from the previous session estimated this at "~10 lines reusing 
 
 Auto-planning gets you past `plan_required`. It does not get you past the next gate, which asks a question: there are living docs in scope, is this an update to one of them or a new note? The plan response contains the candidate list. So the tempting implementation is to read that list and auto-fill `acknowledged_not_updating` from it, and then every wrap "just works."
 
-That would have hollowed the gate out completely. The script would be rubber-stamping its own plan - answering a question by copying the answer key. That's the exact failure the airlock exists to prevent, rebuilt inside the tool meant to satisfy it.
+That would have hollowed the gate out completely. The script would be rubber-stamping its own plan - answering a question by copying the answer key. That's the failure the airlock exists to prevent, rebuilt inside the tool meant to satisfy it.  A gate left wide open is not a gate.
 
 So it stops instead. With living docs in scope and no `--component`, it prints the plan and exits 2, and you re-run declaring either an update or an explicit decline. Designed friction. An ordinary session wrap with nothing similar in the vault sails straight through, because the plan returns no candidates and there's nothing to answer.
 
@@ -116,3 +116,5 @@ So the vault's protection was never row-level security. It was that nobody had p
 The rubric I use for "is this deployed" asked whether a capability had a caller. It now asks whether the path has actually run, once, end to end, with the output as the receipt. Wired and exercised are different claims and only the second is evidence.
 
 And when someone offers a test as proof, the question is what result would turn it red. If nothing realistic would, it isn't coverage. It's decoration with a green checkmark.
+
+And one final point - one I consider crucial: you `MUST` work with AI in order to identify where it fails.  The longer you work with it, the more you discover how you need to code, test, and then evaluate.  The testing harnesses built over the last 6-or-so months have made a significant difference in what we catch `before` it hits production.  Trust but verify is still a valid approach, IMO.
