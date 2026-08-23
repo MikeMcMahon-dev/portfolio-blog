@@ -42,7 +42,7 @@ None currently.
 ### APIs & backends
 | Service | Purpose | Env var |
 |---|---|---|
-| Supabase | Newsletter subscriber DB | `SUPABASE_URL`, `SUPABASE_KEY` (.env.local) |
+| Supabase | Newsletter subscriber DB — **shared project with OpenBrain's knowledge vault**; see CLAUDE.md "Open question" before any DB/role/grant change | `SUPABASE_URL`, `SUPABASE_KEY` (.env.local) |
 | Resend | Email delivery (^6.0.0+) | `RESEND_API_KEY` (.env.local) |
 | Claude API | Clippy quip generation | `CLAUDE_API_KEY` (GitHub Secrets) |
 | HackerNews | Trending stories for quips | None (free public API) |
