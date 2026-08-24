@@ -111,6 +111,14 @@ pass.
   with equal confidence. And again... and then compliments you when you agree the fourth time." The
   observation is straight; the joke is a tag on the end. Do not distribute wryness through a
   sentence.
+- **The beat has to be an actual joke, not a wry fact.** This is the one I got wrong first. Writing
+  up a DNS record that renamed the laptop, I ended the section with "My shell prompt read
+  `claude @ evil` for the rest of the afternoon" and called it the humor beat. Mike's read: that is
+  a statement of fact. His version - "despite the attestation, I heard no Mr. Burns-style snickering
+  emanating from the speakers... perhaps my volume was set too low" - commits to a bit, adds an
+  image that was not already in the sentence, and undercuts itself at the end. A dry delivery of
+  something that happened is not a joke; it is just the sentence. If the beat does not add anything
+  the reader did not already have, it is not doing the job.
 - **Emphasis is italic on the number, not a rewrite.** `b4eadec`: "Opus cost _57 times_ what Sonnet
   did". Let the figure carry it.
 
