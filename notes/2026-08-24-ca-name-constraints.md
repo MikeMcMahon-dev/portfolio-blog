@@ -129,6 +129,19 @@ state it intended, not the state it has.
 Write it without naming the operation that caused the force-push; it is not the interesting part
 and it does not need to be in a public post. "A history rewrite on main" is the whole story.
 
+## Audience framing (Mike's steer)
+
+The merged-then-erased story is aimed at **people starting to work with agents**, not at PKI people.
+That changes the emphasis: the point is not "git can lose a merge", it is that an agent - or a
+person - reads "MERGED" off GitHub, reads "committed" off a repo, reads "deployed" off a ConfigMap,
+and treats each as evidence the thing is true. Every one of today's three failures is a status
+report standing in for a fact nobody checked. The habit worth teaching is cheap: check the artifact,
+not the report. Does the merge commit exist. Does the running ConfigMap match the file. Does the
+client actually reject the cert.
+
+That also makes the post useful to someone who has never touched a CA, which the PKI framing alone
+would not.
+
 ## Candidate angles
 
 - "Three copies of the same certificate, and only one of them mattered"
