@@ -1,5 +1,5 @@
 ---
-title: "Session: Everything Was Wired. None of It Had Ever Run."
+title: "The Gate Nobody Had Walked Through"
 description: "Two days on OpenBrain's ingest gate and retirement airlock. Both were built, reviewed, merged, and covered by tests. Neither had ever executed once. What surfaced when they finally did: a foreign key that made deletion impossible, a smoke check that could not fail, migration files that lied about their own status, and an anon role that could have emptied the vault."
 pubDate: 2026-08-23
 category: sessions
