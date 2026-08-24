@@ -11,6 +11,9 @@
 	--accent-hover: #2D5566;
 	--border:       #D8C7A4;
 	--code-bg:      #E8DBBD;
+	--terminal-bg:  #2A2118;
+	--terminal-fg:  #EBDBB2;
+	--terminal-edge:#4A3B28;
 	--row-stripe:   rgba(231, 218, 188, 0.4);
 	--sidebar-width: 270px;
 	--box-shadow: 0 2px 8px rgba(44, 44, 44, 0.08);
@@ -31,6 +34,9 @@
 		--accent-hover: #A6D0DE;
 		--border:       #3D3427;
 		--code-bg:      #2C2418;
+		--terminal-bg:  #2A2118;
+		--terminal-fg:  #EBDBB2;
+		--terminal-edge:#4A3B28;
 		--row-stripe:   rgba(232, 220, 192, 0.05);
 		--box-shadow:   0 2px 8px rgba(0, 0, 0, 0.35);
 	}
@@ -210,9 +216,13 @@ code {
 	color: var(--heading);
 }
 
-pre {
-	background: var(--code-bg);
-	border: 1px solid var(--border);
+/* Block code reads as a terminal in both site themes: light text on a dark coffee
+   ground. Shiki writes its theme's background inline on the <pre>, so the override
+   has to win - hence !important, which is load-bearing here rather than lazy. */
+pre,
+pre.astro-code {
+	background: var(--terminal-bg) !important;
+	border: 1px solid var(--terminal-edge);
 	border-radius: 6px;
 	padding: 1.25rem 1.5rem;
 	overflow-x: auto;
@@ -223,7 +233,12 @@ pre > code {
 	all: unset;
 	font-family: 'JetBrains Mono', monospace;
 	font-size: 0.875rem;
-	color: var(--heading);
+	color: var(--terminal-fg);
+}
+
+/* Plain fenced blocks with no language get no shiki spans, so they inherit this. */
+pre:not(.astro-code) > code {
+	color: var(--terminal-fg);
 }
 
 /* ── Tables ──────────────────────────────────────────── */

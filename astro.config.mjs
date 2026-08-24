@@ -18,7 +18,7 @@ export default defineConfig({
 	integrations: [mdx(), sitemap(), clippyQuipsIntegration()],
 	markdown: {
 		shikiConfig: {
-			theme: 'github-light',
+			theme: 'gruvbox-dark-medium',
 		},
 	},
 });

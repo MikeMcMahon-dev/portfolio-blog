@@ -1,5 +1,5 @@
 ---
-title: "Session: Everything Reported Success. Some of It Hadn't Happened."
+title: "Exit Code Zero Is Not Evidence"
 description: "A day that started with a name-constrained root CA and turned into a study of status reports that were not facts: a fix that sat merged and undeployed for 50 days, three copies of a certificate where a stale one would have worked forever, a curl call that reported pushing metrics it had not pushed, and a pull request GitHub still says it merged into a commit that does not exist."
 pubDate: 2026-08-24
 category: sessions
@@ -56,7 +56,7 @@ Same certificate, same chain, same policy. The only variable is the anchor. That
 
 Two things cost me time and are worth passing on. Apple's rejection is the generic `CSSMERR_TP_INVALID_CERTIFICATE`, which curl renders as `unable to get local issuer certificate` - a message that reads like a missing intermediate and is not. And `security verify-cert -r` makes a certificate a trust *anchor*: I passed the intermediate that way, which anchored the chain below the root, so the root's constraints were never consulted and the forged certificate verified clean. I had a confident, entirely wrong "Apple does not enforce this" for about ten minutes, produced by the wrong flag.
 
-The iPhone test needed the forged name to resolve, so it got a temporary local DNS record pointing at my laptop. dnsmasq generates a matching reverse record for every such entry, and macOS derives its hostname by reverse-resolving its own address when one is not explicitly set. My shell prompt read `claude @ evil` for the rest of the afternoon.
+The iPhone test needed the forged name to resolve, so it got a temporary local DNS record pointing at my laptop. dnsmasq generates a matching reverse record for every such entry, and macOS derives its hostname by reverse-resolving its own address when one is not explicitly set. My shell prompt read `claude @ evil` for the rest of the afternoon. Despite the attestation, I heard no Mr. Burns-style snickering from the speakers. Perhaps my volume was set too low.
 
 ## The bug I had fixed four hours earlier
 
