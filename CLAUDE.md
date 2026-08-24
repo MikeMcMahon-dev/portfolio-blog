@@ -77,6 +77,58 @@ urgency — an email list that is public by accident stays wrong even when it is
 
 - Blog at mikemcmahon.dev — Astro + Vercel
 - Audience: engineers. No hand-holding on basics.
-- Voice: first-person, technical, dry humor, honest about failures
+- Voice: first-person, technical, dry humor, honest about failures - see the Voice section below,
+  which is derived from Mike's own edits, not from taste
 - Blog posts live in `src/content/blog/`
 - Naming: `session-*.md` for session posts, `project-*.md` for project overviews
+
+## Voice — what Mike actually changes
+
+Draft posts get revised by Mike before publishing. These rules come from reading those revisions,
+so they are evidence rather than opinion. Apply them while drafting; they are not a post-hoc polish
+pass.
+
+### Mechanical tells (these are the AI giveaways, and they are not word choice)
+
+- **Use " - " (spaced hyphen). Never em-dashes.** This is the single most reliable tell. Mike uses
+  a spaced hyphen every time.
+- **No bolded paragraph leads.** Do not open a paragraph with a bolded phrase followed by a colon
+  as a pseudo-heading.
+- **No count-announcements.** Do not write "three things stand out" and then enumerate. State the
+  things.
+- **Descriptive headings are good** - keep them. An earlier critique of mine called them a tell and
+  was wrong.
+- Lexical slop (delve, tapestry, testament to) is already absent from these drafts. Do not spend the
+  pass hunting words; hunt the four items above.
+
+### Register
+
+- **Concrete beats generic, especially when being barbed.** `68ccca7`: I wrote "most teams are
+  choosing by vibes"; Mike replaced it with "choosing by whichever model was in last week's
+  Substack". Same judgement, sharper, and it sounds like a person who has watched it happen. When a
+  generic dismissive word shows up (vibes, hype, buzz), reach for the specific image instead.
+- **Humor lands at the end, as an appended beat.** `b4eadec`: "...and it proposes the same fix again
+  with equal confidence. And again... and then compliments you when you agree the fourth time." The
+  observation is straight; the joke is a tag on the end. Do not distribute wryness through a
+  sentence.
+- **Emphasis is italic on the number, not a rewrite.** `b4eadec`: "Opus cost _57 times_ what Sonnet
+  did". Let the figure carry it.
+
+### Precision of cause
+
+The revision Mike worked hardest is the one where a sentence implied the wrong cause. Original:
+"More unit tests would have caught none of it." He twice pushed it toward naming the actual
+mechanism, landing on: *"More unit tests would have caught none of it, and not because they weren't
+part of the spec provided to the agent. They'd have missed it because the defects lived between
+components, and the testing that would have caught them - exercising the wired path end to end -
+never ran."* (`b4eadec`, `7640fb4`)
+
+The rule: **a sentence that assigns a cause must assign the right one, and must pre-empt the wrong
+one a reader would otherwise assume.** Do not let a tidy line imply that someone failed to ask for
+something. Say what actually failed, and say what would have caught it.
+
+### Process
+
+Draft, then hand it over. Mike revises in his own voice; those revisions are the corpus this section
+grows from. When he changes a line, ask what rule the change implies and add it here rather than
+fixing that one line and forgetting.
