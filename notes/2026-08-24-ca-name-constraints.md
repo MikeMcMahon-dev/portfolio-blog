@@ -75,6 +75,13 @@ The question the ADR hung on: OpenSSL enforces name constraints, but does Apple?
 Same certificate, same chain, same policy. Only the anchor differs. That is the proof, and it is the
 shape every enforcement claim should have - change one variable, not the whole setup.
 
+Repeated on an iPhone the same evening, because macOS proving it says nothing about iOS: permitted
+name loads, `evil.example.com` gets "this connection is not private". Same root, same intermediate,
+same server, only the leaf name differs. Worth making the point in the post that the *control* is
+what makes the failure mean anything - a certificate warning on its own is equally consistent with
+"you never trusted the root", which is the boring explanation and the one that would have been true
+if the trust toggle had been missed.
+
 Two false leads worth including because they cost real time:
 
 - `security verify-cert -r` makes a certificate a trust *anchor*. Passing the intermediate that way
