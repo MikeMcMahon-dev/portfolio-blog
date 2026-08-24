@@ -109,8 +109,29 @@ working, and the permission classifier blocked the production ConfigMap writes a
 That last one is friction, and it is honest to say so - but the shape it forced (hand over
 paste-ready commands, human runs them, model verifies the result) is not a bad shape for prod.
 
+## Thread 4 - merged, then erased (the best instance of the theme)
+
+Found while cleaning up a planning repo at the end of the session. A PR is reported MERGED by
+GitHub, with a merge commit SHA. That commit does not exist - not in main's history, not locally.
+Main's tip is still the previous PR's merge from the day before. The content it carried was simply
+gone, and stayed gone for four months while work continued on the branch.
+
+Cause: main was rewritten and force-pushed from a clone that predated the merge. The merge landed
+and was then erased by an unrelated operation. Nothing errored. GitHub still cheerfully reports the
+PR as merged today, because from its point of view it was.
+
+This is the strongest version of the day's theme and probably the one to open or close on. The
+cert-renewer script was fixed in git and not running. The renewer's copy of the root would have
+kept working while stale. And here a merge reported success and left no trace. Three different
+layers - a config copy, a deployment, a git history - and the same failure: the system reports the
+state it intended, not the state it has.
+
+Write it without naming the operation that caused the force-push; it is not the interesting part
+and it does not need to be in a public post. "A history rewrite on main" is the whole story.
+
 ## Candidate angles
 
 - "Three copies of the same certificate, and only one of them mattered"
 - "The failure that looks like success" - both roots trusted, constraint inert
 - "Nothing broke for 50 days" - as the opener, since it is where this started
+- "Reported merged, never merged" - the strongest single instance, good as the closer
