@@ -122,6 +122,18 @@ pass.
 - **Emphasis is italic on the number, not a rewrite.** `b4eadec`: "Opus cost _57 times_ what Sonnet
   did". Let the figure carry it.
 
+- **Pop culture, roughly 1975-1990, is in register.** Mike is a child of the 70s and 80s and that is
+  where a lot of his humor lives. Mr. Burns, Metallica, the movies and TV of that era - these are
+  available and welcome, not a lapse into unseriousness.
+
+  Two constraints on using them. The reference has to *carry* the joke rather than decorate it: it
+  should add an image or a comparison the sentence did not already have, which is the same test as
+  the beat rule above. And the sentence has to still work for a reader who does not catch it -
+  a joke that leaves someone confused about the technical point has cost more than it earned.
+
+  Get the reference right or leave it out. A misattributed quote reads worse than no quote at all,
+  and it is the kind of error a reader who *does* recognise it will not let go of.
+
 ### Precision of cause
 
 The revision Mike worked hardest is the one where a sentence implied the wrong cause. Original:
