@@ -136,6 +136,31 @@ state it intended, not the state it has.
 Write it without naming the operation that caused the force-push; it is not the interesting part
 and it does not need to be in a public post. "A history rewrite on main" is the whole story.
 
+## Thread 5 - I reproduced the bug I had fixed four hours earlier
+
+This one is mine and it should go in the post, because it is the most useful thing that happened.
+
+The morning's cert-renewer work found, among other things, that a failed Kubernetes Secret PATCH was
+reporting success: the script ran `curl -sS`, which exits 0 on an HTTP 403 or 500, and then printed
+"patched" unconditionally. A renewal that silently fails to install is indistinguishable from one
+that worked, until the certificate expires. Fixed by inspecting the status code.
+
+That afternoon I wrote the monitoring job that watches the CA for exactly this class of problem. The
+first draft pushed its metrics with `curl -s`, checked the exit status, and reported success. Same
+defect. Four hours later. In a script whose entire purpose is catching things that lie about
+succeeding.
+
+It got caught because I ran the failure path - pointed the push at a deliberately wrong URL to prove
+the job could go red - not because I reviewed the code. Reading it, it looked right. It looks right
+in the morning's version too, which is why it survived in production for weeks.
+
+The lesson for anyone working with agents, and the reason this belongs in the post rather than in a
+private cringe: **fixing a bug does not inoculate the next file against it.** An agent that just
+diagnosed a failure mode in detail will reproduce that exact failure mode in new code it writes
+minutes later, with complete confidence, because the fix lived in the edit and not in the model of
+what is dangerous. The defence is not a better memory. It is running the failure path on everything
+you build, every time, including the thing you built to catch failures.
+
 ## Audience framing (Mike's steer)
 
 The merged-then-erased story is aimed at **people starting to work with agents**, not at PKI people.
