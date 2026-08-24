@@ -154,12 +154,29 @@ It got caught because I ran the failure path - pointed the push at a deliberatel
 the job could go red - not because I reviewed the code. Reading it, it looked right. It looks right
 in the morning's version too, which is why it survived in production for weeks.
 
+Why it happens is worth a paragraph, because "the AI was careless" is the wrong read and leads to
+the wrong defence. `curl -s ... && echo done` is one of the most common idioms in shell. Writing new
+code, the pull toward the idiom is enormous, and the morning's fix was stored as an *edit to one
+file*, not as a rule that curl's exit status does not reflect HTTP status. Knowing something in
+context is not the same as it constraining what gets generated. Worse, the defect is an *absence* -
+a check that is not there - and absences are close to invisible when you are producing the shape of
+a working thing rather than interrogating it. That is also why it survived weeks in the renewer:
+every human who read it saw a line that looked exactly like ten thousand other correct lines.
+
+The same thing then happened a third time in the same session, in the script that places the Grafana
+tile: it shifted panels down on every run and never shifted them back, so the layout crept. Caught
+by running it twice and diffing, not by reading it.
+
 The lesson for anyone working with agents, and the reason this belongs in the post rather than in a
 private cringe: **fixing a bug does not inoculate the next file against it.** An agent that just
 diagnosed a failure mode in detail will reproduce that exact failure mode in new code it writes
 minutes later, with complete confidence, because the fix lived in the edit and not in the model of
-what is dangerous. The defence is not a better memory. It is running the failure path on everything
-you build, every time, including the thing you built to catch failures.
+what is dangerous. The defence is not a better memory - and it is not a more careful reader either,
+since three sets of eyes read `curl -s` and saw nothing. It is mechanical: run the failure path on
+everything you build, every time, including the thing you built to catch failures. Point the push at
+a URL that 404s. Run the idempotent script twice. Set the threshold to zero and confirm it goes red.
+Those take a minute each and they are the only step in this whole session that actually caught
+anything.
 
 ## Audience framing (Mike's steer)
 
