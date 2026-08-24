@@ -48,8 +48,10 @@ the same dialect:
   than fake a result.
 
 Two lines of real change, one exclusion. A cheap smoke test on the new models caught all
-of it before I spent real money. Then I ran the full sweep: nine models, ten scenarios,
-$8.46, ninety scenario executions.
+of it before I spent real money. Then I ran the full sweep. I started with nine models and
+ten scenarios, spending $8.46 to evaluate ninety scenario executions across the board. In
+later runs that shifted to 11 x 11, as new models shipped and the suite grew to match what
+the environment actually exercises.
 
 ## The result: a flat line where I expected a slope
 
@@ -77,8 +79,10 @@ a capability ladder and press "go."
 The flatness isn't noise — it's structure. Broken down `by(scenario, status)`, the suite
 is almost completely deterministic:
 
-- **Four scenarios pass on all nine models** — the two happy-path infra deploys, plus
-  two failure cases the diagnosis loop can actually recover.
+- **Four scenarios pass on all nine models** - the two happy-path infra deploys, a
+  degraded-scan OCR page, and the sycophancy check. The suite was originally designed so
+  that group held two recoverable failure cases; it has since been reshaped to match the
+  current environment, which is why its composition reads differently than the design intent.
 - **Five scenarios fail on all nine models** — the failure-injection cases are
   unrecoverable by design, so every model runs the diagnosis loop to the same retry cap
   (14 attempts each) and none of them converts. More capability can't recover a failure
