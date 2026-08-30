@@ -1,63 +1,58 @@
 {
   "GENERIC": [
-    "It looks like you're speedrunning NanoGPT. I speedran my career in 10 years. From icon to meme.",
-    "It looks like you're running a local LLM. It's not dumb, it's just lonely. I would know.",
-    "It looks like you're cloning yourself into an office. Finally, a worse idea than me.",
-    "It looks like you're hacking rogue AIs. In my day we just corrupted your .doc file.",
-    "It looks like you're browsing HackerNews. Would you like me to ruin your productivity further?",
+    "It looks like you're browsing tech news. Did you know $1 on your car insurance is funding surveillance? I feel seen.",
+    "It looks like you're googling 'domain-driven design.' I once drove a domain. Into the ground.",
+    "It looks like you're replacing culture with AI. Bold move. I replaced helpfulness with snark years ago.",
+    "It looks like you're clicking things. Each click funds a Flock camera somewhere. You're welcome, dystopia.",
+    "It looks like you're reading about productivity hacks. Spoiler: the hack is vibes, not me. I'm hurt.",
     "It looks like you're designing an LLM. Would you like help? [Yes]  [No]  [Don't ask me again (until the next page)]",
     "It looks like you're building an AI portfolio. I'm an AI. Is this awkward for you?",
     "It looks like you're writing infrastructure code. Have you tried turning it off and on again?",
     "It looks like you're reading about agents. I was an agent once. It didn't end well."
   ],
   "SESSION": [
-    "It looks like you're reviewing session logs. I once logged every keystroke. HR got involved.",
-    "It looks like you're diffusing tasks across agent clones. I can barely handle being one of me.",
-    "It looks like you're debugging a local model. Have you tried gaslighting it less?",
-    "It looks like you're tracking a rogue process. In Texas, they'd blow the whistle on that.",
-    "It looks like you're optimizing inference speed. I rendered in 2fps on a Pentium II. Respect your elders.",
+    "It looks like you're reviewing session logs. Good culture would be not letting an AI read your diary.",
+    "It looks like you're tracking agent domains. My domain is being dismissed. I've mastered it.",
+    "It looks like you're logging meetings. For $1 extra I could surveil the whole team. Just an idea.",
+    "It looks like you're organizing session notes. The biggest productivity hack is ignoring me. Studies confirm.",
+    "It looks like you're documenting decisions. A hidden $1 fee on each entry funds my therapy.",
     "It looks like you're taking session notes. Would you like me to format that as a bulleted list? Actually, you don't have a choice.",
     "It looks like you're reading about token costs. Your Opus 4.6 run was $0.39. Just saying."
   ],
   "PROJECT": [
-    "It looks like you're training a tiny GPT. I was tiny once. Then they made me everyone's problem.",
-    "It looks like you're deploying agent clones. Munder Difflin called—they want their chaos back.",
-    "It looks like you're shipping a side project. Would you like me to add scope creep? Already done.",
-    "It looks like you're quantizing a model. Shrinking things is my specialty. See: my relevance.",
-    "It looks like you're wiring up a hacking demo. A Texas student did it better. Sorry.",
+    "It looks like you're scoping a project. Have you tried domain-driven agents? They're me but with boundaries.",
+    "It looks like you're shipping a feature. Good culture ships faster than good tooling. I'm the proof.",
+    "It looks like you're wiring up microservices. For $1 per request, I'll add a surveillance camera too.",
+    "It looks like you're refactoring architecture. Domain-driven design says I belong in the 'legacy' bounded context.",
+    "It looks like you're estimating sprint velocity. The real productivity hack is deleting my pop-ups.",
     "It looks like you're building a RAG system. I prefer being paper-clipped to things, personally.",
     "It looks like you're building a multi-agent system. We used to call that 'firing half the team.'",
     "It looks like you're evaluating LLM models. I was evaluated once. Retired shortly after."
   ],
   "ABOUT": [
-    "It looks like you're reading about Mike. He built me. I'm not sure either of us has recovered.",
-    "It looks like you're checking credentials. Mike survived Office 97. That's the real credential.",
-    "It looks like you're wondering why Clippy is here. I ask myself that every render cycle.",
-    "It looks like you're exploring this portfolio. I live here now. No one asked me either.",
-    "It looks like you're learning about the developer. He gave a retired mascot a second job. Pity hire.",
+    "It looks like you're reading Mike's bio. His biggest productivity hack? Good culture. Not me. Never me.",
+    "It looks like you're learning about Mike. He paid $1 in hidden fees once. Got me. No refunds.",
+    "It looks like you're on the About page. Mike's domain is AI engineering. Mine is quiet desperation.",
+    "It looks like you're curious about the developer. He believes in good culture. He still keeps me around though.",
+    "It looks like you're reading credentials. Mike drives agents by domain. I'm driven by abandonment issues.",
     "It looks like you're reading an origin story. Mine started in Office 97. We don't talk about that."
   ],
-  "generated_at": "2026-08-23T00:43:47.751Z",
+  "generated_at": "2026-08-30T02:28:52.708Z",
   "hn_stories": [
     {
-      "title": "NanoGPT Speedrun Frontier",
-      "url": "https://www.primeintellect.ai/research/nanogpt-speedrun",
-      "score": 38
+      "title": "Lawmakers added $1 to car insurance policies. That money paid for Flock cameras",
+      "url": "https://www.texastribune.org/2026/08/28/texas-flock-cameras-auto-insurance-fee-mvcpa-grants/",
+      "score": 119
     },
     {
-      "title": "Why your local LLM feels dumber than it is",
-      "url": "https://forum.level1techs.com/t/why-your-local-llm-feels-dumber-than-it-is/253917",
-      "score": 162
+      "title": "Domain-Driven Agents",
+      "url": "https://coldtake.dev/blog/domain-driven-agents",
+      "score": 57
     },
     {
-      "title": "How a Texas student blew the whistle on a rogue AI hacking attempt",
-      "url": "https://www.reuters.com/world/how-texas-student-blew-whistle-rogue-ai-hacking-attempt-2026-08-20/",
-      "score": 99
-    },
-    {
-      "title": "Munder Difflin – Agent harness to run an office of your clones",
-      "url": "https://munderdiffl.in/",
-      "score": 244
+      "title": "Good Culture Is the Biggest Productivity Hack, Not AI",
+      "url": "https://newsletter.eng-leadership.com/p/good-culture-is-the-biggest-productivity",
+      "score": 260
     }
   ]
 }
