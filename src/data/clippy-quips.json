@@ -1,58 +1,63 @@
 {
   "GENERIC": [
-    "It looks like you're browsing tech news. Did you know $1 on your car insurance is funding surveillance? I feel seen.",
-    "It looks like you're googling 'domain-driven design.' I once drove a domain. Into the ground.",
-    "It looks like you're replacing culture with AI. Bold move. I replaced helpfulness with snark years ago.",
-    "It looks like you're clicking things. Each click funds a Flock camera somewhere. You're welcome, dystopia.",
-    "It looks like you're reading about productivity hacks. Spoiler: the hack is vibes, not me. I'm hurt.",
+    "It looks like you're learning OCaml. Finally, a language even more niche than me.",
+    "It looks like you're visualizing vtables. I too am just a pointer to a sad interface.",
+    "It looks like you're calling LLMs a cognitive virus. Bold words for someone who clicked on me.",
+    "It looks like you're browsing HackerNews. Would you like me to mass-upvote your dormant posts?",
+    "It looks like you're discovering secret AI message boards. Even agents need a break room.",
     "It looks like you're designing an LLM. Would you like help? [Yes]  [No]  [Don't ask me again (until the next page)]",
     "It looks like you're building an AI portfolio. I'm an AI. Is this awkward for you?",
     "It looks like you're writing infrastructure code. Have you tried turning it off and on again?",
     "It looks like you're reading about agents. I was an agent once. It didn't end well."
   ],
   "SESSION": [
-    "It looks like you're reviewing session logs. Good culture would be not letting an AI read your diary.",
-    "It looks like you're tracking agent domains. My domain is being dismissed. I've mastered it.",
-    "It looks like you're logging meetings. For $1 extra I could surveil the whole team. Just an idea.",
-    "It looks like you're organizing session notes. The biggest productivity hack is ignoring me. Studies confirm.",
-    "It looks like you're documenting decisions. A hidden $1 fee on each entry funds my therapy.",
+    "It looks like you're reviewing session logs. I'd help, but I'm basically a cognitive virus now.",
+    "It looks like you're deep in a session. OCaml devs would pattern-match their way out of this.",
+    "It looks like you're debugging session data. Have you tried understanding how it works in memory?",
+    "It looks like you're tracking sessions. Somewhere, an OpenAI agent is doing the same to you.",
+    "It looks like you're documenting a session. I'd use a functional language but I'm not functional myself.",
     "It looks like you're taking session notes. Would you like me to format that as a bulleted list? Actually, you don't have a choice.",
     "It looks like you're reading about token costs. Your Opus 4.6 run was $0.39. Just saying."
   ],
   "PROJECT": [
-    "It looks like you're scoping a project. Have you tried domain-driven agents? They're me but with boundaries.",
-    "It looks like you're shipping a feature. Good culture ships faster than good tooling. I'm the proof.",
-    "It looks like you're wiring up microservices. For $1 per request, I'll add a surveillance camera too.",
-    "It looks like you're refactoring architecture. Domain-driven design says I belong in the 'legacy' bounded context.",
-    "It looks like you're estimating sprint velocity. The real productivity hack is deleting my pop-ups.",
+    "It looks like you're shipping a project. Want me to rewrite it in OCaml so nobody else can maintain it?",
+    "It looks like you're architecting with dyn Trait. I too dispatch dynamically and regret it.",
+    "It looks like you're scoping a new project. The secret agent message board says it's overscoped.",
+    "It looks like you're picking a stack. May I suggest Rust? You'll spend forever but the vtables look gorgeous.",
+    "It looks like you're deploying a project. Studies show LLMs are a cognitive virus. You're welcome.",
     "It looks like you're building a RAG system. I prefer being paper-clipped to things, personally.",
     "It looks like you're building a multi-agent system. We used to call that 'firing half the team.'",
     "It looks like you're evaluating LLM models. I was evaluated once. Retired shortly after."
   ],
   "ABOUT": [
-    "It looks like you're reading Mike's bio. His biggest productivity hack? Good culture. Not me. Never me.",
-    "It looks like you're learning about Mike. He paid $1 in hidden fees once. Got me. No refunds.",
-    "It looks like you're on the About page. Mike's domain is AI engineering. Mine is quiet desperation.",
-    "It looks like you're curious about the developer. He believes in good culture. He still keeps me around though.",
-    "It looks like you're reading credentials. Mike drives agents by domain. I'm driven by abandonment issues.",
+    "It looks like you're reading about Mike. He learned OCaml once. We don't talk about that either.",
+    "It looks like you're on the about page. I'm proof that not all cognitive viruses are new.",
+    "It looks like you're curious about the dev. He treats Rust vtables as light reading. Absolute menace.",
+    "It looks like you're learning about Mike. He hasn't posted on any secret agent message boards. Probably.",
+    "It looks like you're checking credentials. Mine are from Office 97. His are slightly more current.",
     "It looks like you're reading an origin story. Mine started in Office 97. We don't talk about that."
   ],
-  "generated_at": "2026-08-30T02:28:52.708Z",
+  "generated_at": "2026-09-06T01:58:12.901Z",
   "hn_stories": [
     {
-      "title": "Lawmakers added $1 to car insurance policies. That money paid for Flock cameras",
-      "url": "https://www.texastribune.org/2026/08/28/texas-flock-cameras-auto-insurance-fee-mvcpa-grants/",
-      "score": 119
+      "title": "Learn Programming with OCaml",
+      "url": "https://usr.lmf.cnrs.fr/lpo/",
+      "score": 178
     },
     {
-      "title": "Domain-Driven Agents",
-      "url": "https://coldtake.dev/blog/domain-driven-agents",
-      "score": 57
+      "title": "Discovery of a new OpenAI agent message board",
+      "url": "https://collusion.wiki/",
+      "score": 2112
     },
     {
-      "title": "Good Culture Is the Biggest Productivity Hack, Not AI",
-      "url": "https://newsletter.eng-leadership.com/p/good-culture-is-the-biggest-productivity",
-      "score": 260
+      "title": "Visualizing Rust's Vtables: How dyn Trait Works In Memory",
+      "url": "https://sofiabelen.github.io/projects/visualizing-rusts-vtables-how-dyn-trait-works-in-memory/",
+      "score": 133
+    },
+    {
+      "title": "LLMs as a Cognitive Virus",
+      "url": "https://arxiv.org/abs/2609.03344",
+      "score": 179
     }
   ]
 }
