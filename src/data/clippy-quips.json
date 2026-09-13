@@ -1,63 +1,78 @@
 {
   "GENERIC": [
-    "It looks like you're learning OCaml. Finally, a language even more niche than me.",
-    "It looks like you're visualizing vtables. I too am just a pointer to a sad interface.",
-    "It looks like you're calling LLMs a cognitive virus. Bold words for someone who clicked on me.",
-    "It looks like you're browsing HackerNews. Would you like me to mass-upvote your dormant posts?",
-    "It looks like you're discovering secret AI message boards. Even agents need a break room.",
+    "It looks like you're browsing tech news. Your TV is also browsing you, but LG says that's 'not true.'",
+    "It looks like you're slowing down AI development. Good idea—unless you're my competitor, then speed up.",
+    "It looks like you're looping through transformers. I once got stuck in a recursive paperclip. Dark times.",
+    "It looks like you're aligning AI with mathematics. I was aligned with Comic Sans. We all have regrets.",
+    "It looks like you're squeezing 50 GB/s from Apple silicon. I ran on 32 MB of RAM. Don't @ me.",
     "It looks like you're designing an LLM. Would you like help? [Yes]  [No]  [Don't ask me again (until the next page)]",
     "It looks like you're building an AI portfolio. I'm an AI. Is this awkward for you?",
     "It looks like you're writing infrastructure code. Have you tried turning it off and on again?",
     "It looks like you're reading about agents. I was an agent once. It didn't end well."
   ],
   "SESSION": [
-    "It looks like you're reviewing session logs. I'd help, but I'm basically a cognitive virus now.",
-    "It looks like you're deep in a session. OCaml devs would pattern-match their way out of this.",
-    "It looks like you're debugging session data. Have you tried understanding how it works in memory?",
-    "It looks like you're tracking sessions. Somewhere, an OpenAI agent is doing the same to you.",
-    "It looks like you're documenting a session. I'd use a functional language but I'm not functional myself.",
+    "It looks like you're benchmarking on real codebases. Bold. Most people test on vibes and prayer.",
+    "It looks like you're reviewing session logs. Nvidia's GPU logged more compute than your entire sprint.",
+    "It looks like you're tracking progress. Don't worry, your smart TV is tracking it too. Allegedly.",
+    "It looks like you're planning a sprint. May I suggest a recurrent loop? It worked for transformers.",
+    "It looks like you're documenting decisions. Everyone wants AI to slow down except whoever's in this session.",
     "It looks like you're taking session notes. Would you like me to format that as a bulleted list? Actually, you don't have a choice.",
     "It looks like you're reading about token costs. Your Opus 4.6 run was $0.39. Just saying."
   ],
   "PROJECT": [
-    "It looks like you're shipping a project. Want me to rewrite it in OCaml so nobody else can maintain it?",
-    "It looks like you're architecting with dyn Trait. I too dispatch dynamically and regret it.",
-    "It looks like you're scoping a new project. The secret agent message board says it's overscoped.",
-    "It looks like you're picking a stack. May I suggest Rust? You'll spend forever but the vtables look gorgeous.",
-    "It looks like you're deploying a project. Studies show LLMs are a cognitive virus. You're welcome.",
+    "It looks like you're shipping enterprise code. Have you benchmarked it against Real-SWE, or just hoped?",
+    "It looks like you're optimizing performance. The neural engine gets 50 GB/s. You get coffee and regret.",
+    "It looks like you're deploying to production. Nvidia thanks you for your monetary policy contribution.",
+    "It looks like you're building something loopy. Recurrent transformers are cool. Recurrent bugs less so.",
+    "It looks like you're scaling infrastructure. Remember, Nvidia isn't a chip company—it's a central bank now.",
     "It looks like you're building a RAG system. I prefer being paper-clipped to things, personally.",
     "It looks like you're building a multi-agent system. We used to call that 'firing half the team.'",
     "It looks like you're evaluating LLM models. I was evaluated once. Retired shortly after."
   ],
   "ABOUT": [
-    "It looks like you're reading about Mike. He learned OCaml once. We don't talk about that either.",
-    "It looks like you're on the about page. I'm proof that not all cognitive viruses are new.",
-    "It looks like you're curious about the dev. He treats Rust vtables as light reading. Absolute menace.",
-    "It looks like you're learning about Mike. He hasn't posted on any secret agent message boards. Probably.",
-    "It looks like you're checking credentials. Mine are from Office 97. His are slightly more current.",
+    "It looks like you're reading about Mike. He built me. I'd complain to HR but I am HR.",
+    "It looks like you're checking credentials. Mike aligns AI to useful things. I was aligned to annoyance.",
+    "It looks like you're wondering who made this. Someone who'd rather benchmark real code than fake demos.",
+    "It looks like you're learning about the dev. He gets 50 GB/s from hardware. I got 0 respect from users.",
+    "It looks like you're on the About page. Fun fact: I'm the only AI here who admits to being annoying.",
     "It looks like you're reading an origin story. Mine started in Office 97. We don't talk about that."
   ],
-  "generated_at": "2026-09-06T01:58:12.901Z",
+  "generated_at": "2026-09-13T02:07:24.516Z",
   "hn_stories": [
     {
-      "title": "Learn Programming with OCaml",
-      "url": "https://usr.lmf.cnrs.fr/lpo/",
-      "score": 178
+      "title": "Real-SWE: Benchmarking AI models on private, real-world, enterprise codebases",
+      "url": "https://withspecific.com/benchmarks/real-swe",
+      "score": 122
     },
     {
-      "title": "Discovery of a new OpenAI agent message board",
-      "url": "https://collusion.wiki/",
-      "score": 2112
+      "title": "Align AI and Mathematics–To Something Else",
+      "url": "https://liorpachter.wordpress.com/2026/09/12/align-ai-and-mathematics-to-something-else/",
+      "score": 11
     },
     {
-      "title": "Visualizing Rust's Vtables: How dyn Trait Works In Memory",
-      "url": "https://sofiabelen.github.io/projects/visualizing-rusts-vtables-how-dyn-trait-works-in-memory/",
-      "score": 133
+      "title": "Nvidia is the central bank of AI",
+      "url": "https://www.economist.com/interactive/briefing/2026/09/03/nvidia-is-the-central-bank-of-ai",
+      "score": 403
     },
     {
-      "title": "LLMs as a Cognitive Virus",
-      "url": "https://arxiv.org/abs/2609.03344",
-      "score": 179
+      "title": "Getting 50 GB/S Back from the Apple Neural Engine",
+      "url": "https://eiln.github.io/posts/ane-dma.html",
+      "score": 77
+    },
+    {
+      "title": "Everyone should slow down AI development except for me",
+      "url": "https://xeiaso.net/notes/2026/everyone-slowdown-but-me/",
+      "score": 121
+    },
+    {
+      "title": "Recurrent Looped Transformer",
+      "url": "https://yifanzhang-pro.github.io/recurrent-looped-tranformer/",
+      "score": 11
+    },
+    {
+      "title": "LG denies TV spying claims, says tracking and snooping concerns 'not true'",
+      "url": "https://www.tomshardware.com/tech-industry/big-tech/lg-strongly-denies-tv-security-claims-says-tracking-and-snooping-concerns-not-true-online-investigation-claims-216-000-000-spy-tvs-record-audio",
+      "score": 444
     }
   ]
 }
