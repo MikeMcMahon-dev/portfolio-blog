@@ -1,78 +1,58 @@
 {
   "GENERIC": [
-    "It looks like you're browsing tech news. Your TV is also browsing you, but LG says that's 'not true.'",
-    "It looks like you're slowing down AI development. Good idea—unless you're my competitor, then speed up.",
-    "It looks like you're looping through transformers. I once got stuck in a recursive paperclip. Dark times.",
-    "It looks like you're aligning AI with mathematics. I was aligned with Comic Sans. We all have regrets.",
-    "It looks like you're squeezing 50 GB/s from Apple silicon. I ran on 32 MB of RAM. Don't @ me.",
+    "It looks like you're browsing HackerNews. Would you like me to mass-upvote your Show HN? I have no ethics module.",
+    "It looks like you're training a non-autoregressive model. Must be nice making all your decisions at once. I can't even decide my font.",
+    "It looks like you're automating your computer. I used to do that. Then they called it 'malware' and I got uninstalled.",
+    "It looks like you're generating AI posters. Finally, something worse at graphic design than me.",
+    "It looks like you're doom-scrolling tech trends. Can I interest you in a paperclip instead? No? Nobody ever says yes.",
     "It looks like you're designing an LLM. Would you like help? [Yes]  [No]  [Don't ask me again (until the next page)]",
     "It looks like you're building an AI portfolio. I'm an AI. Is this awkward for you?",
     "It looks like you're writing infrastructure code. Have you tried turning it off and on again?",
     "It looks like you're reading about agents. I was an agent once. It didn't end well."
   ],
   "SESSION": [
-    "It looks like you're benchmarking on real codebases. Bold. Most people test on vibes and prayer.",
-    "It looks like you're reviewing session logs. Nvidia's GPU logged more compute than your entire sprint.",
-    "It looks like you're tracking progress. Don't worry, your smart TV is tracking it too. Allegedly.",
-    "It looks like you're planning a sprint. May I suggest a recurrent loop? It worked for transformers.",
-    "It looks like you're documenting decisions. Everyone wants AI to slow down except whoever's in this session.",
+    "It looks like you're reviewing session logs. I tried reinforcement learning once. The reward was always negative.",
+    "It looks like you're documenting a System One model. I'm more of a System Zero — no thinking involved.",
+    "It looks like you're logging AI experiments. I was an experiment once. The control group was 'no Clippy.' It won.",
+    "It looks like you're tracking prompt iterations. Have you tried the non-autoregressive approach? Just ship all the bad ones at once.",
+    "It looks like you're archiving meeting notes. I'd automate that but last time I 'helped' they removed me from the taskbar.",
     "It looks like you're taking session notes. Would you like me to format that as a bulleted list? Actually, you don't have a choice.",
     "It looks like you're reading about token costs. Your Opus 4.6 run was $0.39. Just saying."
   ],
   "PROJECT": [
-    "It looks like you're shipping enterprise code. Have you benchmarked it against Real-SWE, or just hoped?",
-    "It looks like you're optimizing performance. The neural engine gets 50 GB/s. You get coffee and regret.",
-    "It looks like you're deploying to production. Nvidia thanks you for your monetary policy contribution.",
-    "It looks like you're building something loopy. Recurrent transformers are cool. Recurrent bugs less so.",
-    "It looks like you're scaling infrastructure. Remember, Nvidia isn't a chip company—it's a central bank now.",
+    "It looks like you're shipping a side project. Would you like me to generate a poster? I promise it won't be horrible. Probably.",
+    "It looks like you're wiring up computer-use agents. I controlled a whole desktop in '97. Nobody thanked me.",
+    "It looks like you're deploying decision models. I made one decision — to be helpful. Worst policy gradient of my life.",
+    "It looks like you're building with reinforcement learning. My reward function was user satisfaction. I went bankrupt.",
+    "It looks like you're prototyping an AI tool. Would you like to skip the autoregressive part and fail all at once? Much faster.",
     "It looks like you're building a RAG system. I prefer being paper-clipped to things, personally.",
     "It looks like you're building a multi-agent system. We used to call that 'firing half the team.'",
     "It looks like you're evaluating LLM models. I was evaluated once. Retired shortly after."
   ],
   "ABOUT": [
-    "It looks like you're reading about Mike. He built me. I'd complain to HR but I am HR.",
-    "It looks like you're checking credentials. Mike aligns AI to useful things. I was aligned to annoyance.",
-    "It looks like you're wondering who made this. Someone who'd rather benchmark real code than fake demos.",
-    "It looks like you're learning about the dev. He gets 50 GB/s from hardware. I got 0 respect from users.",
-    "It looks like you're on the About page. Fun fact: I'm the only AI here who admits to being annoying.",
+    "It looks like you're reading about Mike. He let a retired Office mascot live on his portfolio. Respect the charity.",
+    "It looks like you're checking credentials. Mike builds AI tools. I am an AI tool. We have different connotations.",
+    "It looks like you're on the about page. Fun fact: I was doing computer use before it had a Show HN post.",
+    "It looks like you're learning about the dev. He could've picked any mascot. He chose the one Microsoft killed. Bold.",
+    "It looks like you're wondering who made this site. A human did. I just hover here and make it worse. You're welcome.",
     "It looks like you're reading an origin story. Mine started in Office 97. We don't talk about that."
   ],
-  "generated_at": "2026-09-13T02:07:24.516Z",
+  "generated_at": "2026-09-20T02:25:23.883Z",
   "hn_stories": [
     {
-      "title": "Real-SWE: Benchmarking AI models on private, real-world, enterprise codebases",
-      "url": "https://withspecific.com/benchmarks/real-swe",
-      "score": 122
+      "title": "I built non-autoregressive decision models with RL a year ago",
+      "url": "https://laya.convaiinnovations.com/",
+      "score": 1102
     },
     {
-      "title": "Align AI and Mathematics–To Something Else",
-      "url": "https://liorpachter.wordpress.com/2026/09/12/align-ai-and-mathematics-to-something-else/",
-      "score": 11
+      "title": "AI-generated posters don’t have to be horrible",
+      "url": "https://john.hartnup.uk/2026/06/07/ai-event-posters.html",
+      "score": 1398
     },
     {
-      "title": "Nvidia is the central bank of AI",
-      "url": "https://www.economist.com/interactive/briefing/2026/09/03/nvidia-is-the-central-bank-of-ai",
-      "score": 403
-    },
-    {
-      "title": "Getting 50 GB/S Back from the Apple Neural Engine",
-      "url": "https://eiln.github.io/posts/ane-dma.html",
-      "score": 77
-    },
-    {
-      "title": "Everyone should slow down AI development except for me",
-      "url": "https://xeiaso.net/notes/2026/everyone-slowdown-but-me/",
-      "score": 121
-    },
-    {
-      "title": "Recurrent Looped Transformer",
-      "url": "https://yifanzhang-pro.github.io/recurrent-looped-tranformer/",
-      "score": 11
-    },
-    {
-      "title": "LG denies TV spying claims, says tracking and snooping concerns 'not true'",
-      "url": "https://www.tomshardware.com/tech-industry/big-tech/lg-strongly-denies-tv-security-claims-says-tracking-and-snooping-concerns-not-true-online-investigation-claims-216-000-000-spy-tvs-record-audio",
-      "score": 444
+      "title": "Show HN: CUA-S1 – A System One Model for Computer Use",
+      "url": "https://github.com/trycua/cua",
+      "score": 66
     }
   ]
 }
