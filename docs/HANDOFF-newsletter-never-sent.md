@@ -100,7 +100,31 @@ mailing list full of strangers being ignored.
 
 It does not lower it to zero. Two people opted in and verified, and the silence runs up to 171
 days for the oldest row. Whether that warrants a first digest, a short note, or retiring the
-subscribe form is Mike's call — worth making deliberately rather than by default.
+subscribe form is Mike's call - worth making deliberately rather than by default.
+
+### If the answer is an apology note, the material is already here
+
+Mike's line when the second fault turned out not to exist, after a day of layered safeguards
+failing anyway:
+
+> "our pants fell down even with the belt and suspenders"
+
+That is the note. The honest version writes itself: a subscribe form that worked perfectly, a
+cron that was scheduled and never fired, an audit table that stayed empty because nothing ever
+got far enough to write a row, and a vendor expiry notice five months later as the only signal
+anyone received. Belt, suspenders, and the trousers still went.
+
+Worth saying plainly in the letter that the failure mode was *silence* rather than error - there
+was nothing to notice, which is the whole lesson and the reason a `newsletter_sends` panel is
+part of the fix rather than a nice-to-have.
+
+**Write it in the blog's voice, not in generic apology prose.** The recorded constraints for this
+site are mechanical rather than lexical:
+- spaced hyphens (` - `), never em-dashes
+- no bolded paragraph leads
+- no count-announcements ("three things happened...")
+Descriptive headings are fine and wanted. The voice is self-deprecating engineering honesty, so
+an apology that owns the mechanism beats one that apologises for the inconvenience.
 
 ## Background
 
