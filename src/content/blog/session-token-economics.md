@@ -3,7 +3,7 @@ title: "Session: Token Economics and Model Cost Calculation"
 description: "Building a Python CLI that projects cost across six models by task type and complexity, using real cost data from the agent eval harness and OCR eval."
 pubDate: 2026-04-10
 category: sessions
-draft: true
+draft: false
 ---
 
 *Full write-up coming soon.*

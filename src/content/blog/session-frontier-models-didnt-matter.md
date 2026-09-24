@@ -3,7 +3,7 @@ title: "Session: The Generation Gap That Wasn't — When the Frontier Models Did
 description: "Months after the first run, I re-ran the multi-agent eval across a fresh generation of models — Claude Fable 5, GPT-5.5, GPT-5.6 Sol. I expected the frontier tier to pull ahead. Instead the cheap model from a generation ago tied for first, one handwriting sample decided the entire ranking, paying 33× more bought nothing — and when I stress-tested that conclusion, half the quality signal turned out not to reproduce."
 pubDate: 2026-07-22
 category: sessions
-draft: true
+draft: false
 ---
 
 A few months back I built a dashboard to make my AI agent's eval costs visible, and
