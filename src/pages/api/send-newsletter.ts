@@ -6,7 +6,9 @@ import { renderDigestAsHtml } from '../../lib/email-template';
 
 const SEVEN_DAYS_MS = 7 * 24 * 60 * 60 * 1000;
 
-export const POST: APIRoute = async (context) => {
+// Vercel cron jobs invoke their path with GET. This was POST for its first five
+// months, so every scheduled run got a 404 before any of the code below ran.
+export const GET: APIRoute = async (context) => {
   try {
     // Verify cron secret
     const authHeader = context.request.headers.get('Authorization');
@@ -53,7 +55,15 @@ export const POST: APIRoute = async (context) => {
     // Get verified subscribers via stored procedure
     const { data: subscribers, error: subError } = await db.rpc('get_verified_subscribers');
 
-    if (subError || !subscribers || subscribers.length === 0) {
+    if (subError) {
+      console.error('Error fetching verified subscribers:', subError);
+      return new Response(
+        JSON.stringify({ error: 'Failed to fetch subscribers' }),
+        { status: 500, headers: { 'Content-Type': 'application/json' } }
+      );
+    }
+
+    if (!subscribers || subscribers.length === 0) {
       console.log('✅ No verified subscribers');
       return new Response(
         JSON.stringify({ success: true, message: 'No verified subscribers' }),
