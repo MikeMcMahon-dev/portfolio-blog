@@ -5,7 +5,7 @@ test.describe('Subscription', () => {
     await page.goto('/subscribe');
 
     await expect(page).toHaveURL(/\/subscribe\/?$/);
-    await expect(page.locator('h1, h2').first()).toBeTruthy();
+    await expect(page.locator('h1').first()).toBeVisible();
   });
 
   test('subscribe form should have email input', async ({ page }) => {
@@ -31,11 +31,9 @@ test.describe('Subscription', () => {
     // Try invalid email
     await emailInput.fill('not-an-email');
 
-    // Browser validation should prevent submit or form should have error
-    const formInvalid = await emailInput.evaluate((el: any) => !el.checkValidity?.());
-    if (formInvalid) {
-      expect(formInvalid).toBeTruthy();
-    }
+    // Browser validation must reject it before submit
+    const isValid = await emailInput.evaluate((el: HTMLInputElement) => el.checkValidity());
+    expect(isValid).toBe(false);
   });
 
   test('subscribe form should accept valid email', async ({ page }) => {
@@ -69,20 +67,11 @@ test.describe('Subscription', () => {
     await expect(emailInput).toBeVisible();
   });
 
-  test('unsubscribe page should have token form or secondary flow', async ({
-    page,
-  }) => {
+  test('unsubscribe page should have token paste form', async ({ page }) => {
     await page.goto('/unsubscribe');
 
-    // Should have email input at minimum
-    const emailInput = page.locator('input[type="email"]');
-    await expect(emailInput).toBeVisible();
-
-    // Might have token input or second form
-    const tokenInput = page.locator('input[name*="token"]');
-    const hasToken = await tokenInput.count();
-
-    // At least email form should be present
-    expect(hasToken >= 0).toBeTruthy();
+    // Brevo's link tracking strips query params, so pasting the token is the
+    // only unsubscribe path that survives. It has to be there.
+    await expect(page.locator('input[name="token"]')).toBeVisible();
   });
 });
