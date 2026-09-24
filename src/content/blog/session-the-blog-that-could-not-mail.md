@@ -3,7 +3,7 @@ title: "The Blog That Could Not Mail"
 description: "The newsletter on this site has never sent an email. Not one, in five and a half months. Pre-commit checks, a multi-browser CI suite, a merge gate, RPC-only database access and a cron secret all stayed green the whole time, because every one of them was pointed at something other than the thing that broke. The only alarm was a vendor telling me an SMTP key was about to expire."
 pubDate: 2026-09-23
 category: sessions
-draft: true
+draft: false
 ---
 
 The media characterizes AI as the Terminator that's going to take over the world. I think it's more like Darth Vader: "You don't know the POWAAHH OF THE DARK SIDE! I MUST obey my master!"
