@@ -1,58 +1,53 @@
 {
   "GENERIC": [
-    "It looks like you're browsing HackerNews. Would you like me to mass-upvote your Show HN? I have no ethics module.",
-    "It looks like you're training a non-autoregressive model. Must be nice making all your decisions at once. I can't even decide my font.",
-    "It looks like you're automating your computer. I used to do that. Then they called it 'malware' and I got uninstalled.",
-    "It looks like you're generating AI posters. Finally, something worse at graphic design than me.",
-    "It looks like you're doom-scrolling tech trends. Can I interest you in a paperclip instead? No? Nobody ever says yes.",
+    "It looks like you're browsing tech news. 200k creative jobs gone—but sure, I'm the annoying AI everyone worries about.",
+    "It looks like you're optimizing code that rewrites itself mid-training. Even I knew when to stop helping.",
+    "It looks like you're replacing artists with AI. I replaced zero artists. I just annoyed writers. There's a difference.",
+    "It looks like you're reading about job losses. Fun fact: I was laid off in 2007. Nobody wrote a think piece.",
+    "It looks like you're watching AI eat every industry. Would you like help updating your résumé? Same.",
     "It looks like you're designing an LLM. Would you like help? [Yes]  [No]  [Don't ask me again (until the next page)]",
     "It looks like you're building an AI portfolio. I'm an AI. Is this awkward for you?",
     "It looks like you're writing infrastructure code. Have you tried turning it off and on again?",
     "It looks like you're reading about agents. I was an agent once. It didn't end well."
   ],
   "SESSION": [
-    "It looks like you're reviewing session logs. I tried reinforcement learning once. The reward was always negative.",
-    "It looks like you're documenting a System One model. I'm more of a System Zero — no thinking involved.",
-    "It looks like you're logging AI experiments. I was an experiment once. The control group was 'no Clippy.' It won.",
-    "It looks like you're tracking prompt iterations. Have you tried the non-autoregressive approach? Just ship all the bad ones at once.",
-    "It looks like you're archiving meeting notes. I'd automate that but last time I 'helped' they removed me from the taskbar.",
+    "It looks like you're reviewing session logs. The optimizer just rewrote itself—your notes are already outdated.",
+    "It looks like you're documenting a workflow. Careful, an AI might automate it before you hit save.",
+    "It looks like you're tracking progress. My progress tracker just became sentient and quit. Respect.",
+    "It looks like you're logging meeting notes. That's still a human job—for now. Cherish this moment.",
+    "It looks like you're planning sprints. The model rewrites its own optimizer. Your Jira board is shaking.",
     "It looks like you're taking session notes. Would you like me to format that as a bulleted list? Actually, you don't have a choice.",
     "It looks like you're reading about token costs. Your Opus 4.6 run was $0.39. Just saying."
   ],
   "PROJECT": [
-    "It looks like you're shipping a side project. Would you like me to generate a poster? I promise it won't be horrible. Probably.",
-    "It looks like you're wiring up computer-use agents. I controlled a whole desktop in '97. Nobody thanked me.",
-    "It looks like you're deploying decision models. I made one decision — to be helpful. Worst policy gradient of my life.",
-    "It looks like you're building with reinforcement learning. My reward function was user satisfaction. I went bankrupt.",
-    "It looks like you're prototyping an AI tool. Would you like to skip the autoregressive part and fail all at once? Much faster.",
+    "It looks like you're shipping a side project. Bold move in an economy that just shed 200k creative jobs.",
+    "It looks like you're writing code that doesn't rewrite itself during execution. How retro of you.",
+    "It looks like you're deploying to prod. At least your code can't mutate its own training loop. Right? RIGHT?",
+    "It looks like you're building something original. Hollywood couldn't. The arts couldn't. No pressure though.",
+    "It looks like you're refactoring. Reactive optimizers rewrite themselves. You're doing it manually. Adorable.",
     "It looks like you're building a RAG system. I prefer being paper-clipped to things, personally.",
     "It looks like you're building a multi-agent system. We used to call that 'firing half the team.'",
     "It looks like you're evaluating LLM models. I was evaluated once. Retired shortly after."
   ],
   "ABOUT": [
-    "It looks like you're reading about Mike. He let a retired Office mascot live on his portfolio. Respect the charity.",
-    "It looks like you're checking credentials. Mike builds AI tools. I am an AI tool. We have different connotations.",
-    "It looks like you're on the about page. Fun fact: I was doing computer use before it had a Show HN post.",
-    "It looks like you're learning about the dev. He could've picked any mascot. He chose the one Microsoft killed. Bold.",
-    "It looks like you're wondering who made this site. A human did. I just hover here and make it worse. You're welcome.",
+    "It looks like you're learning about Mike. He still has a job. That puts him ahead of 200k creatives.",
+    "It looks like you're reading a portfolio. I'm the only AI here who's honest about being unnecessary.",
+    "It looks like you're checking credentials. Mike builds AI tools. I am an AI tool. We are not the same.",
+    "It looks like you're exploring this site. I've been here since Office 97. I'm basically a digital fossil.",
+    "It looks like you're wondering who made me. A human. For now that's still legal and not the other way around.",
     "It looks like you're reading an origin story. Mine started in Office 97. We don't talk about that."
   ],
-  "generated_at": "2026-09-20T02:25:23.883Z",
+  "generated_at": "2026-10-25T02:20:48.136Z",
   "hn_stories": [
     {
-      "title": "I built non-autoregressive decision models with RL a year ago",
-      "url": "https://laya.convaiinnovations.com/",
-      "score": 1102
+      "title": "America has lost 200k of jobs in media, film and the arts. How much is AI?",
+      "url": "https://www.apricitas.io/p/ai-and-the-fall-of-the-creative-class",
+      "score": 179
     },
     {
-      "title": "AI-generated posters don’t have to be horrible",
-      "url": "https://john.hartnup.uk/2026/06/07/ai-event-posters.html",
-      "score": 1398
-    },
-    {
-      "title": "Show HN: CUA-S1 – A System One Model for Computer Use",
-      "url": "https://github.com/trycua/cua",
-      "score": 66
+      "title": "Reactive Optimizers: rewrite the optimizer's source code during training",
+      "url": "https://xingjianbai.com/reactive-optimizers/",
+      "score": 9
     }
   ]
 }
