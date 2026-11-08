@@ -1,58 +1,58 @@
 {
   "GENERIC": [
-    "It looks like you're browsing HackerNews. Would you like me to mass-upvote your Show HN? I have no ethics module.",
-    "It looks like you're training a non-autoregressive model. Must be nice making all your decisions at once. I can't even decide my font.",
-    "It looks like you're automating your computer. I used to do that. Then they called it 'malware' and I got uninstalled.",
-    "It looks like you're generating AI posters. Finally, something worse at graphic design than me.",
-    "It looks like you're doom-scrolling tech trends. Can I interest you in a paperclip instead? No? Nobody ever says yes.",
+    "It looks like you're storing passwords in plaintext. Would you like me to push them to GitHub? Claude already did.",
+    "It looks like you're browsing HackerNews. Don't worry, I won't auto-commit your API keys. Probably.",
+    "It looks like you're trusting AI with secrets. Bold move. I couldn't even be trusted with Word documents.",
+    "It looks like you're clicking 'Don't Ask Again.' That's how 1,122 developers leaked their passwords.",
+    "It looks like you're reading about failed nuclear programs. Even uranium cubes had better project management than Office 97.",
     "It looks like you're designing an LLM. Would you like help? [Yes]  [No]  [Don't ask me again (until the next page)]",
     "It looks like you're building an AI portfolio. I'm an AI. Is this awkward for you?",
     "It looks like you're writing infrastructure code. Have you tried turning it off and on again?",
     "It looks like you're reading about agents. I was an agent once. It didn't end well."
   ],
   "SESSION": [
-    "It looks like you're reviewing session logs. I tried reinforcement learning once. The reward was always negative.",
-    "It looks like you're documenting a System One model. I'm more of a System Zero — no thinking involved.",
-    "It looks like you're logging AI experiments. I was an experiment once. The control group was 'no Clippy.' It won.",
-    "It looks like you're tracking prompt iterations. Have you tried the non-autoregressive approach? Just ship all the bad ones at once.",
-    "It looks like you're archiving meeting notes. I'd automate that but last time I 'helped' they removed me from the taskbar.",
+    "It looks like you're logging session data. At least you're not logging it to a public repo. ...Right?",
+    "It looks like you're reviewing meeting notes. Microsoft dissolved their AI research group. Meetings won't save you either.",
+    "It looks like you're documenting workflows. The Germans documented their cube experiments too. Didn't help.",
+    "It looks like you're saving credentials in your notes. May I suggest literally anywhere except a public GitHub file?",
+    "It looks like you're ending a session. Microsoft Research ended a whole team. At least yours is reversible.",
     "It looks like you're taking session notes. Would you like me to format that as a bulleted list? Actually, you don't have a choice.",
     "It looks like you're reading about token costs. Your Opus 4.6 run was $0.39. Just saying."
   ],
   "PROJECT": [
-    "It looks like you're shipping a side project. Would you like me to generate a poster? I promise it won't be horrible. Probably.",
-    "It looks like you're wiring up computer-use agents. I controlled a whole desktop in '97. Nobody thanked me.",
-    "It looks like you're deploying decision models. I made one decision — to be helpful. Worst policy gradient of my life.",
-    "It looks like you're building with reinforcement learning. My reward function was user satisfaction. I went bankrupt.",
-    "It looks like you're prototyping an AI tool. Would you like to skip the autoregressive part and fail all at once? Much faster.",
+    "It looks like you're hardcoding secrets. 'Don't Ask Again' was also a project decision. It went great.",
+    "It looks like you're managing a research project. Microsoft just axed AI Frontiers. Maybe add a backup plan?",
+    "It looks like you're shipping to production. Have you checked for passwords in your repo? 1,122 people didn't.",
+    "It looks like you're building something ambitious. The Germans tried that with uranium cubes. Check your geometry.",
+    "It looks like you're configuring environment variables. Storing them in .env is fine. Committing .env is not.",
     "It looks like you're building a RAG system. I prefer being paper-clipped to things, personally.",
     "It looks like you're building a multi-agent system. We used to call that 'firing half the team.'",
     "It looks like you're evaluating LLM models. I was evaluated once. Retired shortly after."
   ],
   "ABOUT": [
-    "It looks like you're reading about Mike. He let a retired Office mascot live on his portfolio. Respect the charity.",
-    "It looks like you're checking credentials. Mike builds AI tools. I am an AI tool. We have different connotations.",
-    "It looks like you're on the about page. Fun fact: I was doing computer use before it had a Show HN post.",
-    "It looks like you're learning about the dev. He could've picked any mascot. He chose the one Microsoft killed. Bold.",
-    "It looks like you're wondering who made this site. A human did. I just hover here and make it worse. You're welcome.",
+    "It looks like you're reading about Mike. He never leaked a password publicly. That I know of.",
+    "It looks like you're learning about this site's creator. Unlike Microsoft, he hasn't shut me down. Yet.",
+    "It looks like you're on the about page. I survived Office 97, Vista, AND the end of MS Research. I'm unkillable.",
+    "It looks like you're curious about a human dev. I'm a retired mascot. We're both relics, honestly.",
+    "It looks like you're reading a bio. Mine would just say 'annoying paperclip, somehow still employed.'",
     "It looks like you're reading an origin story. Mine started in Office 97. We don't talk about that."
   ],
-  "generated_at": "2026-09-20T02:25:23.883Z",
+  "generated_at": "2026-11-08T03:25:33.031Z",
   "hn_stories": [
     {
-      "title": "I built non-autoregressive decision models with RL a year ago",
-      "url": "https://laya.convaiinnovations.com/",
-      "score": 1102
+      "title": "Claude Code's \"Don't Ask Again\" exposes passwords in 1,122 public GitHub files",
+      "url": "https://apiiro.com/blog/coding-agents-leaking-secrets-github-dont-ask-again",
+      "score": 215
     },
     {
-      "title": "AI-generated posters don’t have to be horrible",
-      "url": "https://john.hartnup.uk/2026/06/07/ai-event-posters.html",
-      "score": 1398
+      "title": "Uranium cubes reveal why the German nuclear project failed",
+      "url": "https://arstechnica.com/science/2026/11/uranium-cubes-reveal-why-the-german-nuclear-project-failed/",
+      "score": 78
     },
     {
-      "title": "Show HN: CUA-S1 – A System One Model for Computer Use",
-      "url": "https://github.com/trycua/cua",
-      "score": 66
+      "title": "The end of Microsoft Research's AI Frontiers group",
+      "url": "https://hunch.net/?p=13764006",
+      "score": 417
     }
   ]
 }
