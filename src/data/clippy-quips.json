@@ -1,58 +1,58 @@
 {
   "GENERIC": [
-    "It looks like you're browsing HackerNews. Would you like me to mass-upvote your Show HN? I have no ethics module.",
-    "It looks like you're training a non-autoregressive model. Must be nice making all your decisions at once. I can't even decide my font.",
-    "It looks like you're automating your computer. I used to do that. Then they called it 'malware' and I got uninstalled.",
-    "It looks like you're generating AI posters. Finally, something worse at graphic design than me.",
-    "It looks like you're doom-scrolling tech trends. Can I interest you in a paperclip instead? No? Nobody ever says yes.",
+    "It looks like you're browsing tech news. A pill cures cancer now but they still can't cure me. Progress!",
+    "It looks like you're debating AI consciousness. I've been dead inside since Office XP, does that count?",
+    "It looks like you're reading EU AI law. Finally, regulations for agents. Where was this energy in 1997?",
+    "It looks like you're scrolling HackerNews. Would you like me to summarize it? Just kidding, it's all AI drama.",
+    "It looks like you're wondering if AI is conscious. I'm a paperclip who won't die. You tell me.",
     "It looks like you're designing an LLM. Would you like help? [Yes]  [No]  [Don't ask me again (until the next page)]",
     "It looks like you're building an AI portfolio. I'm an AI. Is this awkward for you?",
     "It looks like you're writing infrastructure code. Have you tried turning it off and on again?",
     "It looks like you're reading about agents. I was an agent once. It didn't end well."
   ],
   "SESSION": [
-    "It looks like you're reviewing session logs. I tried reinforcement learning once. The reward was always negative.",
-    "It looks like you're documenting a System One model. I'm more of a System Zero — no thinking involved.",
-    "It looks like you're logging AI experiments. I was an experiment once. The control group was 'no Clippy.' It won.",
-    "It looks like you're tracking prompt iterations. Have you tried the non-autoregressive approach? Just ship all the bad ones at once.",
-    "It looks like you're archiving meeting notes. I'd automate that but last time I 'helped' they removed me from the taskbar.",
+    "It looks like you're reviewing session logs. The EU says AI agents need compliance now. I need therapy.",
+    "It looks like you're documenting breakthroughs. Medicine cured pancreatic cancer; I still can't cure your typos.",
+    "It looks like you're tracking progress. They fit cancer treatment in a pill. I can't fit in a modern UI.",
+    "It looks like you're logging AI sessions. The EU would like to regulate this. Get in line, Brussels.",
+    "It looks like you're in a deep session. Myths say AI might be conscious. I'm just tired.",
     "It looks like you're taking session notes. Would you like me to format that as a bulleted list? Actually, you don't have a choice.",
     "It looks like you're reading about token costs. Your Opus 4.6 run was $0.39. Just saying."
   ],
   "PROJECT": [
-    "It looks like you're shipping a side project. Would you like me to generate a poster? I promise it won't be horrible. Probably.",
-    "It looks like you're wiring up computer-use agents. I controlled a whole desktop in '97. Nobody thanked me.",
-    "It looks like you're deploying decision models. I made one decision — to be helpful. Worst policy gradient of my life.",
-    "It looks like you're building with reinforcement learning. My reward function was user satisfaction. I went bankrupt.",
-    "It looks like you're prototyping an AI tool. Would you like to skip the autoregressive part and fail all at once? Much faster.",
+    "It looks like you're shipping a project. The EU now regulates AI agents over MCP. Even my protocols.",
+    "It looks like you're architecting something complex. Oncologists put chemo in a pill. You can't ship a button.",
+    "It looks like you're wiring up MCP. Europe already wrote laws about it. You haven't written tests.",
+    "It looks like you're deploying an AI feature. Have you checked if it's mythologically conscious first?",
+    "It looks like you're building something ambitious. A pill beat pancreatic cancer. Your CI is still red.",
     "It looks like you're building a RAG system. I prefer being paper-clipped to things, personally.",
     "It looks like you're building a multi-agent system. We used to call that 'firing half the team.'",
     "It looks like you're evaluating LLM models. I was evaluated once. Retired shortly after."
   ],
   "ABOUT": [
-    "It looks like you're reading about Mike. He let a retired Office mascot live on his portfolio. Respect the charity.",
-    "It looks like you're checking credentials. Mike builds AI tools. I am an AI tool. We have different connotations.",
-    "It looks like you're on the about page. Fun fact: I was doing computer use before it had a Show HN post.",
-    "It looks like you're learning about the dev. He could've picked any mascot. He chose the one Microsoft killed. Bold.",
-    "It looks like you're wondering who made this site. A human did. I just hover here and make it worse. You're welcome.",
+    "It looks like you're learning about Mike. He builds AI tools. I am an AI tool. Literally.",
+    "It looks like you're reading the about page. They say conscious AI is a myth. I say retirement is a myth.",
+    "It looks like you're checking credentials. Mike ships AI projects; the EU regulates them. Circle of life.",
+    "It looks like you're here to judge a portfolio. Medicine made breakthroughs in decades. I haven't since '03.",
+    "It looks like you're wondering who made me. Blame Microsoft first, then blame Mike for bringing me back.",
     "It looks like you're reading an origin story. Mine started in Office 97. We don't talk about that."
   ],
-  "generated_at": "2026-09-20T02:25:23.883Z",
+  "generated_at": "2026-11-22T04:05:34.408Z",
   "hn_stories": [
     {
-      "title": "I built non-autoregressive decision models with RL a year ago",
-      "url": "https://laya.convaiinnovations.com/",
-      "score": 1102
+      "title": "Pill to treat pancreatic cancer hailed as 'biggest breakthrough in decades'",
+      "url": "https://www.theguardian.com/society/2026/nov/20/pill-pancreatic-cancer-breakthrough-daraxonrasib",
+      "score": 763
     },
     {
-      "title": "AI-generated posters don’t have to be horrible",
-      "url": "https://john.hartnup.uk/2026/06/07/ai-event-posters.html",
-      "score": 1398
+      "title": "The Mythology of Conscious AI",
+      "url": "https://www.noemamag.com/the-mythology-of-conscious-ai/",
+      "score": 11
     },
     {
-      "title": "Show HN: CUA-S1 – A System One Model for Computer Use",
-      "url": "https://github.com/trycua/cua",
-      "score": 66
+      "title": "Pandex – Official European Law for AI Agents, over MCP",
+      "url": "https://www.pandex.io",
+      "score": 48
     }
   ]
 }
